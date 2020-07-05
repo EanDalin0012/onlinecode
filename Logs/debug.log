@@ -1,0 +1,369 @@
+2020-07-05 17:08:27 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.6 on DESKTOP-SSTPOFF with PID 19620 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-07-05 17:08:27 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-M1
+2020-07-05 17:08:27 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-07-05 17:08:27 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-05 17:08:27 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-05 17:08:27 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-07-05 17:08:27 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-07-05 17:08:27 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-05 17:08:27 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JDBC repository interfaces.
+2020-07-05 17:08:28 [restartedMain] [WARN] o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.bizcode]' package. Please check your configuration.
+2020-07-05 17:08:28 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$9beaf0fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-05 17:08:28 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-07-05 17:08:28 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-07-05 17:08:28 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:08:28 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-07-05 17:08:28 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-05 17:08:28 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-07-05 17:08:28 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1386 ms
+2020-07-05 17:08:29 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-05 17:08:29 [restartedMain] [WARN] o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-07-05 17:08:29 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2020-07-05 17:08:29 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified.
+2020-07-05 17:08:29 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-07-05 17:08:29 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-07-05 17:08:29 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-07-05 17:08:29 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:08:29 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-05 17:08:29 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Started BizcodeApplication in 2.907 seconds (JVM running for 3.971)
+2020-07-05 17:09:51 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.6 on DESKTOP-SSTPOFF with PID 10612 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-07-05 17:09:51 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-M1
+2020-07-05 17:09:51 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-07-05 17:09:51 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-05 17:09:51 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-05 17:09:51 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-07-05 17:09:51 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-07-05 17:09:51 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-05 17:09:51 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JDBC repository interfaces.
+2020-07-05 17:09:51 [restartedMain] [WARN] o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.bizcode]' package. Please check your configuration.
+2020-07-05 17:09:52 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$24dcd744] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-05 17:09:52 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-07-05 17:09:52 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-07-05 17:09:52 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:09:52 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-07-05 17:09:52 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-05 17:09:52 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-07-05 17:09:52 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1442 ms
+2020-07-05 17:09:52 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-05 17:09:53 [restartedMain] [WARN] o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-07-05 17:09:53 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2020-07-05 17:09:53 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified.
+2020-07-05 17:09:53 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-07-05 17:09:53 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-07-05 17:09:53 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-07-05 17:09:53 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:09:53 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-05 17:09:53 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Started BizcodeApplication in 2.73 seconds (JVM running for 3.73)
+2020-07-05 17:16:18 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.6 on DESKTOP-SSTPOFF with PID 6300 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-07-05 17:16:18 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-M1
+2020-07-05 17:16:18 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-07-05 17:16:18 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-05 17:16:18 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-05 17:16:18 [Thread-189] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-07-05 17:16:18 [Thread-189] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-07-05 17:16:18 [Thread-189] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-05 17:16:18 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.6 on DESKTOP-SSTPOFF with PID 10612 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-07-05 17:16:18 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-M1
+2020-07-05 17:16:18 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-07-05 17:16:19 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-07-05 17:16:19 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-07-05 17:16:19 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-05 17:16:19 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
+2020-07-05 17:16:19 [restartedMain] [WARN] o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.bizcode]' package. Please check your configuration.
+2020-07-05 17:16:19 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$24dcd744] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-05 17:16:19 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-07-05 17:16:19 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-07-05 17:16:19 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:16:19 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-07-05 17:16:19 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-05 17:16:19 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-07-05 17:16:19 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 346 ms
+2020-07-05 17:16:19 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-05 17:16:19 [restartedMain] [WARN] o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-07-05 17:16:19 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-07-05 17:16:19 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-07-05 17:16:19 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2020-07-05 17:16:19 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-05 17:16:19 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2020-07-05 17:16:19 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis/mybatis_config.xml]'
+2020-07-05 17:16:19 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified.
+2020-07-05 17:16:19 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2020-07-05 17:16:19 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2020-07-05 17:16:19 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-07-05 17:16:19 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:16:19 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-05 17:16:19 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Started BizcodeApplication in 0.649 seconds (JVM running for 389.684)
+2020-07-05 17:16:19 [restartedMain] [INFO] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-07-05 17:16:19 [restartedMain] [WARN] o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.bizcode]' package. Please check your configuration.
+2020-07-05 17:16:19 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$9f67beb0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-05 17:16:19 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-07-05 17:16:20 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-07-05 17:16:20 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:16:20 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-07-05 17:16:20 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-05 17:16:20 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-07-05 17:16:20 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1608 ms
+2020-07-05 17:16:20 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-05 17:16:20 [restartedMain] [WARN] o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-07-05 17:16:20 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2020-07-05 17:16:20 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis/mybatis_config.xml]'
+2020-07-05 17:16:20 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified.
+2020-07-05 17:16:21 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-07-05 17:16:21 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-07-05 17:16:21 [restartedMain] [WARN] o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-05 17:16:21 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:16:21 [restartedMain] [WARN] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2020-07-05 17:16:21 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-07-05 17:16:21 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-07-05 17:16:21 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-05 17:16:21 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:16:21 [restartedMain] [INFO] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-07-05 17:16:21 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:16:21 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:16:21 [restartedMain] [INFO] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-05 17:16:21 [restartedMain] [ERROR] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-07-05 17:19:32 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.6 on DESKTOP-SSTPOFF with PID 9632 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-07-05 17:19:32 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-M1
+2020-07-05 17:19:32 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-07-05 17:19:32 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-05 17:19:32 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-05 17:19:32 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-07-05 17:19:32 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-07-05 17:19:33 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-05 17:19:33 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+2020-07-05 17:19:33 [restartedMain] [WARN] o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.bizcode]' package. Please check your configuration.
+2020-07-05 17:19:33 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ec8816ae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-05 17:19:33 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-07-05 17:19:33 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-07-05 17:19:33 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:19:33 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-07-05 17:19:33 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-05 17:19:33 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-07-05 17:19:33 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1593 ms
+2020-07-05 17:19:34 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-05 17:19:34 [restartedMain] [WARN] o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-07-05 17:19:34 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2020-07-05 17:19:34 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis/mybatis_config.xml]'
+2020-07-05 17:19:34 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified.
+2020-07-05 17:19:34 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-07-05 17:19:34 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-07-05 17:19:34 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-07-05 17:19:34 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:19:34 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-05 17:19:35 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Started BizcodeApplication in 3.379 seconds (JVM running for 4.625)
+2020-07-05 17:21:12 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.6 on DESKTOP-SSTPOFF with PID 11864 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-07-05 17:21:12 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-M1
+2020-07-05 17:21:12 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-07-05 17:21:12 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-05 17:21:12 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-05 17:21:13 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-07-05 17:21:13 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-07-05 17:21:13 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-05 17:21:13 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2020-07-05 17:21:13 [restartedMain] [WARN] o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.bizcode]' package. Please check your configuration.
+2020-07-05 17:21:13 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$eae1d7a8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-05 17:21:13 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-07-05 17:21:13 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-07-05 17:21:13 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:21:13 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-07-05 17:21:13 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-05 17:21:14 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-07-05 17:21:14 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1078 ms
+2020-07-05 17:21:14 [restartedMain] [WARN] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'translator' defined in file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\component\Translator.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.context.support.ReloadableResourceBundleMessageSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2020-07-05 17:21:14 [restartedMain] [INFO] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-07-05 17:21:14 [restartedMain] [INFO] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-05 17:21:14 [restartedMain] [ERROR] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.bizcode.component.Translator required a bean of type 'org.springframework.context.support.ReloadableResourceBundleMessageSource' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.context.support.ReloadableResourceBundleMessageSource' in your configuration.
+
+2020-07-05 17:22:07 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.6 on DESKTOP-SSTPOFF with PID 2312 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-07-05 17:22:07 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-M1
+2020-07-05 17:22:07 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-07-05 17:22:07 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-05 17:22:07 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-05 17:22:08 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-07-05 17:22:08 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-07-05 17:22:08 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-05 17:22:08 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2020-07-05 17:22:08 [restartedMain] [WARN] o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.bizcode]' package. Please check your configuration.
+2020-07-05 17:22:08 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$dcefed13] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-05 17:22:08 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-07-05 17:22:08 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-07-05 17:22:08 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:22:08 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-07-05 17:22:08 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-05 17:22:08 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-07-05 17:22:08 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1047 ms
+2020-07-05 17:22:08 [restartedMain] [WARN] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'translator' defined in file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\component\Translator.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.context.support.ReloadableResourceBundleMessageSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2020-07-05 17:22:08 [restartedMain] [INFO] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-07-05 17:22:08 [restartedMain] [INFO] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-05 17:22:08 [restartedMain] [ERROR] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.bizcode.component.Translator required a bean of type 'org.springframework.context.support.ReloadableResourceBundleMessageSource' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.context.support.ReloadableResourceBundleMessageSource' in your configuration.
+
+2020-07-05 17:22:32 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.6 on DESKTOP-SSTPOFF with PID 1116 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-07-05 17:22:32 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-M1
+2020-07-05 17:22:32 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-07-05 17:22:32 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-05 17:22:32 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-05 17:22:32 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-07-05 17:22:32 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-07-05 17:22:32 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-05 17:22:32 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2020-07-05 17:22:33 [restartedMain] [WARN] o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.bizcode]' package. Please check your configuration.
+2020-07-05 17:22:33 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ae39073e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-05 17:22:33 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-07-05 17:22:33 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-07-05 17:22:33 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:22:33 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-07-05 17:22:33 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-05 17:22:33 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-07-05 17:22:33 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1015 ms
+2020-07-05 17:22:33 [restartedMain] [WARN] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'translator' defined in file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\component\Translator.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.context.support.ReloadableResourceBundleMessageSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2020-07-05 17:22:33 [restartedMain] [INFO] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-07-05 17:22:33 [restartedMain] [INFO] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-05 17:22:33 [restartedMain] [ERROR] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.bizcode.component.Translator required a bean of type 'org.springframework.context.support.ReloadableResourceBundleMessageSource' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.context.support.ReloadableResourceBundleMessageSource' in your configuration.
+
+2020-07-05 17:25:47 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.6 on DESKTOP-SSTPOFF with PID 10748 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-07-05 17:25:47 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-M1
+2020-07-05 17:25:47 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-07-05 17:25:47 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-05 17:25:47 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-05 17:25:48 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-07-05 17:25:48 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-07-05 17:25:48 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-05 17:25:48 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 JDBC repository interfaces.
+2020-07-05 17:25:48 [restartedMain] [WARN] o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.bizcode]' package. Please check your configuration.
+2020-07-05 17:25:48 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$6b63d972] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-05 17:25:48 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-07-05 17:25:48 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-07-05 17:25:48 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:25:48 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-07-05 17:25:48 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-05 17:25:48 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-07-05 17:25:48 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1172 ms
+2020-07-05 17:25:49 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-05 17:25:49 [restartedMain] [WARN] o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-07-05 17:25:49 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2020-07-05 17:25:49 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis/mybatis_config.xml]'
+2020-07-05 17:25:49 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified.
+2020-07-05 17:25:49 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-07-05 17:25:49 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-07-05 17:25:49 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-07-05 17:25:49 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:25:49 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-05 17:25:49 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Started BizcodeApplication in 2.352 seconds (JVM running for 3.297)
+2020-07-05 17:26:50 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.6 on DESKTOP-SSTPOFF with PID 10576 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-07-05 17:26:50 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-M1
+2020-07-05 17:26:50 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-07-05 17:26:50 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-05 17:26:50 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-05 17:26:51 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-07-05 17:26:51 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-07-05 17:26:51 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-05 17:26:51 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2020-07-05 17:26:51 [restartedMain] [WARN] o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.bizcode]' package. Please check your configuration.
+2020-07-05 17:26:51 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$d30f732b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-05 17:26:51 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-07-05 17:26:51 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-07-05 17:26:51 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:26:51 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-07-05 17:26:51 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-05 17:26:51 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-07-05 17:26:51 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1016 ms
+2020-07-05 17:26:52 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-05 17:26:52 [restartedMain] [WARN] o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-07-05 17:26:52 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2020-07-05 17:26:52 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis/mybatis_config.xml]'
+2020-07-05 17:26:52 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified.
+2020-07-05 17:26:52 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-07-05 17:26:52 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-07-05 17:26:52 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-07-05 17:26:52 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:26:52 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-05 17:26:52 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Started BizcodeApplication in 2.423 seconds (JVM running for 3.977)
+2020-07-05 17:27:35 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.6 on DESKTOP-SSTPOFF with PID 1984 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-07-05 17:27:35 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-M1
+2020-07-05 17:27:35 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-07-05 17:27:35 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-05 17:27:35 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-05 17:27:36 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-07-05 17:27:36 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-07-05 17:27:36 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-05 17:27:36 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2020-07-05 17:27:36 [restartedMain] [WARN] o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.bizcode]' package. Please check your configuration.
+2020-07-05 17:27:36 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$d05685b1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-05 17:27:36 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-07-05 17:27:36 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-07-05 17:27:36 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:27:36 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-07-05 17:27:36 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-05 17:27:36 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-07-05 17:27:36 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1031 ms
+2020-07-05 17:27:36 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-05 17:27:36 [restartedMain] [WARN] o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-07-05 17:27:36 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2020-07-05 17:27:37 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis/mybatis_config.xml]'
+2020-07-05 17:27:37 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified.
+2020-07-05 17:27:37 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-07-05 17:27:37 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-07-05 17:27:37 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-07-05 17:27:37 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-07-05 17:27:37 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-05 17:27:37 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Started BizcodeApplication in 2.123 seconds (JVM running for 2.905)

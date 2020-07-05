@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- ${APP_HOME}/log -->
+
+    <property name="rootDir" value="Logs" />
+    <property name="archiveDir" value="${rootDir}/archived" />
+    <property name="fileSize" value="10MB" />
+
+    <property name="pattern" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] [%level] %logger{36} - %msg%n" />
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="DEBUG-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${rootDir}/debug.log</file>
+        <encoder>
+            <pattern>${pattern}</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${archiveDir}/debug.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>${fileSize}</maxFileSize>
+        </rollingPolicy>
+    </appender>
+
+
+    <!-- error file logger -->
+    <appender name="ERROR-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${rootDir}/error.log</file>
+        <encoder>
+            <pattern>${pattern}</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${archiveDir}/error.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>${fileSize}</maxFileSize>
+        </rollingPolicy>
+    </appender>
+
+    <logger name="org.springframework.core" level="INFO" additivity="true"/>
+    <logger name="org.springframework.beans" level="INFO" additivity="true"/>
+    <logger name="org.springframework.context" level="INFO" additivity="true"/>
+    <logger name="org.springframework.web" level="INFO" additivity="true"/>
+    <logger name="org.mybatis" level="DEBUG" />
+    <logger name="org.springframework.web.filter.CommonsRequestLoggingFilter" level="DEBUG" />
+
+    <logger name="com.bizcode" level="DEBUG" />
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="DEBUG-FILE"/>
+        <appender-ref ref="ERROR-FILE"/>
+    </root>
+
+</configuration>

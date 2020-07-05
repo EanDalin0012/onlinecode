@@ -1,0 +1,59 @@
+2020-07-05 17:16:21 [restartedMain] [ERROR] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-07-05 17:21:14 [restartedMain] [ERROR] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.bizcode.component.Translator required a bean of type 'org.springframework.context.support.ReloadableResourceBundleMessageSource' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.context.support.ReloadableResourceBundleMessageSource' in your configuration.
+
+2020-07-05 17:22:08 [restartedMain] [ERROR] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.bizcode.component.Translator required a bean of type 'org.springframework.context.support.ReloadableResourceBundleMessageSource' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.context.support.ReloadableResourceBundleMessageSource' in your configuration.
+
+2020-07-05 17:22:33 [restartedMain] [ERROR] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.bizcode.component.Translator required a bean of type 'org.springframework.context.support.ReloadableResourceBundleMessageSource' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.context.support.ReloadableResourceBundleMessageSource' in your configuration.
+

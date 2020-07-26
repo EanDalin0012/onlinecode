@@ -21,6 +21,25 @@
 	     ]]>
 	</select>
 
+	<select id="getValueById" resultType="MMap">
+	   <![CDATA[
+		 SELECT
+		 	id				as "id"
+			, name			as "name"
+			, contact		as "contact"
+			, email			as "email"
+			, address_id	as "address"
+			, description	as "description"
+			, status		as "status"
+			, create_by		as "createBy"
+			, create_date 	as "createDate"
+			, modify_by		as "modifyBy"
+			, modify_date 	as "modifyDate"
+		FROM company
+		 WHERE id = #{id}
+	     ]]>
+	</select>
+
 	<insert id="save">
     	<![CDATA[
 	    	INSERT INTO company
@@ -69,7 +88,6 @@
 			, modify_by		= #{userID}
 			, modify_date	= to_char(NOW(), 'YYYYMMDD')
 		WHERE id 			= #{id}
-
 		]]>
 	</update>
 

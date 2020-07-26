@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bizcode.admins.dao.UserDao">
+
+	<select id="getList" resultType="MMap">
+	   <![CDATA[
+			SELECT
+				  u.id				as "id"
+				, u.first_name	as "firstName"
+				, u.last_name		as "lastName"
+				, u.date_of_birth	as "dateBirth"
+				, u.email			as "email"
+				, u.password		as "password"
+				, u.contact		as "contact"
+				, u.gender		as "gender"
+				, u.create_by		as "createBy"
+				, u.create_date	as "createDate"
+				, u.modify_by		as "modifyBy"
+				, u.modify_date	as "modifyDate"
+				, u.status		as "status"
+				, u.description	as "description"
+				, u.address_id	as "addressID"
+				, u.resource_id   as "resourceID"
+			FROM "user" u
+		 	WHERE u.status != #{status}
+	     ]]>
+	</select>
+
+	<insert id="save">
+    	<![CDATA[
+			INSERT INTO "user" (
+					  first_name
+					, last_name
+					, date_of_birth
+					, email
+					, password
+					, contact
+					, gender
+					, create_by
+					, create_date
+					, status
+					, description
+					, address_id
+					, resource_id
+					)
+			VALUES (
+					#{firstName}
+					, #{lastName}
+					, #{dateBirth}
+					, #{email}
+					, #{password}
+					, #{contact}
+					, #{gender}
+					, #{userID}
+					, to_char(NOW(), 'YYYYMMDD')
+					, #{status}
+					, COALESCE(#{description}, '' )
+					, COALESCE(#{addressID}, 0)
+					, COALESCE(#{resourceID}, 0)
+					);
+    	]]>
+    </insert>
+
+	<select id="getValueById" resultType="MMap">
+	   <![CDATA[
+		  	SELECT
+		  		  id			as "id"
+				, first_name	as "firstName"
+				, last_name		as "lastName"
+				, date_of_birth	as "dateBirth"
+				, email			as "email"
+				, password		as "password"
+				, contact		as "contact"
+				, gender		as "gender"
+				, create_by		as "createBy"
+				, create_date	as "createDate"
+				, modify_by		as "modifyBy"
+				, modify_date	as "modifyDate"
+				, status		as "status"
+				, description	as "description"
+				, address_id	as "addressID"
+				, resource_id   as "resourceID"
+			FROM user
+			 WHERE id = #{id}
+	     ]]>
+	</select>
+
+	<select id="count" resultType="java.lang.Integer">
+	   <![CDATA[
+		  SELECT
+	     	COUNT (*)
+	     FROM "user"
+	     ]]>
+	</select>
+
+	<update id="update">
+		<![CDATA[
+				UPDATE user
+				SET
+					first_name		= #{firstName}
+					, last_name		= #{lastName}
+					, date_of_birth	= #{dateBirth}
+					, email			= #{email}
+					, password		= #{password}
+					, contact		= #{contact}
+					, gender		= #{gender}
+					, modify_by		= #{userID}
+					, modify_date	= #{firstName}
+					, status		= #{status}
+					, description	= COALESCE(#{description}, '' )
+					, address_id	= #{addressID}
+					, resource_id	= #{resourceID}
+				WHERE id			= #{id}
+		]]>
+	</update>
+
+</mapper>

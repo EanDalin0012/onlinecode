@@ -32,7 +32,8 @@ public class CompanyServiceImplement implements CompanyService {
     }
 
     @Override
-    public MMap getValueById(MMap param) {
+    public MMap getValueById(MMap param) throws Exception {
+        ValidatorUtil.validate(param,"id");
         return companyDao.getValueById(param);
     }
 

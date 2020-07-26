@@ -10,7 +10,7 @@ public interface CompanyService {
     MultiMap getList(MMap param);
     Long save(MMap param) throws Exception;
     Long delete(MMap param) throws Exception;
-    MMap getValueById(MMap param);
+    MMap getValueById(MMap param) throws Exception;
     Long update(MMap param) throws Exception;
     int count();
 }

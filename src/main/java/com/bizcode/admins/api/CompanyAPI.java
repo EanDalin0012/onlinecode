@@ -6,6 +6,7 @@ import com.bizcode.core.map.MMap;
 import com.bizcode.core.map.MultiMap;
 import com.bizcode.core.template.ResponseData;
 import com.bizcode.utils.ValidatorUtil;
+import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/api/company")
@@ -38,10 +36,10 @@ public class CompanyAPI {
      * @return
      * @throws
      **/
-    @PostMapping(value = "/get/list")
-    public ResponseEntity<ResponseData<MMap, MMap>> getList(@RequestBody MMap param) {
+    @GetMapping(value = "/get/list")
+    public ResponseEntity<ResponseData<MMap, MMap>> getList(@RequestParam("lang") String param) {
         ResponseData<MMap, MMap> response   = new ResponseData<>();
-        MMap header                         = param.getMMap("header");
+        MMap header                         = new MMap();
 
         try{
             MMap input = new MMap();
@@ -105,7 +103,6 @@ public class CompanyAPI {
         TransactionStatus transactionStatus    = transactionManager.getTransaction(new DefaultTransactionDefinition());
 
         try{
-            int count = list.size();
             for (MMap in: list.toListData()) {
                 MMap input = new MMap();
                 input.setString("status", Status.Delete.getValueStr());
@@ -183,5 +180,37 @@ public class CompanyAPI {
             log.error("get Exception ", e);
             throw e;
         }
+    }
+
+    /**
+     * <pre>
+     *     get value by id
+     * </pre>
+     * @param param
+     *  <pre>
+     *      header:
+     *      body: id: int
+     *  </pre>
+     * */
+    @PostMapping(value = "/get/value/by/id")
+    public ResponseEntity<ResponseData<MMap, MMap>> getValueById(@RequestBody MMap param) throws Exception {
+        ResponseData<MMap, MMap> response = new ResponseData<>();
+        try {
+            MMap header = param.getMMap("header");
+            MMap body   = param.getMMap("body");
+            ValidatorUtil.validate(body, "id");
+            MMap input = new MMap();
+            input.setInt("id", body.getInt("id"));
+
+            MMap output = companyService.getValueById(input);
+            response.setHeader(header);
+            response.setBody(output);
+
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        }catch (Exception e) {
+            log.error("get value by id of company api", e);
+            throw new Exception("error input:");
+        }
+
     }
 }

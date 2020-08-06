@@ -35,6 +35,8 @@ dependencies {
 	compile group: 'com.sun.xml.bind', name: 'jaxb-core', version: '3.0.0-M4'
 	// https://mvnrepository.com/artifact/javax.xml/jaxb-impl
 	compile group: 'javax.xml', name: 'jaxb-impl', version: '2.1'
+// https://mvnrepository.com/artifact/com.google.guava/guava
+	compile group: 'com.google.guava', name: 'guava', version: '29.0-jre'
 
 	testCompile group: 'junit', name: 'junit'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'

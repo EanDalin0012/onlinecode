@@ -29,13 +29,9 @@ dependencies {
 	compile group: 'commons-codec', name: 'commons-codec', version: '1.14'
 	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.10'
 	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind'
-	// https://mvnrepository.com/artifact/org.springframework.security.oauth/spring-security-oauth2
 	compile group: 'org.springframework.security.oauth', name: 'spring-security-oauth2', version: '2.3.5.RELEASE'
-	// https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-core
 	compile group: 'com.sun.xml.bind', name: 'jaxb-core', version: '3.0.0-M4'
-	// https://mvnrepository.com/artifact/javax.xml/jaxb-impl
 	compile group: 'javax.xml', name: 'jaxb-impl', version: '2.1'
-// https://mvnrepository.com/artifact/com.google.guava/guava
 	compile group: 'com.google.guava', name: 'guava', version: '29.0-jre'
 
 	testCompile group: 'junit', name: 'junit'

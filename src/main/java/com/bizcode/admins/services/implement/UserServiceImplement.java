@@ -39,6 +39,11 @@ public class UserServiceImplement implements UserService {
     }
 
     @Override
+    public MMap loadUserByUserName(MMap param) throws Exception {
+        return userDao.loadUserByUserName(param);
+    }
+
+    @Override
     public int update(MMap param) throws Exception {
         ValidatorUtil.validate(param, "id","firstName", "lastName", "dateBirth", "email", "password", "contact", "gender", "addressID", "userID");
         return userDao.update(param);

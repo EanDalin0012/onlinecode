@@ -8,6 +8,7 @@ public interface UserService {
     int save(MMap param) throws Exception;
     int delete(MMap param) throws Exception;
     MMap getValueById(MMap param) throws Exception;
+    MMap loadUserByUserName(MMap param) throws Exception;
     int update(MMap param) throws Exception;
     int count();
 }

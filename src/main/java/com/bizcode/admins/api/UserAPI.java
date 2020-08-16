@@ -14,10 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/api/user")
@@ -156,6 +153,34 @@ public class UserAPI {
             log.error("get Exception ", e);
             throw e;
         }
+    }
+
+    @GetMapping(value = "/load_user")
+    public ResponseEntity<ResponseData<MMap, MMap>> getUserByUserName(@RequestParam("user_name") String name) throws Exception {
+        ResponseData<MMap, MMap> out = new ResponseData<>();
+        try {
+            if (name == null || name == "") {
+                throw new Exception("user name is null");
+            }
+
+            MMap input = new MMap();
+            MMap outPut = new MMap();
+            MMap header = new MMap();
+            header.setBoolean("result", true);
+            header.setString("mgs", "test");
+
+            input.setString("user_name", name);
+
+            outPut = userService.loadUserByUserName(input);
+
+            out.setBody(outPut);
+            out.setHeader(header);
+
+        } catch (Exception e) {
+            log.error("load user by user name get exception error:", e);
+            throw e;
+        }
+        return new ResponseEntity<>(out, HttpStatus.OK);
     }
 
 }

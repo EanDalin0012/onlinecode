@@ -4,25 +4,15 @@
 
 	<select id="getList" resultType="MMap">
 	   <![CDATA[
-			SELECT
-				  u.id				as "id"
-				, u.first_name	as "firstName"
-				, u.last_name		as "lastName"
-				, u.date_of_birth	as "dateBirth"
-				, u.email			as "email"
-				, u.password		as "password"
-				, u.contact		as "contact"
-				, u.gender		as "gender"
-				, u.create_by		as "createBy"
-				, u.create_date	as "createDate"
-				, u.modify_by		as "modifyBy"
-				, u.modify_date	as "modifyDate"
-				, u.status		as "status"
-				, u.description	as "description"
-				, u.address_id	as "addressID"
-				, u.resource_id   as "resourceID"
-			FROM "user" u
-		 	WHERE u.status != #{status}
+			 	select
+				u.id
+				, u.account_expired
+				, u.account_locked
+				, u.credentials_expired
+				, u.enabled
+				, u.user_name
+				, u.resource_img_id
+			from user_ u
 	     ]]>
 	</select>
 
@@ -85,11 +75,27 @@
 	     ]]>
 	</select>
 
+	<select id="loadUserByUserName" resultType="MMap">
+	   <![CDATA[
+		  	select
+				u.id
+				, u.account_expired
+				, u.account_locked
+				, u.credentials_expired
+				, u.enabled
+				, u.user_name
+				, u.resource_img_id
+			from user_ u
+			where u.user_name = #{user_name}
+	     ]]>
+	</select>
+
+
 	<select id="count" resultType="java.lang.Integer">
 	   <![CDATA[
 		  SELECT
 	     	COUNT (*)
-	     FROM "user"
+	     FROM "user_"
 	     ]]>
 	</select>
 

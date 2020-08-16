@@ -10,6 +10,7 @@ public interface UserDao {
     int save(MMap param);
     int delete(MMap param);
     MMap getValueById(MMap param);
+    MMap loadUserByUserName(MMap param);
     int update(MMap param);
     int count();
 }

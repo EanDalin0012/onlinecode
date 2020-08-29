@@ -40,14 +40,11 @@ public class DefaultAuthenticationProvider implements AuthenticationProvider {
             input.setString("username", authentication.getName());
             MMap userInfo = userService.getUserByName(input);
 
-            List<GrantedAuthority> grantedAuthorities = new ArrayList<GrantedAuthority>();
-            MultiMap authorities = userInfo.getMultiMap("authorities");
-            for (MMap authority: authorities.toListData()) {
-                grantedAuthorities.add(new SimpleGrantedAuthority(authority.getString("name")));
+            if (userInfo == null) {
+                throw new UsernameNotFoundException("User Not found");
             }
 
             BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-
             String _password = userInfo.getString("password");
             String password  = (String) authentication.getCredentials();
             boolean isPasswordMatch = passwordEncoder.matches(password, _password);
@@ -56,8 +53,10 @@ public class DefaultAuthenticationProvider implements AuthenticationProvider {
                 throw new UsernameNotFoundException("Password invalid");
             }
 
-            if (!userInfo.getString("username").equalsIgnoreCase(authentication.getName()) || userInfo == null) {
-                throw new UsernameNotFoundException("User not found");
+            List<GrantedAuthority> grantedAuthorities = new ArrayList<GrantedAuthority>();
+            MultiMap authorities = userInfo.getMultiMap("authorities");
+            for (MMap authority: authorities.toListData()) {
+                grantedAuthorities.add(new SimpleGrantedAuthority(authority.getString("name")));
             }
 
             return new UsernamePasswordAuthenticationToken(
@@ -65,7 +64,10 @@ public class DefaultAuthenticationProvider implements AuthenticationProvider {
                     userInfo.getString("password"),
                     grantedAuthorities);
 
-        } catch (Exception e) {
+        } catch (UsernameNotFoundException ex) {
+            throw ex;
+        }
+        catch (Exception e) {
             log.error("\n ==>> ***get error class DefaultAuthenticationProvider ***<<==\n", e);
         }
         return null;

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bizcode.admins.dao.UserLockDao">
+
+	<select id="getUserLockByUserName" resultType="MMap">
+	   <![CDATA[
+			SELECT
+			id			as "id"
+			, user_name	as "userName"
+			, count		as "count"
+			, datetime	as "dateTime"
+			, status	as "status"
+			, message	as "message"
+			FROM user_lock_count
+			Where user_name = #{userName};
+
+	     ]]>
+	</select>
+
+	<insert id="saveUserLock">
+    	<![CDATA[
+			INSERT INTO user_lock_count
+				(
+				 user_name
+				, count
+				, datetime
+				, status
+				, message
+				)
+			VALUES(
+				#{userName}
+				, #{count}
+				, to_char(NOW(), 'DD-Mon-YYYY HH12:MI:SS AM')
+				, #{status}
+				, #{message}
+				);
+    	]]>
+    </insert>
+
+	<update id="updateUserLock">
+		<![CDATA[
+				UPDATE user_lock_count
+					SET
+					  user_name	=	#{userName}
+					, count		=	#{count}
+					, datetime	=	#{dateTime}
+					, status	=	#{status}
+					, message	=	#{message}
+				WHERE id		= #{id}
+		]]>
+	</update>
+
+</mapper>

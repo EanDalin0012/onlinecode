@@ -1,5 +1,6 @@
 package com.bizcode.admins.api;
 
+import com.bizcode.admins.dao.UserLockDao;
 import com.bizcode.admins.services.implement.UserServiceImplement;
 import com.bizcode.constants.Status;
 import com.bizcode.core.map.MMap;
@@ -24,6 +25,8 @@ public class UserAPI {
     private UserServiceImplement userService;
     @Autowired
     private PlatformTransactionManager transactionManager;
+    @Autowired
+    private UserLockDao _userLockService;
 
     // private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
@@ -49,6 +52,7 @@ public class UserAPI {
     public ResponseEntity<ResponseData<MMap, MMap>> getUserList(@RequestBody MMap param) throws Exception {
         ResponseData<MMap, MMap> responseData = new ResponseData<>();
         try {
+
             MMap header = param.getMMap("header");
             MMap input  = new MMap();
             input.setString("status", Status.Delete.getValueStr());
@@ -162,7 +166,6 @@ public class UserAPI {
             if (name == null || name == "") {
                 throw new Exception("user name is null");
             }
-
             MMap input = new MMap();
             MMap outPut = new MMap();
             MMap header = new MMap();

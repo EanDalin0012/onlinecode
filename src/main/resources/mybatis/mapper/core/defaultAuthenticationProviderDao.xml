@@ -37,4 +37,82 @@
 	   ]]>
 	</select>
 
+
+	<select id="getTrackUserLockByUserName" resultType="MMap">
+	   <![CDATA[
+			SELECT
+			id			as "id"
+			, user_name	as "userName"
+			, count		as "count"
+			, date		as "date"
+			, status	as "status"
+			, message	as "message"
+			, islocked	as "islocked"
+			FROM user_lock_count
+			Where user_name = #{userName}
+			AND islocked 	= #{isLocked};
+
+	     ]]>
+	</select>
+
+	<update id="lockedUser">
+		<![CDATA[
+			UPDATE user_
+			SET
+				account_locked 	= #{accountLocked}
+			WHERE user_name 	= #{userName}
+		]]>
+	</update>
+
+
+	<insert id="trackSaveUserLock">
+    	<![CDATA[
+			INSERT INTO user_lock_count
+				(
+				 user_name
+				, count
+				, date
+				, time
+				, status
+				, message
+				)
+			VALUES(
+				#{userName}
+				, #{count}
+				, to_char(NOW(), 'YYYYMMDD')
+				, to_char(NOW(), 'HH12MI')
+				, #{status}
+				, #{message}
+				);
+    	]]>
+    </insert>
+
+	<update id="trackUpdateUserLock">
+		<![CDATA[
+				UPDATE user_lock_count
+					SET
+					 count		=	#{count}
+					, date		=	to_char(NOW(), 'YYYYMMDD')
+					, time 		= 	to_char(NOW(), 'HH12MI')
+					, status	=	#{status}
+					, message	=	#{message}
+					, islocked	=	#{isLocked}
+				WHERE id		= 	#{id}
+				AND	islocked	= 	#{isLocked}
+		]]>
+	</update>
+
+	<update id="trackUpdateUserIsLocked">
+		<![CDATA[
+				UPDATE user_lock_count
+					SET
+					 date		=	to_char(NOW(), 'YYYYMMDD')
+					, time 		= 	to_char(NOW(), 'HH12MI')
+					, status	=	#{status}
+					, islocked	=	#{isLocked}
+				WHERE id		= 	#{id}
+				AND	islocked	= 	#{isUpdateLocked}
+		]]>
+	</update>
+
 </mapper>

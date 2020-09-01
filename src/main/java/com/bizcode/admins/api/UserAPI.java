@@ -2,6 +2,7 @@ package com.bizcode.admins.api;
 
 import com.bizcode.admins.dao.UserLockDao;
 import com.bizcode.admins.services.implement.UserServiceImplement;
+import com.bizcode.admins.utils.DefaultResponse;
 import com.bizcode.constants.Status;
 import com.bizcode.core.map.MMap;
 import com.bizcode.core.map.MultiMap;
@@ -34,7 +35,7 @@ public class UserAPI {
      * <pre>
      *     get list of user
      * </pre>
-     * @param param
+     * @param
      * <pre>
      *     header: { msg: string,
      *              sessionId: string,
@@ -48,20 +49,24 @@ public class UserAPI {
      * </pre>
      * @return
      * */
-    @PostMapping(value = "/get/list")
-    public ResponseEntity<ResponseData<MMap, MMap>> getUserList(@RequestBody MMap param) throws Exception {
+    @GetMapping(value = "/get/list")
+    public ResponseEntity<ResponseData<MMap, MMap>> getUserList() throws Exception {
         ResponseData<MMap, MMap> responseData = new ResponseData<>();
         try {
-
-            MMap header = param.getMMap("header");
+            MMap header = DefaultResponse.defaultHeader();;
             MMap input  = new MMap();
+            MMap output = new MMap();
+            MMap body = new MMap();
+
             input.setString("status", Status.Delete.getValueStr());
             MultiMap userList = userService.getList(input);
+
             int count = userService.count();
-            MMap output = new MMap();
-            output.setMultiMap("list", userList);
-            output.setLong("totalRecord", count);
-            responseData.setBody(output);
+            body.setMultiMap("items", userList);
+            body.setInt("totalRecords", count);
+            output.setMMap("header", header);
+
+            responseData.setBody(body);
             responseData.setHeader(header);
             return new ResponseEntity<>(responseData, HttpStatus.OK);
         }catch (Exception e) {

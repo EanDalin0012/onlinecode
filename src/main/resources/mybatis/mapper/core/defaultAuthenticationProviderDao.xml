@@ -115,4 +115,14 @@
 		]]>
 	</update>
 
+	<update id="updateLoginSuccess">
+		<![CDATA[
+			UPDATE user_
+			SET
+				last_login_date 	= to_char(NOW(), 'YYYYMMDD')
+				, last_login_time 	= to_char(NOW(), 'HH12MISS')
+			WHERE  user_name = #{userName}
+		]]>
+	</update>
+
 </mapper>

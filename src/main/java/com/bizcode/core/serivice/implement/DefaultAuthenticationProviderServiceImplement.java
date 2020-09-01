@@ -1,9 +1,7 @@
 package com.bizcode.core.serivice.implement;
 
-import com.bizcode.admins.api.UserAPI;
 import com.bizcode.core.dao.DefaultAuthenticationProviderDao;
 import com.bizcode.core.map.MMap;
-import com.bizcode.core.map.MultiMap;
 import com.bizcode.core.serivice.DefaultAuthenticationProviderService;
 import com.bizcode.utils.ValidatorUtil;
 import org.slf4j.Logger;
@@ -105,5 +103,18 @@ public class DefaultAuthenticationProviderServiceImplement implements UserDetail
                 log.error("get error exception service trackUpdateUserIsLocked:",e);
                 throw e;
             }
+    }
+
+    public int updateLoginSuccess(MMap param) throws Exception {
+        int _return = 0;
+        try {
+            ValidatorUtil.validate(param, "userName");
+            _return = defaultAuthenticationProviderDao.updateLoginSuccess(param);
+        }catch (Exception e) {
+            log.error("get error exception service updateLoginSuccess",e);
+            throw e;
+        }
+
+        return _return;
     }
 }

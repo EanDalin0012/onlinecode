@@ -12,6 +12,10 @@
 				, u.enabled
 				, u.user_name
 				, u.resource_img_id
+				, u.create_date			as "createDate"
+				, u.create_by			as "createBy"
+				, u.modify_date			as "modifyDate"
+				, u.modify_by			as "modifyBy"
 			from user_ u
 	     ]]>
 	</select>

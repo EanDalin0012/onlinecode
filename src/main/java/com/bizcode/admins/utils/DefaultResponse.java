@@ -5,21 +5,21 @@ import com.bizcode.core.map.MMap;
 public class DefaultResponse {
     public static MMap defaultHeader(Boolean error, String msg) {
         MMap _header = new MMap();
-        _header.setString("msg", msg);
+        _header.setString("message", msg);
         _header.setBoolean("result", error);
         return  _header;
     }
 
     public static MMap defaultHeader(String msg) {
         MMap _header = new MMap();
-        _header.setString("msg", msg);
+        _header.setString("message", msg);
         _header.setBoolean("result", true);
         return  _header;
     }
 
     public static MMap defaultHeader() {
         MMap _header = new MMap();
-        _header.setString("msg", "msg default");
+        _header.setString("message", "msg default");
         _header.setBoolean("result", true);
         return  _header;
     }

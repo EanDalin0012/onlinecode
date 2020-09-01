@@ -21,12 +21,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DefaultAuthenticationProvider implements AuthenticationProvider {
-
     private static final Logger log = LoggerFactory.getLogger(UserAPI.class);
-
     @Autowired
     private DefaultAuthenticationProviderServiceImplement userService;
-
 
     public DefaultAuthenticationProvider(DefaultAuthenticationProviderServiceImplement userService) {
         this.userService = userService;
@@ -66,6 +63,10 @@ public class DefaultAuthenticationProvider implements AuthenticationProvider {
             for (MMap authority: authorities.toListData()) {
                 grantedAuthorities.add(new SimpleGrantedAuthority(authority.getString("name")));
             }
+
+            MMap param = new MMap();
+            param.setString("userName", authentication.getName());
+            userService.updateLoginSuccess(param);
 
             return new UsernamePasswordAuthenticationToken(
                     userInfo.getString("username"),

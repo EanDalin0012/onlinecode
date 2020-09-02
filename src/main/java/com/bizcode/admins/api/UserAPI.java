@@ -1,6 +1,6 @@
 package com.bizcode.admins.api;
 
-import com.bizcode.admins.dao.UserLockDao;
+import com.bizcode.admins.dao.UserAccountDao;
 import com.bizcode.admins.services.implement.UserServiceImplement;
 import com.bizcode.admins.utils.DefaultResponse;
 import com.bizcode.constants.Status;
@@ -27,7 +27,7 @@ public class UserAPI {
     @Autowired
     private PlatformTransactionManager transactionManager;
     @Autowired
-    private UserLockDao _userLockService;
+    private UserAccountDao _userLockService;
 
     // private final BCryptPasswordEncoder bCryptPasswordEncoder;
 

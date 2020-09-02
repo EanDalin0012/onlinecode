@@ -43,7 +43,7 @@
 			SELECT
 			id			as "id"
 			, user_name	as "userName"
-			, count		as "count"
+			, count		as "co unt"
 			, date		as "date"
 			, status	as "status"
 			, message	as "message"

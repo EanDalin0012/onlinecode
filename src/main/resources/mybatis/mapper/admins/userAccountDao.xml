@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bizcode.admins.dao.UserAccountDao">
+
+	<update id="updateUserAccount">
+		<![CDATA[
+			UPDATE user_
+			SET
+				account_expired 		= 	#{accountExpired}
+				, account_locked		=	#{accountLocked}
+				, credentials_expired	=	#{credentialsExpired}
+				, enabled				=	#{enabled}
+				, status				=	#{status}
+				, modify_date			=	to_char(NOW(), 'YYYYMMDD')
+				, modify_by				=	#{userID}
+			WHERE id					=	#{id};
+
+		]]>
+	</update>
+
+</mapper>

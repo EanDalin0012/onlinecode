@@ -30,14 +30,14 @@ public class UserAccountAPI {
             MMap resp   = new MMap();
             MMap input  = new MMap();
 
-            input.setInt("userID", header.getInt("userID"));
-            input.setBoolean("enable", body.getBoolean("enable"));
-            input.setBoolean("accountLock", body.getBoolean("accountLock"));
-            input.setBoolean("accountExpired", body.getBoolean("accountExpired"));
-            input.setBoolean("credentialsExpired", body.getBoolean("credentialsExpired"));
-            input.setString("status", Status.Modify.getValueStr());
-            input.setString("userName", body.getString("userName"));
-            input.setInt("id", body.getInt("id"));
+            input.setInt("userID",                  header.getInt("userID")                 );
+            input.setBoolean("enabled",              body.getBoolean("enabled")               );
+            input.setBoolean("accountLocked",         body.getBoolean("accountLocked")          );
+            input.setBoolean("accountExpired",      body.getBoolean("accountExpired")       );
+            input.setBoolean("credentialsExpired",  body.getBoolean("credentialsExpired")   );
+            input.setString("status",               Status.Modify.getValueStr()                  );
+            input.setString("userName",             body.getString("userName")              );
+            input.setInt("id",                      body.getInt("id")                       );
             String isSuccess = "N";
 
             int update = userAccountService.updateUserAccount(input);

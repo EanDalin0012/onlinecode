@@ -13,7 +13,7 @@ public class UserAccountServiceImplement implements UserAccountService {
     private UserAccountDao userAccountDao;
     @Override
     public int updateUserAccount(MMap param) throws Exception {
-        ValidatorUtil.validate(param, "id", "userName", "enable", "accountLock", "credentialsExpired", "accountExpired");
+        ValidatorUtil.validate(param, "id", "userName", "enabled", "accountLocked", "credentialsExpired", "accountExpired");
         return userAccountDao.updateUserAccount(param);
     }
 

@@ -45,6 +45,20 @@ public class DefaultAuthenticationProvider implements AuthenticationProvider {
                 throw new UsernameNotFoundException("Your user account locked");
             }
 
+            if (userInfo.getBoolean("enabled")) {
+                throw new UsernameNotFoundException("Your user account enabled");
+            }
+
+            if (userInfo.getBoolean("account_expired")) {
+                throw new UsernameNotFoundException("Your user account account expired");
+            }
+
+            if (userInfo.getBoolean("credentials_expired")) {
+                throw new UsernameNotFoundException("Your user account credentials expired");
+            }
+
+
+
             BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
             String _password = userInfo.getString("password");
             String password  = (String) authentication.getCredentials();

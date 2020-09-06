@@ -5,24 +5,24 @@
 2020-08-11 00:03:47 [http-nio-8080-exec-4] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: admin(String)
 2020-08-11 00:03:47 [http-nio-8080-exec-4] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 9
 2020-08-11 00:03:47 [http-nio-8080-exec-4] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@207566ad]
-2020-08-11 23:34:48 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 11960 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
-2020-08-11 23:34:48 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
-2020-08-11 23:34:48 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-08-11 23:34:48 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 11960 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-08-11 23:34:48 [restartedMain] [DEBUG] com.onlinecode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
+2020-08-11 23:34:48 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - No active profile set, falling back to default profiles: default
 2020-08-11 23:34:48 [restartedMain] [INFO] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Eanda\.gradle\caches\modules-2\files-2.1\javax.xml\jaxb-impl\2.1\8c86d5d4eac7f89cec63432274d712ba82cd201b\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb-api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/activation.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jsr173_1.0_api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb1-impl.jar
 2020-08-11 23:34:48 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2020-08-11 23:34:48 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2020-08-11 23:34:49 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
-2020-08-11 23:34:49 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-08-11 23:34:49 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.onlinecode'
 2020-08-11 23:34:49 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
 2020-08-11 23:34:49 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 JDBC repository interfaces.
 2020-08-11 23:34:49 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\CompanyDao.class]
 2020-08-11 23:34:49 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\UserDao.class]
 2020-08-11 23:34:49 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\core\dao\DefaultAuthenticationProviderDao.class]
-2020-08-11 23:34:49 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.bizcode.admins.dao.CompanyDao' mapperInterface
+2020-08-11 23:34:49 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.onlinecode.admins.dao.CompanyDao' mapperInterface
 2020-08-11 23:34:49 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'companyDao'.
-2020-08-11 23:34:49 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.bizcode.admins.dao.UserDao' mapperInterface
+2020-08-11 23:34:49 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.onlinecode.admins.dao.UserDao' mapperInterface
 2020-08-11 23:34:49 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userDao'.
-2020-08-11 23:34:49 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.bizcode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
+2020-08-11 23:34:49 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.onlinecode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
 2020-08-11 23:34:49 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'defaultAuthenticationProviderDao'.
 2020-08-11 23:34:49 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$c9dce71a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-08-11 23:34:49 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
@@ -55,7 +55,7 @@
 2020-08-11 23:34:51 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2020-08-11 23:34:51 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
 2020-08-11 23:34:51 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2020-08-11 23:34:52 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Started BizcodeApplication in 4.197 seconds (JVM running for 5.266)
+2020-08-11 23:34:52 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Started BizcodeApplication in 4.197 seconds (JVM running for 5.266)
 2020-08-11 23:42:09 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-08-11 23:42:09 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-08-11 23:42:09 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
@@ -74,11 +74,11 @@
 2020-08-11 23:43:03 [http-nio-8080-exec-3] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: miracle(String)
 2020-08-11 23:43:03 [http-nio-8080-exec-3] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 0
 2020-08-11 23:43:03 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1d61ba02]
-2020-08-11 23:43:03 [http-nio-8080-exec-3] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-11 23:43:03 [http-nio-8080-exec-3] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:40)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:40)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -156,7 +156,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:36)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:36)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -253,7 +253,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:36)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:36)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -368,7 +368,7 @@ Content-Disposition: form-data; name" is not allowed.
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:36)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:36)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -495,24 +495,24 @@ Content-Disposition: form-data; name" is not allowed.]
 2020-08-11 23:49:20 [http-nio-8080-exec-9] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: reader(String)
 2020-08-11 23:49:20 [http-nio-8080-exec-9] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 2
 2020-08-11 23:49:20 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2373f12]
-2020-08-11 23:49:32 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 9712 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
-2020-08-11 23:49:32 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
-2020-08-11 23:49:32 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-08-11 23:49:32 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 9712 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-08-11 23:49:32 [restartedMain] [DEBUG] com.onlinecode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
+2020-08-11 23:49:32 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - No active profile set, falling back to default profiles: default
 2020-08-11 23:49:32 [restartedMain] [INFO] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Eanda\.gradle\caches\modules-2\files-2.1\javax.xml\jaxb-impl\2.1\8c86d5d4eac7f89cec63432274d712ba82cd201b\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb-api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/activation.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jsr173_1.0_api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb1-impl.jar
 2020-08-11 23:49:32 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2020-08-11 23:49:32 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2020-08-11 23:49:33 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
-2020-08-11 23:49:33 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-08-11 23:49:33 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.onlinecode'
 2020-08-11 23:49:33 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
 2020-08-11 23:49:33 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 JDBC repository interfaces.
 2020-08-11 23:49:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\CompanyDao.class]
 2020-08-11 23:49:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\UserDao.class]
 2020-08-11 23:49:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\core\dao\DefaultAuthenticationProviderDao.class]
-2020-08-11 23:49:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.bizcode.admins.dao.CompanyDao' mapperInterface
+2020-08-11 23:49:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.onlinecode.admins.dao.CompanyDao' mapperInterface
 2020-08-11 23:49:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'companyDao'.
-2020-08-11 23:49:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.bizcode.admins.dao.UserDao' mapperInterface
+2020-08-11 23:49:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.onlinecode.admins.dao.UserDao' mapperInterface
 2020-08-11 23:49:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userDao'.
-2020-08-11 23:49:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.bizcode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
+2020-08-11 23:49:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.onlinecode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
 2020-08-11 23:49:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'defaultAuthenticationProviderDao'.
 2020-08-11 23:49:33 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ffbd98e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-08-11 23:49:33 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
@@ -545,7 +545,7 @@ Content-Disposition: form-data; name" is not allowed.]
 2020-08-11 23:49:35 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2020-08-11 23:49:35 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
 2020-08-11 23:49:35 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2020-08-11 23:49:35 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Started BizcodeApplication in 3.494 seconds (JVM running for 4.578)
+2020-08-11 23:49:35 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Started BizcodeApplication in 3.494 seconds (JVM running for 4.578)
 2020-08-11 23:49:43 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-08-11 23:49:43 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-08-11 23:49:43 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
@@ -593,24 +593,24 @@ Content-Disposition: form-data; name" is not allowed.]
 2020-08-11 23:50:00 [http-nio-8080-exec-9] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: reader(String)
 2020-08-11 23:50:00 [http-nio-8080-exec-9] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 2
 2020-08-11 23:50:00 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@205bed83]
-2020-08-11 23:50:32 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 13012 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
-2020-08-11 23:50:32 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
-2020-08-11 23:50:32 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-08-11 23:50:32 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 13012 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-08-11 23:50:32 [restartedMain] [DEBUG] com.onlinecode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
+2020-08-11 23:50:32 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - No active profile set, falling back to default profiles: default
 2020-08-11 23:50:32 [restartedMain] [INFO] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Eanda\.gradle\caches\modules-2\files-2.1\javax.xml\jaxb-impl\2.1\8c86d5d4eac7f89cec63432274d712ba82cd201b\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb-api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/activation.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jsr173_1.0_api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb1-impl.jar
 2020-08-11 23:50:32 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2020-08-11 23:50:32 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2020-08-11 23:50:33 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
-2020-08-11 23:50:33 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-08-11 23:50:33 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.onlinecode'
 2020-08-11 23:50:33 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
 2020-08-11 23:50:33 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 JDBC repository interfaces.
 2020-08-11 23:50:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\CompanyDao.class]
 2020-08-11 23:50:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\UserDao.class]
 2020-08-11 23:50:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\core\dao\DefaultAuthenticationProviderDao.class]
-2020-08-11 23:50:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.bizcode.admins.dao.CompanyDao' mapperInterface
+2020-08-11 23:50:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.onlinecode.admins.dao.CompanyDao' mapperInterface
 2020-08-11 23:50:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'companyDao'.
-2020-08-11 23:50:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.bizcode.admins.dao.UserDao' mapperInterface
+2020-08-11 23:50:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.onlinecode.admins.dao.UserDao' mapperInterface
 2020-08-11 23:50:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userDao'.
-2020-08-11 23:50:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.bizcode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
+2020-08-11 23:50:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.onlinecode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
 2020-08-11 23:50:33 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'defaultAuthenticationProviderDao'.
 2020-08-11 23:50:33 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$b8785fb4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-08-11 23:50:33 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
@@ -643,7 +643,7 @@ Content-Disposition: form-data; name" is not allowed.]
 2020-08-11 23:50:35 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2020-08-11 23:50:35 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
 2020-08-11 23:50:35 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2020-08-11 23:50:35 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Started BizcodeApplication in 2.825 seconds (JVM running for 3.539)
+2020-08-11 23:50:35 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Started BizcodeApplication in 2.825 seconds (JVM running for 3.539)
 2020-08-11 23:50:38 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-08-11 23:50:38 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-08-11 23:50:38 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
@@ -654,24 +654,24 @@ Content-Disposition: form-data; name" is not allowed.]
 2020-08-11 23:50:38 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: reader(String)
 2020-08-11 23:50:38 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 2
 2020-08-11 23:50:38 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48443016]
-2020-08-11 23:52:37 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 5008 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
-2020-08-11 23:52:37 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
-2020-08-11 23:52:37 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-08-11 23:52:37 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 5008 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-08-11 23:52:37 [restartedMain] [DEBUG] com.onlinecode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
+2020-08-11 23:52:37 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - No active profile set, falling back to default profiles: default
 2020-08-11 23:52:37 [restartedMain] [INFO] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Eanda\.gradle\caches\modules-2\files-2.1\javax.xml\jaxb-impl\2.1\8c86d5d4eac7f89cec63432274d712ba82cd201b\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb-api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/activation.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jsr173_1.0_api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb1-impl.jar
 2020-08-11 23:52:37 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2020-08-11 23:52:37 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2020-08-11 23:52:38 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
-2020-08-11 23:52:38 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-08-11 23:52:38 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.onlinecode'
 2020-08-11 23:52:38 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
 2020-08-11 23:52:38 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 JDBC repository interfaces.
 2020-08-11 23:52:38 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\CompanyDao.class]
 2020-08-11 23:52:38 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\UserDao.class]
 2020-08-11 23:52:38 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\core\dao\DefaultAuthenticationProviderDao.class]
-2020-08-11 23:52:38 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.bizcode.admins.dao.CompanyDao' mapperInterface
+2020-08-11 23:52:38 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.onlinecode.admins.dao.CompanyDao' mapperInterface
 2020-08-11 23:52:38 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'companyDao'.
-2020-08-11 23:52:38 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.bizcode.admins.dao.UserDao' mapperInterface
+2020-08-11 23:52:38 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.onlinecode.admins.dao.UserDao' mapperInterface
 2020-08-11 23:52:38 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userDao'.
-2020-08-11 23:52:38 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.bizcode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
+2020-08-11 23:52:38 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.onlinecode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
 2020-08-11 23:52:38 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'defaultAuthenticationProviderDao'.
 2020-08-11 23:52:38 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$d42e6d74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-08-11 23:52:38 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
@@ -704,7 +704,7 @@ Content-Disposition: form-data; name" is not allowed.]
 2020-08-11 23:52:40 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2020-08-11 23:52:40 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
 2020-08-11 23:52:40 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2020-08-11 23:52:40 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Started BizcodeApplication in 2.873 seconds (JVM running for 3.579)
+2020-08-11 23:52:40 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Started BizcodeApplication in 2.873 seconds (JVM running for 3.579)
 2020-08-11 23:52:48 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-08-11 23:52:48 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-08-11 23:52:48 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
@@ -729,11 +729,11 @@ Content-Disposition: form-data; name" is not allowed.]
 2020-08-11 23:52:55 [http-nio-8080-exec-3] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: readerdafdafdf(String)
 2020-08-11 23:52:55 [http-nio-8080-exec-3] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 0
 2020-08-11 23:52:55 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5bb2d087]
-2020-08-11 23:52:55 [http-nio-8080-exec-3] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-11 23:52:55 [http-nio-8080-exec-3] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:40)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:40)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -999,14 +999,14 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 2020-08-11 23:53:30 [http-nio-8080-exec-7] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: reader(String)
 2020-08-11 23:53:30 [http-nio-8080-exec-7] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 2
 2020-08-11 23:53:30 [http-nio-8080-exec-7] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@fe1ff9]
-2020-08-11 23:53:32 [http-nio-8080-exec-8] [INFO] com.bizcode.utils.ValidatorUtil - Error : username is empty !!!
-2020-08-11 23:53:32 [http-nio-8080-exec-8] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-11 23:53:32 [http-nio-8080-exec-8] [INFO] com.onlinecode.utils.ValidatorUtil - Error : username is empty !!!
+2020-08-11 23:53:32 [http-nio-8080-exec-8] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.Exception: Your input information is missing field: username
-	at com.bizcode.utils.ValidatorUtil.validate(ValidatorUtil.java:36)
-	at com.bizcode.core.serivice.implement.DefaultAuthenticationProviderServiceImplement.getUserByName(DefaultAuthenticationProviderServiceImplement.java:24)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:37)
+	at com.onlinecode.utils.ValidatorUtil.validate(ValidatorUtil.java:36)
+	at com.onlinecode.core.serivice.implement.DefaultAuthenticationProviderServiceImplement.getUserByName(DefaultAuthenticationProviderServiceImplement.java:24)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:37)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -1195,24 +1195,24 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-08-11 23:53:32 [http-nio-8080-exec-8] [WARN] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.ProviderNotFoundException: No AuthenticationProvider found for org.springframework.security.authentication.UsernamePasswordAuthenticationToken]
-2020-08-11 23:54:26 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 6500 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
-2020-08-11 23:54:26 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
-2020-08-11 23:54:26 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-08-11 23:54:26 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 6500 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-08-11 23:54:26 [restartedMain] [DEBUG] com.onlinecode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
+2020-08-11 23:54:26 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - No active profile set, falling back to default profiles: default
 2020-08-11 23:54:26 [restartedMain] [INFO] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Eanda\.gradle\caches\modules-2\files-2.1\javax.xml\jaxb-impl\2.1\8c86d5d4eac7f89cec63432274d712ba82cd201b\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb-api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/activation.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jsr173_1.0_api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb1-impl.jar
 2020-08-11 23:54:26 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2020-08-11 23:54:26 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2020-08-11 23:54:26 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
-2020-08-11 23:54:26 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-08-11 23:54:26 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.onlinecode'
 2020-08-11 23:54:26 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
 2020-08-11 23:54:26 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 JDBC repository interfaces.
 2020-08-11 23:54:26 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\CompanyDao.class]
 2020-08-11 23:54:26 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\UserDao.class]
 2020-08-11 23:54:26 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\core\dao\DefaultAuthenticationProviderDao.class]
-2020-08-11 23:54:26 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.bizcode.admins.dao.CompanyDao' mapperInterface
+2020-08-11 23:54:26 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.onlinecode.admins.dao.CompanyDao' mapperInterface
 2020-08-11 23:54:26 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'companyDao'.
-2020-08-11 23:54:26 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.bizcode.admins.dao.UserDao' mapperInterface
+2020-08-11 23:54:26 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.onlinecode.admins.dao.UserDao' mapperInterface
 2020-08-11 23:54:26 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userDao'.
-2020-08-11 23:54:26 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.bizcode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
+2020-08-11 23:54:26 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.onlinecode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
 2020-08-11 23:54:26 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'defaultAuthenticationProviderDao'.
 2020-08-11 23:54:26 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ea67f7e2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-08-11 23:54:26 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
@@ -1245,7 +1245,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 2020-08-11 23:54:28 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2020-08-11 23:54:28 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
 2020-08-11 23:54:28 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2020-08-11 23:54:28 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Started BizcodeApplication in 3.005 seconds (JVM running for 3.712)
+2020-08-11 23:54:28 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Started BizcodeApplication in 3.005 seconds (JVM running for 3.712)
 2020-08-11 23:54:57 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-08-11 23:54:57 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-08-11 23:54:57 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms

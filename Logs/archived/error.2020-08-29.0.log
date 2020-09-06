@@ -1,8 +1,8 @@
-2020-08-29 13:09:12 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 13:09:12 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 org.springframework.security.core.userdetails.UsernameNotFoundException: Password invalid
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:56)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:56)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -80,7 +80,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -177,7 +177,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -196,11 +196,11 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 13:10:23 [http-nio-8080-exec-3] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 13:10:23 [http-nio-8080-exec-3] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 org.springframework.security.core.userdetails.UsernameNotFoundException: Password invalid
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:56)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:56)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -278,7 +278,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -375,7 +375,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -394,11 +394,11 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 13:11:57 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 13:11:57 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 org.springframework.security.core.userdetails.UsernameNotFoundException: Password invalid
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:56)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:56)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -476,7 +476,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -573,7 +573,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -592,11 +592,11 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 13:12:21 [http-nio-8080-exec-3] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 13:12:21 [http-nio-8080-exec-3] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -674,7 +674,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -771,7 +771,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -790,11 +790,11 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 13:13:21 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 13:13:21 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -872,7 +872,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -969,7 +969,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -988,11 +988,11 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 13:13:30 [http-nio-8080-exec-2] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 13:13:30 [http-nio-8080-exec-2] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -1070,7 +1070,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -1167,7 +1167,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -1186,11 +1186,11 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 13:13:36 [http-nio-8080-exec-3] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 13:13:36 [http-nio-8080-exec-3] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -1268,7 +1268,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -1365,7 +1365,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -1384,11 +1384,11 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 13:14:33 [http-nio-8080-exec-4] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 13:14:33 [http-nio-8080-exec-4] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -1466,7 +1466,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -1563,7 +1563,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -1582,11 +1582,11 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 13:15:12 [http-nio-8080-exec-5] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 13:15:12 [http-nio-8080-exec-5] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -1664,7 +1664,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -1761,7 +1761,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -1780,11 +1780,11 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 13:16:27 [http-nio-8080-exec-6] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 13:16:27 [http-nio-8080-exec-6] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 org.springframework.security.core.userdetails.UsernameNotFoundException: Password invalid
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:56)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:56)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -1862,7 +1862,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -1959,7 +1959,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -1980,7 +1980,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-08-29 13:19:25 [http-nio-8080-exec-1] [ERROR] o.s.s.o.p.endpoint.TokenEndpoint - Handling error: UsernameNotFoundException, Password invalid
 org.springframework.security.core.userdetails.UsernameNotFoundException: Password invalid
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:56)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:56)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -2058,7 +2058,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -2077,11 +2077,11 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 13:21:32 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 13:21:32 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -2159,7 +2159,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -2256,7 +2256,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -2275,11 +2275,11 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 13:23:09 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 13:23:09 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -2357,7 +2357,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -2454,7 +2454,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -2475,7 +2475,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-08-29 13:24:04 [http-nio-8080-exec-1] [ERROR] o.s.s.o.p.endpoint.TokenEndpoint - Handling error: UsernameNotFoundException, User Not invalid
 org.springframework.security.core.userdetails.UsernameNotFoundException: User Not invalid
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:45)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:45)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -2553,7 +2553,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: User No
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -2574,7 +2574,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: User No
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-08-29 13:25:16 [http-nio-8080-exec-1] [ERROR] o.s.s.o.p.endpoint.TokenEndpoint - Handling error: UsernameNotFoundException, User Not invalid
 org.springframework.security.core.userdetails.UsernameNotFoundException: User Not invalid
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -2652,7 +2652,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: User No
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -2673,7 +2673,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: User No
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-08-29 13:25:42 [http-nio-8080-exec-1] [ERROR] o.s.s.o.p.endpoint.TokenEndpoint - Handling error: UsernameNotFoundException, User Not found
 org.springframework.security.core.userdetails.UsernameNotFoundException: User Not found
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -2751,7 +2751,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: User No
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -2772,7 +2772,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: User No
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-08-29 13:25:48 [http-nio-8080-exec-3] [ERROR] o.s.s.o.p.endpoint.TokenEndpoint - Handling error: UsernameNotFoundException, User Not found
 org.springframework.security.core.userdetails.UsernameNotFoundException: User Not found
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -2850,7 +2850,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: User No
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -2871,7 +2871,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: User No
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-08-29 13:25:54 [http-nio-8080-exec-2] [ERROR] o.s.s.o.p.endpoint.TokenEndpoint - Handling error: UsernameNotFoundException, Password invalid
 org.springframework.security.core.userdetails.UsernameNotFoundException: Password invalid
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:53)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:53)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -2949,7 +2949,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -2970,7 +2970,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-08-29 13:30:40 [http-nio-8080-exec-4] [ERROR] o.s.s.o.p.endpoint.TokenEndpoint - Handling error: UsernameNotFoundException, Password invalid
 org.springframework.security.core.userdetails.UsernameNotFoundException: Password invalid
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:53)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:53)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -3048,7 +3048,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -3069,7 +3069,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-08-29 14:01:09 [http-nio-8080-exec-9] [ERROR] o.s.s.o.p.endpoint.TokenEndpoint - Handling error: UsernameNotFoundException, Password invalid
 org.springframework.security.core.userdetails.UsernameNotFoundException: Password invalid
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:53)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:53)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -3147,7 +3147,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -3168,7 +3168,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-08-29 14:01:49 [http-nio-8080-exec-4] [ERROR] o.s.s.o.p.endpoint.TokenEndpoint - Handling error: UsernameNotFoundException, Password invalid
 org.springframework.security.core.userdetails.UsernameNotFoundException: Password invalid
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:53)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:53)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -3246,7 +3246,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -3267,7 +3267,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-08-29 14:02:05 [http-nio-8080-exec-6] [ERROR] o.s.s.o.p.endpoint.TokenEndpoint - Handling error: UsernameNotFoundException, Password invalid
 org.springframework.security.core.userdetails.UsernameNotFoundException: Password invalid
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:53)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:53)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -3345,7 +3345,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -3366,7 +3366,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-08-29 14:02:50 [http-nio-8080-exec-8] [ERROR] o.s.s.o.p.endpoint.TokenEndpoint - Handling error: UsernameNotFoundException, Password invalid
 org.springframework.security.core.userdetails.UsernameNotFoundException: Password invalid
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:53)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:53)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -3444,7 +3444,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -3465,7 +3465,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-08-29 14:10:46 [http-nio-8080-exec-3] [ERROR] o.s.s.o.p.endpoint.TokenEndpoint - Handling error: UsernameNotFoundException, User Not found
 org.springframework.security.core.userdetails.UsernameNotFoundException: User Not found
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -3543,7 +3543,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: User No
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -3562,10 +3562,10 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: User No
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 15:52:37 [http-nio-8080-exec-2] [ERROR] com.bizcode.admins.api.UserAPI - get error user service lock user
+2020-08-29 15:52:37 [http-nio-8080-exec-2] [ERROR] com.onlinecode.admins.api.UserAPI - get error user service lock user
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -3643,7 +3643,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -3662,12 +3662,12 @@ java.lang.NullPointerException: null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 15:52:37 [http-nio-8080-exec-2] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 15:52:37 [http-nio-8080-exec-2] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -3745,7 +3745,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -3842,7 +3842,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -3861,10 +3861,10 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 15:52:56 [http-nio-8080-exec-3] [ERROR] com.bizcode.admins.api.UserAPI - get error user service lock user
+2020-08-29 15:52:56 [http-nio-8080-exec-3] [ERROR] com.onlinecode.admins.api.UserAPI - get error user service lock user
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -3942,7 +3942,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -3961,12 +3961,12 @@ java.lang.NullPointerException: null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 15:52:56 [http-nio-8080-exec-3] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 15:52:56 [http-nio-8080-exec-3] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -4044,7 +4044,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -4141,7 +4141,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -4160,10 +4160,10 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 15:56:19 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - get error user service lock user
+2020-08-29 15:56:19 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI - get error user service lock user
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -4241,7 +4241,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -4260,12 +4260,12 @@ java.lang.NullPointerException: null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 15:56:19 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 15:56:19 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -4343,7 +4343,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -4440,7 +4440,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -4459,10 +4459,10 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 15:57:00 [http-nio-8080-exec-2] [ERROR] com.bizcode.admins.api.UserAPI - get error user service lock user
+2020-08-29 15:57:00 [http-nio-8080-exec-2] [ERROR] com.onlinecode.admins.api.UserAPI - get error user service lock user
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -4540,7 +4540,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -4559,12 +4559,12 @@ java.lang.NullPointerException: null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 15:57:00 [http-nio-8080-exec-2] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 15:57:00 [http-nio-8080-exec-2] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -4642,7 +4642,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -4739,7 +4739,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -4758,10 +4758,10 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 15:58:04 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - get error user service lock user
+2020-08-29 15:58:04 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI - get error user service lock user
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -4839,7 +4839,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -4858,12 +4858,12 @@ java.lang.NullPointerException: null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 15:58:04 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 15:58:04 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -4941,7 +4941,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -5038,7 +5038,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -5057,10 +5057,10 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 15:59:32 [http-nio-8080-exec-2] [ERROR] com.bizcode.admins.api.UserAPI - get error user service lock user
+2020-08-29 15:59:32 [http-nio-8080-exec-2] [ERROR] com.onlinecode.admins.api.UserAPI - get error user service lock user
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -5138,7 +5138,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -5157,12 +5157,12 @@ java.lang.NullPointerException: null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 15:59:32 [http-nio-8080-exec-2] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 15:59:32 [http-nio-8080-exec-2] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -5240,7 +5240,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -5337,7 +5337,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -5356,10 +5356,10 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 15:59:41 [http-nio-8080-exec-3] [ERROR] com.bizcode.admins.api.UserAPI - get error user service lock user
+2020-08-29 15:59:41 [http-nio-8080-exec-3] [ERROR] com.onlinecode.admins.api.UserAPI - get error user service lock user
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -5437,7 +5437,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -5456,12 +5456,12 @@ java.lang.NullPointerException: null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 15:59:41 [http-nio-8080-exec-3] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 15:59:41 [http-nio-8080-exec-3] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -5539,7 +5539,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -5636,7 +5636,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -5655,10 +5655,10 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:01:40 [http-nio-8080-exec-5] [ERROR] com.bizcode.admins.api.UserAPI - get error user service lock user
+2020-08-29 16:01:40 [http-nio-8080-exec-5] [ERROR] com.onlinecode.admins.api.UserAPI - get error user service lock user
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -5736,7 +5736,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -5755,12 +5755,12 @@ java.lang.NullPointerException: null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:01:40 [http-nio-8080-exec-5] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 16:01:40 [http-nio-8080-exec-5] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -5838,7 +5838,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -5935,7 +5935,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -5954,10 +5954,10 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:03:09 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - get error user service lock user
+2020-08-29 16:03:09 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI - get error user service lock user
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -6035,7 +6035,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -6054,12 +6054,12 @@ java.lang.NullPointerException: null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:03:09 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 16:03:09 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:65)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -6137,7 +6137,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -6234,7 +6234,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -6253,10 +6253,10 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:10:49 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - get error user service lock user
+2020-08-29 16:10:49 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI - get error user service lock user
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -6334,7 +6334,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -6353,12 +6353,12 @@ java.lang.NullPointerException: null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:10:49 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 16:10:49 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -6436,7 +6436,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -6533,7 +6533,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -6552,10 +6552,10 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:11:20 [http-nio-8080-exec-2] [ERROR] com.bizcode.admins.api.UserAPI - get error user service lock user
+2020-08-29 16:11:20 [http-nio-8080-exec-2] [ERROR] com.onlinecode.admins.api.UserAPI - get error user service lock user
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -6633,7 +6633,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -6652,12 +6652,12 @@ java.lang.NullPointerException: null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:11:20 [http-nio-8080-exec-2] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 16:11:20 [http-nio-8080-exec-2] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -6735,7 +6735,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -6832,7 +6832,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -6851,10 +6851,10 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:11:52 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - get error user service lock user
+2020-08-29 16:11:52 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI - get error user service lock user
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -6932,7 +6932,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -6951,12 +6951,12 @@ java.lang.NullPointerException: null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:11:52 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 16:11:52 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -7034,7 +7034,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -7131,7 +7131,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -7150,11 +7150,11 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:15:57 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 16:15:57 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:67)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:67)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -7232,7 +7232,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -7329,7 +7329,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -7348,11 +7348,11 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:16:54 [http-nio-8080-exec-2] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 16:16:54 [http-nio-8080-exec-2] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:67)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:67)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -7430,7 +7430,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -7527,7 +7527,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -7546,10 +7546,10 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:21:56 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - get error user service lock user
+2020-08-29 16:21:56 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI - get error user service lock user
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -7627,7 +7627,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -7646,12 +7646,12 @@ java.lang.NullPointerException: null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:21:56 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 16:21:56 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -7729,7 +7729,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -7826,7 +7826,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -7845,10 +7845,10 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:24:18 [http-nio-8080-exec-3] [ERROR] com.bizcode.admins.api.UserAPI - get error user service lock user
+2020-08-29 16:24:18 [http-nio-8080-exec-3] [ERROR] com.onlinecode.admins.api.UserAPI - get error user service lock user
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -7926,7 +7926,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -7945,12 +7945,12 @@ java.lang.NullPointerException: null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:24:18 [http-nio-8080-exec-3] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 16:24:18 [http-nio-8080-exec-3] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -8028,7 +8028,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -8125,7 +8125,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -8144,10 +8144,10 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:24:27 [http-nio-8080-exec-4] [ERROR] com.bizcode.admins.api.UserAPI - get error user service lock user
+2020-08-29 16:24:27 [http-nio-8080-exec-4] [ERROR] com.onlinecode.admins.api.UserAPI - get error user service lock user
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -8225,7 +8225,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -8244,12 +8244,12 @@ java.lang.NullPointerException: null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:24:27 [http-nio-8080-exec-4] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 16:24:27 [http-nio-8080-exec-4] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -8327,7 +8327,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -8424,7 +8424,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -8443,10 +8443,10 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:33:40 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - get error user service lock user
+2020-08-29 16:33:40 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI - get error user service lock user
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -8524,7 +8524,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -8543,12 +8543,12 @@ java.lang.NullPointerException: null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:33:40 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 16:33:40 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:98)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -8626,7 +8626,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -8723,7 +8723,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -8742,10 +8742,10 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:38:07 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - get error user service lock user
+2020-08-29 16:38:07 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI - get error user service lock user
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -8823,7 +8823,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -8842,12 +8842,12 @@ java.lang.NullPointerException: null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:38:07 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 16:38:07 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -8925,7 +8925,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -9022,7 +9022,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -9041,10 +9041,10 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:44:47 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - get error user service lock user
+2020-08-29 16:44:47 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI - get error user service lock user
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -9122,7 +9122,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -9141,12 +9141,12 @@ java.lang.NullPointerException: null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-29 16:44:47 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-29 16:44:47 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.trackLockUser(DefaultAuthenticationProvider.java:99)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:64)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -9224,7 +9224,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -9321,7 +9321,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -9342,7 +9342,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-08-29 23:58:35 [http-nio-8080-exec-5] [ERROR] o.s.s.o.p.endpoint.TokenEndpoint - Handling error: UsernameNotFoundException, User Not found
 org.springframework.security.core.userdetails.UsernameNotFoundException: User Not found
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:47)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:47)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -9420,7 +9420,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: User No
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)

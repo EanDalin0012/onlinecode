@@ -1,8 +1,8 @@
-2020-08-17 00:00:01 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - 
+2020-08-17 00:00:01 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.UserAPI -
  ==>> ***get error class DefaultAuthenticationProvider ***<<==
 
 java.lang.NullPointerException: null
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -79,7 +79,7 @@ java.lang.NullPointerException: null
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -175,7 +175,7 @@ org.springframework.security.authentication.ProviderNotFoundException: No Authen
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -216,7 +216,7 @@ org.springframework.security.web.firewall.RequestRejectedException: The request 
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -235,8 +235,8 @@ org.springframework.security.web.firewall.RequestRejectedException: The request 
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-17 22:15:04 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.CompanyAPI - api category retrieve category list get error exception:
-org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.bizcode.admins.dao.CategoryDao.retrieveList
+2020-08-17 22:15:04 [http-nio-8080-exec-1] [ERROR] com.onlinecode.admins.api.CompanyAPI - api category retrieve category list get error exception:
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.onlinecode.admins.dao.CategoryDao.retrieveList
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
 	at org.apache.ibatis.binding.MapperProxy.lambda$cachedMapperMethod$0(MapperProxy.java:98)
@@ -244,8 +244,8 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:97)
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:92)
 	at com.sun.proxy.$Proxy68.retrieveList(Unknown Source)
-	at com.bizcode.admins.services.implement.MainCategoryServiceImplement.retrieveList(MainCategoryServiceImplement.java:18)
-	at com.bizcode.admins.services.implement.MainCategoryServiceImplement$$FastClassBySpringCGLIB$$30ede5d1.invoke(<generated>)
+	at com.onlinecode.admins.services.implement.MainCategoryServiceImplement.retrieveList(MainCategoryServiceImplement.java:18)
+	at com.onlinecode.admins.services.implement.MainCategoryServiceImplement$$FastClassBySpringCGLIB$$30ede5d1.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
@@ -254,8 +254,8 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
-	at com.bizcode.admins.services.implement.MainCategoryServiceImplement$$EnhancerBySpringCGLIB$$c04f7f3c.retrieveList(<generated>)
-	at com.bizcode.admins.api.MainCategoryApi.retrieveCategoryList(MainCategoryApi.java:29)
+	at com.onlinecode.admins.services.implement.MainCategoryServiceImplement$$EnhancerBySpringCGLIB$$c04f7f3c.retrieveList(<generated>)
+	at com.onlinecode.admins.api.MainCategoryApi.retrieveCategoryList(MainCategoryApi.java:29)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -323,7 +323,7 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -342,8 +342,8 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-08-17 22:15:04 [http-nio-8080-exec-1] [ERROR] o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.bizcode.admins.dao.CategoryDao.retrieveList] with root cause
-org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.bizcode.admins.dao.CategoryDao.retrieveList
+2020-08-17 22:15:04 [http-nio-8080-exec-1] [ERROR] o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.onlinecode.admins.dao.CategoryDao.retrieveList] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.onlinecode.admins.dao.CategoryDao.retrieveList
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
 	at org.apache.ibatis.binding.MapperProxy.lambda$cachedMapperMethod$0(MapperProxy.java:98)
@@ -351,8 +351,8 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:97)
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:92)
 	at com.sun.proxy.$Proxy68.retrieveList(Unknown Source)
-	at com.bizcode.admins.services.implement.MainCategoryServiceImplement.retrieveList(MainCategoryServiceImplement.java:18)
-	at com.bizcode.admins.services.implement.MainCategoryServiceImplement$$FastClassBySpringCGLIB$$30ede5d1.invoke(<generated>)
+	at com.onlinecode.admins.services.implement.MainCategoryServiceImplement.retrieveList(MainCategoryServiceImplement.java:18)
+	at com.onlinecode.admins.services.implement.MainCategoryServiceImplement$$FastClassBySpringCGLIB$$30ede5d1.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
@@ -361,8 +361,8 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
-	at com.bizcode.admins.services.implement.MainCategoryServiceImplement$$EnhancerBySpringCGLIB$$c04f7f3c.retrieveList(<generated>)
-	at com.bizcode.admins.api.MainCategoryApi.retrieveCategoryList(MainCategoryApi.java:29)
+	at com.onlinecode.admins.services.implement.MainCategoryServiceImplement$$EnhancerBySpringCGLIB$$c04f7f3c.retrieveList(<generated>)
+	at com.onlinecode.admins.api.MainCategoryApi.retrieveCategoryList(MainCategoryApi.java:29)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -430,7 +430,7 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)

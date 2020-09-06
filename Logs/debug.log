@@ -1,14 +1,14 @@
 2020-09-06 00:02:43 [SpringContextShutdownHook] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2020-09-06 00:02:43 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2020-09-06 00:02:43 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2020-09-06 00:02:55 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 4360 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
-2020-09-06 00:02:55 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
-2020-09-06 00:02:55 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-09-06 00:02:55 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 4360 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-09-06 00:02:55 [restartedMain] [DEBUG] com.onlinecode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
+2020-09-06 00:02:55 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - No active profile set, falling back to default profiles: default
 2020-09-06 00:02:55 [restartedMain] [INFO] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Eanda\.gradle\caches\modules-2\files-2.1\javax.xml\jaxb-impl\2.1\8c86d5d4eac7f89cec63432274d712ba82cd201b\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb-api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/activation.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jsr173_1.0_api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb1-impl.jar
 2020-09-06 00:02:55 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2020-09-06 00:02:55 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
-2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.onlinecode'
 2020-09-06 00:02:56 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
 2020-09-06 00:02:56 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 JDBC repository interfaces.
 2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\CategoryDao.class]
@@ -17,17 +17,17 @@
 2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\UserAccountDao.class]
 2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\UserDao.class]
 2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\core\dao\DefaultAuthenticationProviderDao.class]
-2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'categoryDao' and 'com.bizcode.admins.dao.CategoryDao' mapperInterface
+2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'categoryDao' and 'com.onlinecode.admins.dao.CategoryDao' mapperInterface
 2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'categoryDao'.
-2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.bizcode.admins.dao.CompanyDao' mapperInterface
+2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.onlinecode.admins.dao.CompanyDao' mapperInterface
 2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'companyDao'.
-2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'resourceFileInfoDao' and 'com.bizcode.admins.dao.ResourceFileInfoDao' mapperInterface
+2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'resourceFileInfoDao' and 'com.onlinecode.admins.dao.ResourceFileInfoDao' mapperInterface
 2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'resourceFileInfoDao'.
-2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userAccountDao' and 'com.bizcode.admins.dao.UserAccountDao' mapperInterface
+2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userAccountDao' and 'com.onlinecode.admins.dao.UserAccountDao' mapperInterface
 2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userAccountDao'.
-2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.bizcode.admins.dao.UserDao' mapperInterface
+2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.onlinecode.admins.dao.UserDao' mapperInterface
 2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userDao'.
-2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.bizcode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
+2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.onlinecode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
 2020-09-06 00:02:56 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'defaultAuthenticationProviderDao'.
 2020-09-06 00:02:56 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$e2824f20] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-09-06 00:02:56 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
@@ -62,7 +62,7 @@
 2020-09-06 00:03:03 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2020-09-06 00:03:03 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
 2020-09-06 00:03:03 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2020-09-06 00:03:03 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Started BizcodeApplication in 8.615 seconds (JVM running for 10.655)
+2020-09-06 00:03:03 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Started BizcodeApplication in 8.615 seconds (JVM running for 10.655)
 2020-09-06 00:04:51 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-09-06 00:04:51 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-09-06 00:04:51 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Completed initialization in 20 ms
@@ -97,9 +97,9 @@
 2020-09-06 00:05:09 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:05:09 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7077b1bb] was not registered for synchronization because synchronization is not active
 2020-09-06 00:05:09 [http-nio-8080-exec-6] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@391688687 wrapping org.postgresql.jdbc.PgConnection@5068fe9d] will not be managed by Spring
-2020-09-06 00:05:09 [http-nio-8080-exec-6] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:05:09 [http-nio-8080-exec-6] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:05:09 [http-nio-8080-exec-6] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:05:09 [http-nio-8080-exec-6] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:05:09 [http-nio-8080-exec-6] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:05:09 [http-nio-8080-exec-6] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:05:09 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7077b1bb]
 2020-09-06 00:06:25 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:06:25 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@59ea7547] was not registered for synchronization because synchronization is not active
@@ -125,21 +125,21 @@
 2020-09-06 00:07:47 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:07:47 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e6505c5] was not registered for synchronization because synchronization is not active
 2020-09-06 00:07:47 [http-nio-8080-exec-3] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@993807130 wrapping org.postgresql.jdbc.PgConnection@5068fe9d] will not be managed by Spring
-2020-09-06 00:07:47 [http-nio-8080-exec-3] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:07:47 [http-nio-8080-exec-3] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:07:47 [http-nio-8080-exec-3] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:07:47 [http-nio-8080-exec-3] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:07:47 [http-nio-8080-exec-3] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:07:47 [http-nio-8080-exec-3] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:07:47 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e6505c5]
 2020-09-06 00:14:45 [SpringContextShutdownHook] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2020-09-06 00:14:45 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2020-09-06 00:14:45 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2020-09-06 00:14:53 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 14296 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
-2020-09-06 00:14:53 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
-2020-09-06 00:14:53 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-09-06 00:14:53 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 14296 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-09-06 00:14:53 [restartedMain] [DEBUG] com.onlinecode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
+2020-09-06 00:14:53 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - No active profile set, falling back to default profiles: default
 2020-09-06 00:14:53 [restartedMain] [INFO] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Eanda\.gradle\caches\modules-2\files-2.1\javax.xml\jaxb-impl\2.1\8c86d5d4eac7f89cec63432274d712ba82cd201b\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb-api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/activation.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jsr173_1.0_api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb1-impl.jar
 2020-09-06 00:14:53 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2020-09-06 00:14:53 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2020-09-06 00:14:54 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
-2020-09-06 00:14:54 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-09-06 00:14:54 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.onlinecode'
 2020-09-06 00:14:54 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
 2020-09-06 00:14:54 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 50 ms. Found 0 JDBC repository interfaces.
 2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\CategoryDao.class]
@@ -148,17 +148,17 @@
 2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\UserAccountDao.class]
 2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\UserDao.class]
 2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\core\dao\DefaultAuthenticationProviderDao.class]
-2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'categoryDao' and 'com.bizcode.admins.dao.CategoryDao' mapperInterface
+2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'categoryDao' and 'com.onlinecode.admins.dao.CategoryDao' mapperInterface
 2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'categoryDao'.
-2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.bizcode.admins.dao.CompanyDao' mapperInterface
+2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.onlinecode.admins.dao.CompanyDao' mapperInterface
 2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'companyDao'.
-2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'resourceFileInfoDao' and 'com.bizcode.admins.dao.ResourceFileInfoDao' mapperInterface
+2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'resourceFileInfoDao' and 'com.onlinecode.admins.dao.ResourceFileInfoDao' mapperInterface
 2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'resourceFileInfoDao'.
-2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userAccountDao' and 'com.bizcode.admins.dao.UserAccountDao' mapperInterface
+2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userAccountDao' and 'com.onlinecode.admins.dao.UserAccountDao' mapperInterface
 2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userAccountDao'.
-2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.bizcode.admins.dao.UserDao' mapperInterface
+2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.onlinecode.admins.dao.UserDao' mapperInterface
 2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userDao'.
-2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.bizcode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
+2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.onlinecode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
 2020-09-06 00:14:55 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'defaultAuthenticationProviderDao'.
 2020-09-06 00:14:55 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f6c8fe49] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-09-06 00:14:55 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
@@ -193,7 +193,7 @@
 2020-09-06 00:14:59 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2020-09-06 00:14:59 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
 2020-09-06 00:14:59 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2020-09-06 00:14:59 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Started BizcodeApplication in 6.566 seconds (JVM running for 8.303)
+2020-09-06 00:14:59 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Started BizcodeApplication in 6.566 seconds (JVM running for 8.303)
 2020-09-06 00:21:26 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-09-06 00:21:26 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-09-06 00:21:26 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
@@ -235,9 +235,9 @@
 2020-09-06 00:21:51 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:21:51 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f19c2e8] was not registered for synchronization because synchronization is not active
 2020-09-06 00:21:51 [http-nio-8080-exec-5] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@437999471 wrapping org.postgresql.jdbc.PgConnection@25cfb635] will not be managed by Spring
-2020-09-06 00:21:51 [http-nio-8080-exec-5] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:21:51 [http-nio-8080-exec-5] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:21:51 [http-nio-8080-exec-5] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:21:51 [http-nio-8080-exec-5] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:21:51 [http-nio-8080-exec-5] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:21:51 [http-nio-8080-exec-5] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:21:51 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f19c2e8]
 2020-09-06 00:27:56 [http-nio-8080-exec-7] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:27:57 [http-nio-8080-exec-7] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5fe213ac] was not registered for synchronization because synchronization is not active
@@ -249,9 +249,9 @@
 2020-09-06 00:27:57 [http-nio-8080-exec-7] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:27:57 [http-nio-8080-exec-7] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6ef7c957] was not registered for synchronization because synchronization is not active
 2020-09-06 00:27:57 [http-nio-8080-exec-7] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1895693859 wrapping org.postgresql.jdbc.PgConnection@25cfb635] will not be managed by Spring
-2020-09-06 00:27:57 [http-nio-8080-exec-7] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:27:57 [http-nio-8080-exec-7] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:27:57 [http-nio-8080-exec-7] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:27:57 [http-nio-8080-exec-7] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:27:57 [http-nio-8080-exec-7] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:27:57 [http-nio-8080-exec-7] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:27:57 [http-nio-8080-exec-7] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6ef7c957]
 2020-09-06 00:29:29 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:29:29 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6732bfa2] was not registered for synchronization because synchronization is not active
@@ -263,9 +263,9 @@
 2020-09-06 00:29:29 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:29:29 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1cfb6370] was not registered for synchronization because synchronization is not active
 2020-09-06 00:29:29 [http-nio-8080-exec-9] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@424131908 wrapping org.postgresql.jdbc.PgConnection@25cfb635] will not be managed by Spring
-2020-09-06 00:29:29 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:29:29 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:29:29 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:29:29 [http-nio-8080-exec-9] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:29:29 [http-nio-8080-exec-9] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:29:29 [http-nio-8080-exec-9] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:29:29 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1cfb6370]
 2020-09-06 00:30:14 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:30:14 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b219024] was not registered for synchronization because synchronization is not active
@@ -277,9 +277,9 @@
 2020-09-06 00:30:14 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:30:14 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@332a929d] was not registered for synchronization because synchronization is not active
 2020-09-06 00:30:14 [http-nio-8080-exec-1] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1643602396 wrapping org.postgresql.jdbc.PgConnection@25cfb635] will not be managed by Spring
-2020-09-06 00:30:14 [http-nio-8080-exec-1] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:30:14 [http-nio-8080-exec-1] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:30:14 [http-nio-8080-exec-1] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:30:14 [http-nio-8080-exec-1] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:30:14 [http-nio-8080-exec-1] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:30:14 [http-nio-8080-exec-1] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:30:14 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@332a929d]
 2020-09-06 00:30:57 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:30:57 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f4abec2] was not registered for synchronization because synchronization is not active
@@ -291,9 +291,9 @@
 2020-09-06 00:30:57 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:30:57 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c8d0500] was not registered for synchronization because synchronization is not active
 2020-09-06 00:30:57 [http-nio-8080-exec-3] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1986728701 wrapping org.postgresql.jdbc.PgConnection@25cfb635] will not be managed by Spring
-2020-09-06 00:30:57 [http-nio-8080-exec-3] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:30:57 [http-nio-8080-exec-3] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:30:57 [http-nio-8080-exec-3] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:30:57 [http-nio-8080-exec-3] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:30:57 [http-nio-8080-exec-3] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:30:57 [http-nio-8080-exec-3] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:30:57 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c8d0500]
 2020-09-06 00:32:07 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:32:07 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2bcba929] was not registered for synchronization because synchronization is not active
@@ -305,9 +305,9 @@
 2020-09-06 00:32:07 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:32:07 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e7ab6bd] was not registered for synchronization because synchronization is not active
 2020-09-06 00:32:07 [http-nio-8080-exec-5] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1672692254 wrapping org.postgresql.jdbc.PgConnection@25cfb635] will not be managed by Spring
-2020-09-06 00:32:07 [http-nio-8080-exec-5] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:32:07 [http-nio-8080-exec-5] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:32:07 [http-nio-8080-exec-5] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:32:07 [http-nio-8080-exec-5] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:32:07 [http-nio-8080-exec-5] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:32:07 [http-nio-8080-exec-5] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:32:07 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e7ab6bd]
 2020-09-06 00:32:38 [http-nio-8080-exec-7] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:32:38 [http-nio-8080-exec-7] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3fcdece3] was not registered for synchronization because synchronization is not active
@@ -319,9 +319,9 @@
 2020-09-06 00:32:38 [http-nio-8080-exec-7] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:32:38 [http-nio-8080-exec-7] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@443c6598] was not registered for synchronization because synchronization is not active
 2020-09-06 00:32:38 [http-nio-8080-exec-7] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@496174771 wrapping org.postgresql.jdbc.PgConnection@25cfb635] will not be managed by Spring
-2020-09-06 00:32:38 [http-nio-8080-exec-7] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:32:38 [http-nio-8080-exec-7] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:32:38 [http-nio-8080-exec-7] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:32:38 [http-nio-8080-exec-7] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:32:38 [http-nio-8080-exec-7] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:32:38 [http-nio-8080-exec-7] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:32:38 [http-nio-8080-exec-7] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@443c6598]
 2020-09-06 00:34:06 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:34:06 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6bfade61] was not registered for synchronization because synchronization is not active
@@ -333,9 +333,9 @@
 2020-09-06 00:34:06 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:34:06 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b4bc0d4] was not registered for synchronization because synchronization is not active
 2020-09-06 00:34:06 [http-nio-8080-exec-9] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@2143480676 wrapping org.postgresql.jdbc.PgConnection@25cfb635] will not be managed by Spring
-2020-09-06 00:34:06 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:34:06 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:34:06 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:34:06 [http-nio-8080-exec-9] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:34:06 [http-nio-8080-exec-9] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:34:06 [http-nio-8080-exec-9] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:34:06 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b4bc0d4]
 2020-09-06 00:34:15 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:34:16 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3dcbce6a] was not registered for synchronization because synchronization is not active
@@ -361,9 +361,9 @@
 2020-09-06 00:40:14 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:40:14 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@218eca0] was not registered for synchronization because synchronization is not active
 2020-09-06 00:40:14 [http-nio-8080-exec-2] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@697084688 wrapping org.postgresql.jdbc.PgConnection@25cfb635] will not be managed by Spring
-2020-09-06 00:40:14 [http-nio-8080-exec-2] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:40:14 [http-nio-8080-exec-2] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:40:14 [http-nio-8080-exec-2] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:40:14 [http-nio-8080-exec-2] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:40:14 [http-nio-8080-exec-2] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:40:14 [http-nio-8080-exec-2] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:40:14 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@218eca0]
 2020-09-06 00:41:22 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:41:22 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d2e7317] was not registered for synchronization because synchronization is not active
@@ -375,9 +375,9 @@
 2020-09-06 00:41:22 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:41:22 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@268360ee] was not registered for synchronization because synchronization is not active
 2020-09-06 00:41:22 [http-nio-8080-exec-9] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@748846640 wrapping org.postgresql.jdbc.PgConnection@25cfb635] will not be managed by Spring
-2020-09-06 00:41:22 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:41:22 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:41:22 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:41:22 [http-nio-8080-exec-9] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:41:22 [http-nio-8080-exec-9] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:41:22 [http-nio-8080-exec-9] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:41:22 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@268360ee]
 2020-09-06 00:42:30 [http-nio-8080-exec-10] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:42:30 [http-nio-8080-exec-10] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31e4ed37] was not registered for synchronization because synchronization is not active
@@ -389,9 +389,9 @@
 2020-09-06 00:42:30 [http-nio-8080-exec-10] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:42:30 [http-nio-8080-exec-10] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3eec483a] was not registered for synchronization because synchronization is not active
 2020-09-06 00:42:30 [http-nio-8080-exec-10] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@167156140 wrapping org.postgresql.jdbc.PgConnection@25cfb635] will not be managed by Spring
-2020-09-06 00:42:30 [http-nio-8080-exec-10] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:42:30 [http-nio-8080-exec-10] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:42:30 [http-nio-8080-exec-10] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:42:30 [http-nio-8080-exec-10] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:42:30 [http-nio-8080-exec-10] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:42:30 [http-nio-8080-exec-10] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:42:30 [http-nio-8080-exec-10] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3eec483a]
 2020-09-06 00:48:55 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:48:55 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3898f7d5] was not registered for synchronization because synchronization is not active
@@ -403,9 +403,9 @@
 2020-09-06 00:48:55 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:48:55 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@52cbde65] was not registered for synchronization because synchronization is not active
 2020-09-06 00:48:55 [http-nio-8080-exec-2] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@63623020 wrapping org.postgresql.jdbc.PgConnection@314c139b] will not be managed by Spring
-2020-09-06 00:48:55 [http-nio-8080-exec-2] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:48:55 [http-nio-8080-exec-2] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:48:55 [http-nio-8080-exec-2] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:48:55 [http-nio-8080-exec-2] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:48:55 [http-nio-8080-exec-2] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:48:55 [http-nio-8080-exec-2] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:48:55 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@52cbde65]
 2020-09-06 00:49:40 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:49:40 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ca329fe] was not registered for synchronization because synchronization is not active
@@ -417,9 +417,9 @@
 2020-09-06 00:49:40 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:49:40 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21d00e1b] was not registered for synchronization because synchronization is not active
 2020-09-06 00:49:40 [http-nio-8080-exec-5] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1769766663 wrapping org.postgresql.jdbc.PgConnection@314c139b] will not be managed by Spring
-2020-09-06 00:49:40 [http-nio-8080-exec-5] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:49:40 [http-nio-8080-exec-5] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:49:40 [http-nio-8080-exec-5] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:49:40 [http-nio-8080-exec-5] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:49:40 [http-nio-8080-exec-5] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:49:40 [http-nio-8080-exec-5] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:49:40 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21d00e1b]
 2020-09-06 00:49:51 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:49:51 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62492c94] was not registered for synchronization because synchronization is not active
@@ -431,9 +431,9 @@
 2020-09-06 00:49:51 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:49:51 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44954b61] was not registered for synchronization because synchronization is not active
 2020-09-06 00:49:51 [http-nio-8080-exec-6] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@409119437 wrapping org.postgresql.jdbc.PgConnection@314c139b] will not be managed by Spring
-2020-09-06 00:49:51 [http-nio-8080-exec-6] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:49:51 [http-nio-8080-exec-6] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:49:51 [http-nio-8080-exec-6] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:49:51 [http-nio-8080-exec-6] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:49:51 [http-nio-8080-exec-6] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:49:51 [http-nio-8080-exec-6] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:49:51 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44954b61]
 2020-09-06 00:51:35 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:51:35 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@625a1678] was not registered for synchronization because synchronization is not active
@@ -445,9 +445,9 @@
 2020-09-06 00:51:35 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:51:35 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73a026dd] was not registered for synchronization because synchronization is not active
 2020-09-06 00:51:35 [http-nio-8080-exec-9] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1280087399 wrapping org.postgresql.jdbc.PgConnection@314c139b] will not be managed by Spring
-2020-09-06 00:51:35 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:51:35 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:51:35 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:51:35 [http-nio-8080-exec-9] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:51:35 [http-nio-8080-exec-9] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:51:35 [http-nio-8080-exec-9] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:51:35 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73a026dd]
 2020-09-06 00:52:06 [http-nio-8080-exec-10] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:52:06 [http-nio-8080-exec-10] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4d711ddf] was not registered for synchronization because synchronization is not active
@@ -459,9 +459,9 @@
 2020-09-06 00:52:06 [http-nio-8080-exec-10] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:52:06 [http-nio-8080-exec-10] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b0679e6] was not registered for synchronization because synchronization is not active
 2020-09-06 00:52:06 [http-nio-8080-exec-10] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@509348028 wrapping org.postgresql.jdbc.PgConnection@314c139b] will not be managed by Spring
-2020-09-06 00:52:06 [http-nio-8080-exec-10] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:52:06 [http-nio-8080-exec-10] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:52:06 [http-nio-8080-exec-10] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:52:06 [http-nio-8080-exec-10] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:52:06 [http-nio-8080-exec-10] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:52:06 [http-nio-8080-exec-10] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:52:06 [http-nio-8080-exec-10] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b0679e6]
 2020-09-06 00:52:25 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:52:25 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34e562dc] was not registered for synchronization because synchronization is not active
@@ -473,9 +473,9 @@
 2020-09-06 00:52:25 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:52:25 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e384555] was not registered for synchronization because synchronization is not active
 2020-09-06 00:52:25 [http-nio-8080-exec-2] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1149073942 wrapping org.postgresql.jdbc.PgConnection@314c139b] will not be managed by Spring
-2020-09-06 00:52:25 [http-nio-8080-exec-2] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:52:25 [http-nio-8080-exec-2] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:52:25 [http-nio-8080-exec-2] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:52:25 [http-nio-8080-exec-2] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:52:25 [http-nio-8080-exec-2] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:52:25 [http-nio-8080-exec-2] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:52:25 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e384555]
 2020-09-06 00:53:15 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:53:15 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6ddd63b9] was not registered for synchronization because synchronization is not active
@@ -487,9 +487,9 @@
 2020-09-06 00:53:15 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:53:15 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e82243e] was not registered for synchronization because synchronization is not active
 2020-09-06 00:53:15 [http-nio-8080-exec-5] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1686956718 wrapping org.postgresql.jdbc.PgConnection@314c139b] will not be managed by Spring
-2020-09-06 00:53:15 [http-nio-8080-exec-5] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:53:15 [http-nio-8080-exec-5] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:53:15 [http-nio-8080-exec-5] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:53:15 [http-nio-8080-exec-5] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:53:15 [http-nio-8080-exec-5] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:53:15 [http-nio-8080-exec-5] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:53:15 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e82243e]
 2020-09-06 00:58:54 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:58:54 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@764224e3] was not registered for synchronization because synchronization is not active
@@ -501,9 +501,9 @@
 2020-09-06 00:58:54 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 00:58:54 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@683d6266] was not registered for synchronization because synchronization is not active
 2020-09-06 00:58:54 [http-nio-8080-exec-6] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1694800238 wrapping org.postgresql.jdbc.PgConnection@314c139b] will not be managed by Spring
-2020-09-06 00:58:54 [http-nio-8080-exec-6] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 00:58:54 [http-nio-8080-exec-6] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 00:58:54 [http-nio-8080-exec-6] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 00:58:54 [http-nio-8080-exec-6] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 00:58:54 [http-nio-8080-exec-6] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 00:58:54 [http-nio-8080-exec-6] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 00:58:54 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@683d6266]
 2020-09-06 01:00:06 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 01:00:06 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e97a340] was not registered for synchronization because synchronization is not active
@@ -515,9 +515,9 @@
 2020-09-06 01:00:06 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 01:00:06 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@fb61670] was not registered for synchronization because synchronization is not active
 2020-09-06 01:00:06 [http-nio-8080-exec-9] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@662261068 wrapping org.postgresql.jdbc.PgConnection@314c139b] will not be managed by Spring
-2020-09-06 01:00:06 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 01:00:06 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 01:00:06 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 01:00:06 [http-nio-8080-exec-9] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 01:00:06 [http-nio-8080-exec-9] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 01:00:06 [http-nio-8080-exec-9] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 01:00:06 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@fb61670]
 2020-09-06 01:00:43 [http-nio-8080-exec-10] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 01:00:43 [http-nio-8080-exec-10] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@556c3505] was not registered for synchronization because synchronization is not active
@@ -529,9 +529,9 @@
 2020-09-06 01:00:43 [http-nio-8080-exec-10] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 01:00:43 [http-nio-8080-exec-10] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43aa49ea] was not registered for synchronization because synchronization is not active
 2020-09-06 01:00:43 [http-nio-8080-exec-10] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1328850203 wrapping org.postgresql.jdbc.PgConnection@314c139b] will not be managed by Spring
-2020-09-06 01:00:43 [http-nio-8080-exec-10] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 01:00:43 [http-nio-8080-exec-10] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 01:00:43 [http-nio-8080-exec-10] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 01:00:43 [http-nio-8080-exec-10] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 01:00:43 [http-nio-8080-exec-10] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 01:00:43 [http-nio-8080-exec-10] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 01:00:43 [http-nio-8080-exec-10] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43aa49ea]
 2020-09-06 01:01:36 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 01:01:36 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b1113c7] was not registered for synchronization because synchronization is not active
@@ -543,9 +543,9 @@
 2020-09-06 01:01:36 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 01:01:36 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@397b1eb7] was not registered for synchronization because synchronization is not active
 2020-09-06 01:01:36 [http-nio-8080-exec-2] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@385445444 wrapping org.postgresql.jdbc.PgConnection@314c139b] will not be managed by Spring
-2020-09-06 01:01:36 [http-nio-8080-exec-2] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 01:01:36 [http-nio-8080-exec-2] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 01:01:36 [http-nio-8080-exec-2] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 01:01:36 [http-nio-8080-exec-2] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 01:01:36 [http-nio-8080-exec-2] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 01:01:36 [http-nio-8080-exec-2] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 01:01:36 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@397b1eb7]
 2020-09-06 01:02:23 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 01:02:23 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@624a9d2d] was not registered for synchronization because synchronization is not active
@@ -557,9 +557,9 @@
 2020-09-06 01:02:23 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 01:02:23 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48987836] was not registered for synchronization because synchronization is not active
 2020-09-06 01:02:23 [http-nio-8080-exec-5] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1271018001 wrapping org.postgresql.jdbc.PgConnection@314c139b] will not be managed by Spring
-2020-09-06 01:02:23 [http-nio-8080-exec-5] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 01:02:23 [http-nio-8080-exec-5] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 01:02:23 [http-nio-8080-exec-5] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 01:02:23 [http-nio-8080-exec-5] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 01:02:23 [http-nio-8080-exec-5] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 01:02:23 [http-nio-8080-exec-5] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 01:02:23 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48987836]
 2020-09-06 01:03:13 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 01:03:13 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@286cc11] was not registered for synchronization because synchronization is not active
@@ -571,9 +571,9 @@
 2020-09-06 01:03:13 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 01:03:13 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62319097] was not registered for synchronization because synchronization is not active
 2020-09-06 01:03:13 [http-nio-8080-exec-6] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@599763542 wrapping org.postgresql.jdbc.PgConnection@314c139b] will not be managed by Spring
-2020-09-06 01:03:13 [http-nio-8080-exec-6] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 01:03:13 [http-nio-8080-exec-6] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 01:03:13 [http-nio-8080-exec-6] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 01:03:13 [http-nio-8080-exec-6] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 01:03:13 [http-nio-8080-exec-6] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 01:03:13 [http-nio-8080-exec-6] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 01:03:13 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62319097]
 2020-09-06 01:04:55 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 01:04:55 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@64377740] was not registered for synchronization because synchronization is not active
@@ -585,9 +585,9 @@
 2020-09-06 01:04:55 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 01:04:55 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@343eac10] was not registered for synchronization because synchronization is not active
 2020-09-06 01:04:55 [http-nio-8080-exec-9] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1497400566 wrapping org.postgresql.jdbc.PgConnection@314c139b] will not be managed by Spring
-2020-09-06 01:04:55 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 01:04:55 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 01:04:55 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 01:04:55 [http-nio-8080-exec-9] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 01:04:55 [http-nio-8080-exec-9] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 01:04:55 [http-nio-8080-exec-9] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 01:04:55 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@343eac10]
 2020-09-06 01:05:37 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 01:05:37 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26906d76] was not registered for synchronization because synchronization is not active
@@ -599,9 +599,9 @@
 2020-09-06 01:05:37 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 01:05:37 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4f927cc3] was not registered for synchronization because synchronization is not active
 2020-09-06 01:05:37 [http-nio-8080-exec-1] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@355536236 wrapping org.postgresql.jdbc.PgConnection@314c139b] will not be managed by Spring
-2020-09-06 01:05:37 [http-nio-8080-exec-1] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 01:05:37 [http-nio-8080-exec-1] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 01:05:37 [http-nio-8080-exec-1] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 01:05:37 [http-nio-8080-exec-1] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 01:05:37 [http-nio-8080-exec-1] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 01:05:37 [http-nio-8080-exec-1] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 01:05:37 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4f927cc3]
 2020-09-06 01:07:52 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 01:07:52 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c22e0ad] was not registered for synchronization because synchronization is not active
@@ -613,9 +613,9 @@
 2020-09-06 01:07:52 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 01:07:52 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6114e33] was not registered for synchronization because synchronization is not active
 2020-09-06 01:07:52 [http-nio-8080-exec-3] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1132725710 wrapping org.postgresql.jdbc.PgConnection@314c139b] will not be managed by Spring
-2020-09-06 01:07:52 [http-nio-8080-exec-3] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 01:07:52 [http-nio-8080-exec-3] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 01:07:52 [http-nio-8080-exec-3] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 01:07:52 [http-nio-8080-exec-3] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 01:07:52 [http-nio-8080-exec-3] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 01:07:52 [http-nio-8080-exec-3] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 01:07:52 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6114e33]
 2020-09-06 01:08:24 [http-nio-8080-exec-4] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 01:08:24 [http-nio-8080-exec-4] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6afcdbc3] was not registered for synchronization because synchronization is not active
@@ -627,10 +627,443 @@
 2020-09-06 01:08:24 [http-nio-8080-exec-4] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
 2020-09-06 01:08:24 [http-nio-8080-exec-4] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3aa05f1e] was not registered for synchronization because synchronization is not active
 2020-09-06 01:08:24 [http-nio-8080-exec-4] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1298977279 wrapping org.postgresql.jdbc.PgConnection@314c139b] will not be managed by Spring
-2020-09-06 01:08:24 [http-nio-8080-exec-4] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
-2020-09-06 01:08:24 [http-nio-8080-exec-4] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
-2020-09-06 01:08:24 [http-nio-8080-exec-4] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-09-06 01:08:24 [http-nio-8080-exec-4] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_"
+2020-09-06 01:08:24 [http-nio-8080-exec-4] [DEBUG] com.onlinecode.admins.dao.UserDao.count - ==> Parameters:
+2020-09-06 01:08:24 [http-nio-8080-exec-4] [DEBUG] com.onlinecode.admins.dao.UserDao.count - <==      Total: 1
 2020-09-06 01:08:24 [http-nio-8080-exec-4] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3aa05f1e]
 2020-09-06 01:12:37 [SpringContextShutdownHook] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2020-09-06 01:12:38 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2020-09-06 01:12:38 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-09-06 13:41:12 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 17124 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-09-06 13:41:12 [restartedMain] [DEBUG] com.onlinecode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
+2020-09-06 13:41:12 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-09-06 13:41:12 [restartedMain] [INFO] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Eanda\.gradle\caches\modules-2\files-2.1\javax.xml\jaxb-impl\2.1\8c86d5d4eac7f89cec63432274d712ba82cd201b\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb-api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/activation.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jsr173_1.0_api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb1-impl.jar
+2020-09-06 13:41:12 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-06 13:41:12 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-06 13:41:13 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-09-06 13:41:13 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.onlinecode'
+2020-09-06 13:41:13 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-09-06 13:41:13 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
+2020-09-06 13:41:13 [restartedMain] [WARN] o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.onlinecode]' package. Please check your configuration.
+2020-09-06 13:41:13 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$dd7fdf28] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 13:41:13 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-09-06 13:41:13 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-09-06 13:41:13 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-09-06 13:41:13 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-06 13:41:13 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-06 13:41:14 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-09-06 13:41:14 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1271 ms
+2020-09-06 13:41:14 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-06 13:41:14 [restartedMain] [WARN] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-09-06 13:41:14 [restartedMain] [WARN] o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-09-06 13:41:14 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2020-09-06 13:41:14 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis/mybatis_config.xml]'
+2020-09-06 13:41:14 [restartedMain] [WARN] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+2020-09-06 13:41:14 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-06 13:41:14 [restartedMain] [INFO] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-09-06 13:41:14 [restartedMain] [INFO] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-09-06 13:41:14 [restartedMain] [ERROR] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:751)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:410)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1280)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1269)
+	at com.onlinecode.BizcodeApplication.main(BizcodeApplication.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 25 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:595)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:615)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$6bbc6b59.CGLIB$sqlSessionFactory$0(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$6bbc6b59$$FastClassBySpringCGLIB$$a555626b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$6bbc6b59.sqlSessionFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 26 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:593)
+	... 39 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:102)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:137)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:130)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	... 41 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 45 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 47 common frames omitted
+2020-09-06 13:41:49 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 14664 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-09-06 13:41:49 [restartedMain] [DEBUG] com.onlinecode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
+2020-09-06 13:41:49 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-09-06 13:41:49 [restartedMain] [INFO] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Eanda\.gradle\caches\modules-2\files-2.1\javax.xml\jaxb-impl\2.1\8c86d5d4eac7f89cec63432274d712ba82cd201b\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb-api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/activation.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jsr173_1.0_api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb1-impl.jar
+2020-09-06 13:41:49 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-06 13:41:49 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-06 13:41:50 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-09-06 13:41:50 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.onlinecode'
+2020-09-06 13:41:50 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-09-06 13:41:50 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2020-09-06 13:41:50 [restartedMain] [WARN] o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.onlinecode]' package. Please check your configuration.
+2020-09-06 13:41:50 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$58412d35] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 13:41:50 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-09-06 13:41:50 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-09-06 13:41:50 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-09-06 13:41:50 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-06 13:41:50 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-06 13:41:50 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-09-06 13:41:50 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1172 ms
+2020-09-06 13:41:51 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-06 13:41:51 [restartedMain] [WARN] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-09-06 13:41:51 [restartedMain] [WARN] o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-09-06 13:41:51 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2020-09-06 13:41:51 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis/mybatis_config.xml]'
+2020-09-06 13:41:51 [restartedMain] [WARN] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+2020-09-06 13:41:51 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-06 13:41:51 [restartedMain] [INFO] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-09-06 13:41:51 [restartedMain] [INFO] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-09-06 13:41:51 [restartedMain] [ERROR] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:751)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:410)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1280)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1269)
+	at com.onlinecode.BizcodeApplication.main(BizcodeApplication.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 25 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:595)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:615)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$e67db966.CGLIB$sqlSessionFactory$0(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$e67db966$$FastClassBySpringCGLIB$$56db8b83.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$e67db966.sqlSessionFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 26 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:593)
+	... 39 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:102)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:137)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:130)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	... 41 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 45 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 47 common frames omitted
+2020-09-06 13:43:31 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 19428 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-09-06 13:43:31 [restartedMain] [DEBUG] com.onlinecode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
+2020-09-06 13:43:31 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-09-06 13:43:31 [restartedMain] [INFO] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Eanda\.gradle\caches\modules-2\files-2.1\javax.xml\jaxb-impl\2.1\8c86d5d4eac7f89cec63432274d712ba82cd201b\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb-api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/activation.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jsr173_1.0_api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb1-impl.jar
+2020-09-06 13:43:31 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-06 13:43:31 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-06 13:43:32 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-09-06 13:43:32 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.onlinecode'
+2020-09-06 13:43:32 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-09-06 13:43:32 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2020-09-06 13:43:32 [restartedMain] [WARN] o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.onlinecode]' package. Please check your configuration.
+2020-09-06 13:43:32 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$b1f77a2a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 13:43:32 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-09-06 13:43:32 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-09-06 13:43:32 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-09-06 13:43:32 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-06 13:43:32 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-06 13:43:33 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-09-06 13:43:33 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1130 ms
+2020-09-06 13:43:33 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-06 13:43:33 [restartedMain] [WARN] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-09-06 13:43:33 [restartedMain] [WARN] o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-09-06 13:43:33 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2020-09-06 13:43:33 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis/mybatis_config.xml]'
+2020-09-06 13:43:33 [restartedMain] [WARN] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+2020-09-06 13:43:33 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-06 13:43:33 [restartedMain] [INFO] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-09-06 13:43:33 [restartedMain] [INFO] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-09-06 13:43:33 [restartedMain] [ERROR] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:751)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:410)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1280)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1269)
+	at com.onlinecode.BizcodeApplication.main(BizcodeApplication.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 25 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:595)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:615)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$4034065b.CGLIB$sqlSessionFactory$1(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$4034065b$$FastClassBySpringCGLIB$$2dce00de.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$4034065b.sqlSessionFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 26 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:593)
+	... 39 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:102)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:137)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:130)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	... 41 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 45 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: MMap
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 47 common frames omitted
+2020-09-06 13:44:38 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 7740 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-09-06 13:44:38 [restartedMain] [DEBUG] com.onlinecode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
+2020-09-06 13:44:38 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-09-06 13:44:38 [restartedMain] [INFO] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Eanda\.gradle\caches\modules-2\files-2.1\javax.xml\jaxb-impl\2.1\8c86d5d4eac7f89cec63432274d712ba82cd201b\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb-api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/activation.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jsr173_1.0_api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb1-impl.jar
+2020-09-06 13:44:38 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-06 13:44:38 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-06 13:44:38 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-09-06 13:44:38 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.onlinecode'
+2020-09-06 13:44:38 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-09-06 13:44:38 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 JDBC repository interfaces.
+2020-09-06 13:44:38 [restartedMain] [WARN] o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.onlinecode]' package. Please check your configuration.
+2020-09-06 13:44:38 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1464aed1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 13:44:38 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-09-06 13:44:39 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-09-06 13:44:39 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-09-06 13:44:39 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-06 13:44:39 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-06 13:44:39 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-09-06 13:44:39 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1103 ms
+2020-09-06 13:44:39 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-06 13:44:39 [restartedMain] [WARN] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-09-06 13:44:39 [restartedMain] [WARN] o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-09-06 13:44:39 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2020-09-06 13:44:39 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis/mybatis_config.xml]'
+2020-09-06 13:44:40 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'
+2020-09-06 13:44:40 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\mainCategoryDao.xml]'
+2020-09-06 13:44:40 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\userAccountDao.xml]'
+2020-09-06 13:44:40 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\userDao.xml]'
+2020-09-06 13:44:40 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\core\defaultAuthenticationProviderDao.xml]'
+2020-09-06 13:44:40 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-09-06 13:44:40 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-09-06 13:44:40 [restartedMain] [INFO] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: e88cd8f8-ff46-4229-a652-e00fa59913a3
+
+2020-09-06 13:44:40 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15e6a20c, org.springframework.security.web.context.SecurityContextPersistenceFilter@63a9f36d, org.springframework.security.web.header.HeaderWriterFilter@6bd3dcfb, org.springframework.security.web.csrf.CsrfFilter@56e1f7b2, org.springframework.security.web.authentication.logout.LogoutFilter@2384466, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@32d72cdd, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3995873b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7bd0e8d7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7ade3f96, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ab53a44, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a044c05, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64c2e981, org.springframework.security.web.session.SessionManagementFilter@3978aaa7, org.springframework.security.web.access.ExceptionTranslationFilter@3ce2ea6a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1a96a148]
+2020-09-06 13:44:40 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-09-06 13:44:40 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-09-06 13:44:40 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-06 13:44:40 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Started BizcodeApplication in 2.947 seconds (JVM running for 3.817)
+2020-09-06 13:47:10 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-09-06 13:47:10 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-09-06 13:47:10 [SpringContextShutdownHook] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-06 13:47:15 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 16780 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-09-06 13:47:15 [restartedMain] [DEBUG] com.onlinecode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
+2020-09-06 13:47:15 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-09-06 13:47:15 [restartedMain] [INFO] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Eanda\.gradle\caches\modules-2\files-2.1\javax.xml\jaxb-impl\2.1\8c86d5d4eac7f89cec63432274d712ba82cd201b\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb-api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/activation.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jsr173_1.0_api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb1-impl.jar
+2020-09-06 13:47:15 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-06 13:47:15 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.onlinecode'
+2020-09-06 13:47:16 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-09-06 13:47:16 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 JDBC repository interfaces.
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\CategoryDao.class]
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\CompanyDao.class]
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\ResourceFileInfoDao.class]
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\UserAccountDao.class]
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\UserDao.class]
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\core\dao\DefaultAuthenticationProviderDao.class]
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'categoryDao' and 'com.onlinecode.admins.dao.CategoryDao' mapperInterface
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'categoryDao'.
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.onlinecode.admins.dao.CompanyDao' mapperInterface
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'companyDao'.
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'resourceFileInfoDao' and 'com.onlinecode.admins.dao.ResourceFileInfoDao' mapperInterface
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'resourceFileInfoDao'.
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userAccountDao' and 'com.onlinecode.admins.dao.UserAccountDao' mapperInterface
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userAccountDao'.
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.onlinecode.admins.dao.UserDao' mapperInterface
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userDao'.
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.onlinecode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
+2020-09-06 13:47:16 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'defaultAuthenticationProviderDao'.
+2020-09-06 13:47:16 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$302365c5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 13:47:16 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-09-06 13:47:16 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@e41c1ac' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 13:47:16 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 13:47:16 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-09-06 13:47:16 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-09-06 13:47:16 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-06 13:47:16 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-06 13:47:16 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-09-06 13:47:16 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1384 ms
+2020-09-06 13:47:17 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis/mybatis_config.xml]'
+2020-09-06 13:47:17 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'
+2020-09-06 13:47:17 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\mainCategoryDao.xml]'
+2020-09-06 13:47:17 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\userAccountDao.xml]'
+2020-09-06 13:47:17 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\userDao.xml]'
+2020-09-06 13:47:17 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\core\defaultAuthenticationProviderDao.xml]'
+2020-09-06 13:47:17 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/api/web/**'], []
+2020-09-06 13:47:17 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/api/mobile/**'], []
+2020-09-06 13:47:17 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/401.html'], []
+2020-09-06 13:47:17 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/404.html'], []
+2020-09-06 13:47:17 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/500.html'], []
+2020-09-06 13:47:18 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c88d98f, org.springframework.security.web.context.SecurityContextPersistenceFilter@4d73f5c, org.springframework.security.web.header.HeaderWriterFilter@2ce73911, org.springframework.security.web.authentication.logout.LogoutFilter@739c9c15, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7bf67dab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@305ba34f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f2a2ea5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@713e3199, org.springframework.security.web.session.SessionManagementFilter@38e22ab7, org.springframework.security.web.access.ExceptionTranslationFilter@4696d29f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1c061f01]
+2020-09-06 13:47:18 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/api/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@aef0c68, org.springframework.security.web.context.SecurityContextPersistenceFilter@714ecbf8, org.springframework.security.web.header.HeaderWriterFilter@3323433b, org.springframework.security.web.authentication.logout.LogoutFilter@70725358, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@67fb9068, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77ad4300, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e3eec55, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c82d512, org.springframework.security.web.session.SessionManagementFilter@766be306, org.springframework.security.web.access.ExceptionTranslationFilter@4178f3b2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@77096e8f]
+2020-09-06 13:47:18 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@201bdf15, org.springframework.security.web.context.SecurityContextPersistenceFilter@5102d5c, org.springframework.security.web.header.HeaderWriterFilter@34ea6865, org.springframework.security.web.csrf.CsrfFilter@162e8f3d, org.springframework.security.web.authentication.logout.LogoutFilter@30277229, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@37145bc5, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@270f53aa, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@10b8e1c4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@217f6aff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29f40768, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4e3aeb73, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13e6cd61, org.springframework.security.web.session.SessionManagementFilter@72f375f3, org.springframework.security.web.access.ExceptionTranslationFilter@56df52e4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@761e40c4]
+2020-09-06 13:47:18 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-06 13:47:18 [restartedMain] [WARN] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-09-06 13:47:18 [restartedMain] [WARN] o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-09-06 13:47:18 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2020-09-06 13:47:18 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-09-06 13:47:18 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-09-06 13:47:18 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-09-06 13:47:19 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-09-06 13:47:19 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-06 13:47:19 [restartedMain] [INFO] com.onlinecode.BizcodeApplication - Started BizcodeApplication in 3.918 seconds (JVM running for 4.844)
+2020-09-06 13:49:23 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-06 13:49:23 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-09-06 13:49:23 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2020-09-06 13:49:23 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-09-06 13:49:23 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2cd5ac1] was not registered for synchronization because synchronization is not active
+2020-09-06 13:49:23 [http-nio-8080-exec-1] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@326283131 wrapping org.postgresql.jdbc.PgConnection@411fb16b] will not be managed by Spring
+2020-09-06 13:49:23 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.getUserByName - ==>  Preparing: select u.id , u.user_name , u."password" , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , a."name" as "authority_name" , a.id as "authority_id" from user_ u inner join users_authorities ua on ua.user_id = u.id inner join authority a on a.id = ua.authority_id where u.user_name = ? 
+2020-09-06 13:49:23 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: admin(String)
+2020-09-06 13:49:23 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 9
+2020-09-06 13:49:23 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2cd5ac1]
+2020-09-06 13:49:23 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-09-06 13:49:23 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27bce28e] was not registered for synchronization because synchronization is not active
+2020-09-06 13:49:23 [http-nio-8080-exec-1] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1400689630 wrapping org.postgresql.jdbc.PgConnection@411fb16b] will not be managed by Spring
+2020-09-06 13:49:23 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.updateLoginSuccess - ==>  Preparing: UPDATE user_ SET last_login_date = to_char(NOW(), 'YYYYMMDD') , last_login_time = to_char(NOW(), 'HH12MISS') WHERE user_name = ? 
+2020-09-06 13:49:23 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.updateLoginSuccess - ==> Parameters: admin(String)
+2020-09-06 13:49:23 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.updateLoginSuccess - <==    Updates: 1
+2020-09-06 13:49:23 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27bce28e]
+2020-09-06 13:49:23 [http-nio-8080-exec-1] [INFO] o.s.s.o.p.token.store.JdbcTokenStore - Failed to find access token for token 737132c8-8530-4383-a264-b1ea8fe42723
+2020-09-06 13:49:23 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-09-06 13:49:23 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7562306e] was not registered for synchronization because synchronization is not active
+2020-09-06 13:49:23 [http-nio-8080-exec-3] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@368334513 wrapping org.postgresql.jdbc.PgConnection@411fb16b] will not be managed by Spring
+2020-09-06 13:49:23 [http-nio-8080-exec-3] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id from user_ u where u.user_name = ? 
+2020-09-06 13:49:23 [http-nio-8080-exec-3] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==> Parameters: admin(String)
+2020-09-06 13:49:23 [http-nio-8080-exec-3] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - <==      Total: 1
+2020-09-06 13:49:23 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7562306e]

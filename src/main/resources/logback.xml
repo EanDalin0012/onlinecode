@@ -51,7 +51,7 @@
     <logger name="org.mybatis" level="DEBUG"/>
     <logger name="org.springframework.web.filter.CommonsRequestLoggingFilter" level="DEBUG"/>
 
-    <logger name="com.bizcode" level="DEBUG"/>
+    <logger name="com.onlinecode" level="DEBUG"/>
 
     <root level="INFO">
         <appender-ref ref="STDOUT"/>

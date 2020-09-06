@@ -1,6 +1,6 @@
 2020-09-01 18:34:56 [http-nio-8080-exec-1] [ERROR] o.s.s.o.p.endpoint.TokenEndpoint - Handling error: UsernameNotFoundException, Your user account locked
 org.springframework.security.core.userdetails.UsernameNotFoundException: Your user account locked
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:45)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:45)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:534)
@@ -78,7 +78,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Your us
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -99,7 +99,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Your us
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-09-01 18:42:52 [http-nio-8080-exec-7] [ERROR] o.s.s.o.p.endpoint.TokenEndpoint - Handling error: UsernameNotFoundException, Password invalid 1 time
 org.springframework.security.core.userdetails.UsernameNotFoundException: Password invalid 1 time
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:58)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:58)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -177,7 +177,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
@@ -198,7 +198,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Passwor
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-09-01 19:00:38 [http-nio-8080-exec-5] [ERROR] o.s.s.o.p.endpoint.TokenEndpoint - Handling error: UsernameNotFoundException, User Not found
 org.springframework.security.core.userdetails.UsernameNotFoundException: User Not found
-	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:41)
+	at com.onlinecode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:41)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
 	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
@@ -276,7 +276,7 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: User No
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at com.onlinecode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)

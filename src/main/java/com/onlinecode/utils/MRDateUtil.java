@@ -1,4 +1,4 @@
-package com.bizcode.utils;
+package com.onlinecode.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

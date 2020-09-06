@@ -20,3 +20,4 @@ public enum SYN {
     public String getValue() {
         return value;
     }
+}

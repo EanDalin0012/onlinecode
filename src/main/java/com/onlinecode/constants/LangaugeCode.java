@@ -1,4 +1,4 @@
-package com.bizcode.constants;
+package com.onlinecode.constants;
 
 public enum LangaugeCode {
     EN("01", "English"), //

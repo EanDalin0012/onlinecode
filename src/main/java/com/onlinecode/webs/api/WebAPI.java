@@ -1,6 +1,5 @@
-package com.bizcode.webs.api;
+package com.onlinecode.webs.api;
 
-import com.bizcode.constants.URL_ACCESS;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

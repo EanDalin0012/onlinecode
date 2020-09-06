@@ -1,8 +1,8 @@
-package com.bizcode.core.serivice.implement;
+package com.onlinecode.core.serivice.implement;
 
-import com.bizcode.core.dao.DefaultAuthenticationProviderDao;
-import com.bizcode.core.map.MMap;
-import com.bizcode.core.map.MultiMap;
+import com.onlinecode.core.dao.DefaultAuthenticationProviderDao;
+import com.onlinecode.core.map.MMap;
+import com.onlinecode.core.map.MultiMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;

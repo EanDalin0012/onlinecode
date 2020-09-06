@@ -1,6 +1,6 @@
-package com.bizcode.admins.services;
+package com.onlinecode.admins.services;
 
-import com.bizcode.core.map.MMap;
+import com.onlinecode.core.map.MMap;
 
 public interface ResourceFileInfoService {
     long getLastId();

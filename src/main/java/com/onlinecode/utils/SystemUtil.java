@@ -1,4 +1,4 @@
-package com.bizcode.utils;
+package com.onlinecode.utils;
 
 public class SystemUtil {
     public static String projectPath() {

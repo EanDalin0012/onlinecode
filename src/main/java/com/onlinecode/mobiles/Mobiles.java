@@ -1,4 +1,4 @@
-package com.bizcode.mobiles;
+package com.onlinecode.mobiles;
 
 public class Mobiles {
 }

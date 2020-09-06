@@ -1,4 +1,4 @@
-package com.bizcode.core.template;
+package com.onlinecode.core.template;
 
 public class ResponseData<H, B> {
     private H header;

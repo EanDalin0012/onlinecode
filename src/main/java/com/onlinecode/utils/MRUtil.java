@@ -1,7 +1,7 @@
-package com.bizcode.utils;
+package com.onlinecode.utils;
 
-import com.bizcode.core.map.MMap;
-import com.bizcode.core.map.MultiMap;
+import com.onlinecode.core.map.MMap;
+import com.onlinecode.core.map.MultiMap;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.StringUtils;
 

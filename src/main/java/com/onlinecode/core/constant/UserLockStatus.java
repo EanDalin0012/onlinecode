@@ -1,4 +1,4 @@
-package com.bizcode.core.constant;
+package com.onlinecode.core.constant;
 
 public enum UserLockStatus {
     Start("START", "Start"),

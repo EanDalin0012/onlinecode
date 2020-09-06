@@ -1,6 +1,6 @@
-package com.bizcode.admins.utils;
+package com.onlinecode.admins.utils;
 
-import com.bizcode.core.map.MMap;
+import com.onlinecode.core.map.MMap;
 
 public class DefaultResponse {
     public static MMap defaultHeader(Boolean error, String msg) {

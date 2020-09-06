@@ -1,13 +1,13 @@
-package com.bizcode.admins.api;
+package com.onlinecode.admins.api;
 
-import com.bizcode.admins.dao.UserAccountDao;
-import com.bizcode.admins.services.implement.UserServiceImplement;
-import com.bizcode.admins.utils.DefaultResponse;
-import com.bizcode.constants.Status;
-import com.bizcode.core.map.MMap;
-import com.bizcode.core.map.MultiMap;
-import com.bizcode.core.template.ResponseData;
-import com.bizcode.utils.ValidatorUtil;
+import com.onlinecode.admins.dao.UserAccountDao;
+import com.onlinecode.admins.services.implement.UserServiceImplement;
+import com.onlinecode.admins.utils.DefaultResponse;
+import com.onlinecode.constants.Status;
+import com.onlinecode.core.map.MMap;
+import com.onlinecode.core.map.MultiMap;
+import com.onlinecode.core.template.ResponseData;
+import com.onlinecode.utils.ValidatorUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

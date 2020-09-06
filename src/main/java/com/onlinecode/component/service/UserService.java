@@ -1,4 +1,4 @@
-package com.bizcode.component.service;
+package com.onlinecode.component.service;
 
 
 public class UserService {

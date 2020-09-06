@@ -1,4 +1,4 @@
-package com.bizcode.mobiles.api;
+package com.onlinecode.mobiles.api;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

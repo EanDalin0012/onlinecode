@@ -1,4 +1,4 @@
-package com.bizcode.core.config.security_oauth2;
+package com.onlinecode.core.config.security_oauth2;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;

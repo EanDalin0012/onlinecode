@@ -21,3 +21,4 @@ public enum ChannelTypeCode {
     public String getValue() {
         return value;
     }
+}

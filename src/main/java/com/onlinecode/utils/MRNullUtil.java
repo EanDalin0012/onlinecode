@@ -1,4 +1,4 @@
-package com.bizcode.utils;
+package com.onlinecode.utils;
 
 import java.util.List;
 import java.util.Map;

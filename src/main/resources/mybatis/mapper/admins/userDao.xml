@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.bizcode.admins.dao.UserDao">
+<mapper namespace="com.onlinecode.admins.dao.UserDao">
 
-	<select id="getList" resultType="MMap">
-	   <![CDATA[
-			 	select
-				u.id
-				, u.account_expired
-				, u.account_locked
-				, u.credentials_expired
-				, u.enabled
-				, u.user_name
-				, u.resource_img_id
-				, u.create_date			as "createDate"
-				, u.create_by			as "createBy"
-				, u.modify_date			as "modifyDate"
-				, u.modify_by			as "modifyBy"
-			from user_ u
+    <select id="getList" resultType="MMap">
+        <![CDATA[
+			SELECT
+				id
+				, first_name			as "firstName"
+				, last_name				as "lastName"
+				, gender				as "gender"
+				, date_birth			as "dateBirth"
+				, email					as "email"
+				, contact				as "contact"
+				, kh_id					as "KHID"
+				, resource_img_id		as "resource_Img_Id"
+				, status				as "status"
+				, create_date			as "createDate"
+				, create_by				as "createBy"
+				, modify_date			as "modifyDate"
+				, modify_by				as "modifyBy"
+				, description			as "description"
+				, address				as "address"
+			FROM user_info
+			WHERE status = #{status};
 	     ]]>
-	</select>
+    </select>
 
-	<insert id="save">
-    	<![CDATA[
+    <insert id="save">
+        <![CDATA[
 			INSERT INTO "user" (
 					  first_name
 					, last_name
@@ -55,8 +61,8 @@
     	]]>
     </insert>
 
-	<select id="getValueById" resultType="MMap">
-	   <![CDATA[
+    <select id="getValueById" resultType="MMap">
+        <![CDATA[
 		  	SELECT
 		  		  id			as "id"
 				, first_name	as "firstName"
@@ -77,10 +83,10 @@
 			FROM user
 			 WHERE id = #{id}
 	     ]]>
-	</select>
+    </select>
 
-	<select id="loadUserByUserName" resultType="MMap">
-	   <![CDATA[
+    <select id="loadUserByUserName" resultType="MMap">
+        <![CDATA[
 		  	select
 				u.id
 				, u.account_expired
@@ -92,19 +98,19 @@
 			from user_ u
 			where u.user_name = #{user_name}
 	     ]]>
-	</select>
+    </select>
 
 
-	<select id="count" resultType="java.lang.Integer">
-	   <![CDATA[
+    <select id="count" resultType="java.lang.Integer">
+        <![CDATA[
 		  SELECT
 	     	COUNT (*)
 	     FROM "user_"
 	     ]]>
-	</select>
+    </select>
 
-	<update id="update">
-		<![CDATA[
+    <update id="update">
+        <![CDATA[
 				UPDATE user
 				SET
 					first_name		= #{firstName}
@@ -122,6 +128,6 @@
 					, resource_id	= #{resourceID}
 				WHERE id			= #{id}
 		]]>
-	</update>
+    </update>
 
 </mapper>

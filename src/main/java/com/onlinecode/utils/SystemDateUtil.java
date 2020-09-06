@@ -1,4 +1,4 @@
-package com.bizcode.utils;
+package com.onlinecode.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

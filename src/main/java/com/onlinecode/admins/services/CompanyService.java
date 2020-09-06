@@ -17,4 +17,5 @@ public interface CompanyService {
 
     Long update(MMap param) throws Exception;
 
-    int coun
+    int count();
+}

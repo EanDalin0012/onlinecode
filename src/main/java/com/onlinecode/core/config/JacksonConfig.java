@@ -1,4 +1,4 @@
-package com.bizcode.core.config;
+package com.onlinecode.core.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,46 +1,46 @@
 plugins {
-	id 'org.springframework.boot' version '2.4.0-SNAPSHOT'
-	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
-	id 'java'
-	id 'war'
+    id 'org.springframework.boot' version '2.4.0-SNAPSHOT'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+    id 'war'
 }
 
-group = 'com.bizcode'
+group = 'com.onlinecode'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
 repositories {
-	mavenCentral()
-	maven { url 'https://repo.spring.io/milestone' }
-	maven { url 'https://repo.spring.io/snapshot' }
+    mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
+    maven { url 'https://repo.spring.io/snapshot' }
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.boot:spring-boot-starter-web-services'
-	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-web-services'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1'
 
-	compile group: 'commons-fileupload', name: 'commons-fileupload', version: '1.4'
-	compile group: 'org.springframework', name: 'spring-tx', version: '5.2.7.RELEASE'
-	compile group: 'org.imgscalr', name: 'imgscalr-lib',  version: '4.2'
-	compile group: 'commons-codec', name: 'commons-codec', version: '1.14'
-	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.10'
-	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind'
-	compile group: 'org.springframework.security.oauth', name: 'spring-security-oauth2', version: '2.3.5.RELEASE'
-	compile group: 'com.sun.xml.bind', name: 'jaxb-core', version: '3.0.0-M4'
-	compile group: 'javax.xml', name: 'jaxb-impl', version: '2.1'
-	compile group: 'com.google.guava', name: 'guava', version: '29.0-jre'
+    compile group: 'commons-fileupload', name: 'commons-fileupload', version: '1.4'
+    compile group: 'org.springframework', name: 'spring-tx', version: '5.2.7.RELEASE'
+    compile group: 'org.imgscalr', name: 'imgscalr-lib', version: '4.2'
+    compile group: 'commons-codec', name: 'commons-codec', version: '1.14'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.10'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind'
+    compile group: 'org.springframework.security.oauth', name: 'spring-security-oauth2', version: '2.3.5.RELEASE'
+    compile group: 'com.sun.xml.bind', name: 'jaxb-core', version: '3.0.0-M4'
+    compile group: 'javax.xml', name: 'jaxb-impl', version: '2.1'
+    compile group: 'com.google.guava', name: 'guava', version: '29.0-jre'
 
-	testCompile group: 'junit', name: 'junit'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	runtimeOnly 'org.postgresql:postgresql'
-	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testCompile group: 'junit', name: 'junit'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'org.postgresql:postgresql'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 test {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }

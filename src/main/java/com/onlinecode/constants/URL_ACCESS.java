@@ -1,4 +1,4 @@
-package com.bizcode.constants;
+package com.onlinecode.constants;
 
 public class URL_ACCESS {
     public static String ADMIN_URL = "";

@@ -1,4 +1,4 @@
-package com.bizcode.core;
+package com.onlinecode.core;
 
 public class Cores {
 }

@@ -1,4 +1,4 @@
-package com.bizcode.constants;
+package com.onlinecode.constants;
 
 public enum BizResultCodeType {
     FILE_TYPE_CODE("01", "file type code for corp-banking"),

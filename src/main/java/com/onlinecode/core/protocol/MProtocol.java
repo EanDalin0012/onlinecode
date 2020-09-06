@@ -1,4 +1,4 @@
-package com.bizcode.core.protocol;
+package com.onlinecode.core.protocol;
 
 import java.io.Serializable;
 

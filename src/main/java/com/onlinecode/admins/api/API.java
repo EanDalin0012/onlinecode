@@ -1,4 +1,4 @@
-package com.bizcode.admins.api;
+package com.onlinecode.admins.api;
 
 public class API {
 }

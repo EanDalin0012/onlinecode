@@ -1,6 +1,6 @@
-package com.bizcode.admins.services.implement;
+package com.onlinecode.admins.services.implement;
 
-import com.bizcode.admins.services.Service;
+import com.onlinecode.admins.services.Service;
 
 public class ServiceImplement implements Service {
 }

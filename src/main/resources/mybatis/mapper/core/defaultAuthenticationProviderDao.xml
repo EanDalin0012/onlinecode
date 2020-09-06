@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.bizcode.core.dao.DefaultAuthenticationProviderDao">
+<mapper namespace="com.onlinecode.core.dao.DefaultAuthenticationProviderDao">
 
-	<resultMap type="MMap"   					id="user">
-		<id property="id"	    				column="id"/>
-		<result property="username" 			column="user_name"/>
-		<result property="password" 			column="password"/>
-		<result property="accountExpired" 		column="account_expired"/>
-		<result property="accountLocked" 		column="account_locked"/>
-		<result property="credentialsExpired" 	column="credentials_expired"/>
-		<result property="enabled" 				column="enabled"/>
-		<association property="authorities" 	resultMap="authority" javaType="list"/>
-	</resultMap>
+    <resultMap type="MMap" id="user">
+        <id property="id" column="id"/>
+        <result property="username" column="user_name"/>
+        <result property="password" column="password"/>
+        <result property="accountExpired" column="account_expired"/>
+        <result property="accountLocked" column="account_locked"/>
+        <result property="credentialsExpired" column="credentials_expired"/>
+        <result property="enabled" column="enabled"/>
+        <association property="authorities" resultMap="authority" javaType="list"/>
+    </resultMap>
 
-	<resultMap type="MMap" 			id="authority">
-		<id property="id" 			column="authority_id"/>
-		<result property="name"  	column="authority_name"/>
-	</resultMap>
+    <resultMap type="MMap" id="authority">
+        <id property="id" column="authority_id"/>
+        <result property="name" column="authority_name"/>
+    </resultMap>
 
-	<select id="getUserByName" resultMap="user">
-	   <![CDATA[
+    <select id="getUserByName" resultMap="user">
+        <![CDATA[
 			select
 				u.id
 				, u.user_name
@@ -35,11 +35,11 @@
 			inner join authority a on a.id = ua.authority_id
 			where u.user_name = #{username}
 	   ]]>
-	</select>
+    </select>
 
 
-	<select id="getTrackUserLockByUserName" resultType="MMap">
-	   <![CDATA[
+    <select id="getTrackUserLockByUserName" resultType="MMap">
+        <![CDATA[
 			SELECT
 			id			as "id"
 			, user_name	as "userName"
@@ -53,20 +53,20 @@
 			AND islocked 	= #{isLocked};
 
 	     ]]>
-	</select>
+    </select>
 
-	<update id="lockedUser">
-		<![CDATA[
+    <update id="lockedUser">
+        <![CDATA[
 			UPDATE user_
 			SET
 				account_locked 	= #{accountLocked}
 			WHERE user_name 	= #{userName}
 		]]>
-	</update>
+    </update>
 
 
-	<insert id="trackSaveUserLock">
-    	<![CDATA[
+    <insert id="trackSaveUserLock">
+        <![CDATA[
 			INSERT INTO user_lock_count
 				(
 				 user_name
@@ -87,8 +87,8 @@
     	]]>
     </insert>
 
-	<update id="trackUpdateUserLock">
-		<![CDATA[
+    <update id="trackUpdateUserLock">
+        <![CDATA[
 				UPDATE user_lock_count
 					SET
 					 count		=	#{count}
@@ -100,10 +100,10 @@
 				WHERE id		= 	#{id}
 				AND	islocked	= 	#{isLocked}
 		]]>
-	</update>
+    </update>
 
-	<update id="trackUpdateUserIsLocked">
-		<![CDATA[
+    <update id="trackUpdateUserIsLocked">
+        <![CDATA[
 				UPDATE user_lock_count
 					SET
 					 date		=	to_char(NOW(), 'YYYYMMDD')
@@ -113,16 +113,16 @@
 				WHERE id		= 	#{id}
 				AND	islocked	= 	#{isUpdateLocked}
 		]]>
-	</update>
+    </update>
 
-	<update id="updateLoginSuccess">
-		<![CDATA[
+    <update id="updateLoginSuccess">
+        <![CDATA[
 			UPDATE user_
 			SET
 				last_login_date 	= to_char(NOW(), 'YYYYMMDD')
 				, last_login_time 	= to_char(NOW(), 'HH12MISS')
 			WHERE  user_name = #{userName}
 		]]>
-	</update>
+    </update>
 
 </mapper>

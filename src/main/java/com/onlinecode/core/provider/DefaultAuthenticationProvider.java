@@ -1,10 +1,10 @@
-package com.bizcode.core.provider;
+package com.onlinecode.core.provider;
 
-import com.bizcode.admins.api.UserAPI;
-import com.bizcode.core.constant.UserLockStatus;
-import com.bizcode.core.map.MMap;
-import com.bizcode.core.map.MultiMap;
-import com.bizcode.core.serivice.implement.DefaultAuthenticationProviderServiceImplement;
+import com.onlinecode.admins.api.UserAPI;
+import com.onlinecode.core.constant.UserLockStatus;
+import com.onlinecode.core.map.MMap;
+import com.onlinecode.core.map.MultiMap;
+import com.onlinecode.core.serivice.implement.DefaultAuthenticationProviderServiceImplement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

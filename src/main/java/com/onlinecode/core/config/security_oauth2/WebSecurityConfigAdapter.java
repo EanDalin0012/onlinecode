@@ -46,3 +46,5 @@ public class WebSecurityConfigAdapter extends WebSecurityConfigurerAdapter {
                         , "/401.html"
                         , "/404.html"
                         , "/500.html");
+    }
+}

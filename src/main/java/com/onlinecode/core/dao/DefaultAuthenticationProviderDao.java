@@ -1,6 +1,6 @@
-package com.bizcode.core.dao;
+package com.onlinecode.core.dao;
 
-import com.bizcode.core.map.MMap;
+import com.onlinecode.core.map.MMap;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

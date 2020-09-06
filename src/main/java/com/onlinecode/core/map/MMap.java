@@ -1,6 +1,6 @@
-package com.bizcode.core.map;
+package com.onlinecode.core.map;
 
-import com.bizcode.core.protocol.MProtocol;
+import com.onlinecode.core.protocol.MProtocol;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

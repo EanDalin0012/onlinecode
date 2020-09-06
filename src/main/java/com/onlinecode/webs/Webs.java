@@ -1,4 +1,4 @@
-package com.bizcode.webs;
+package com.onlinecode.webs;
 
 public class Webs {
 }

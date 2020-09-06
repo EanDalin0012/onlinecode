@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.bizcode.admins.dao.CompanyDao">
+<mapper namespace="com.onlinecode.admins.dao.CompanyDao">
 
-	<select id="getList" resultType="MMap">
-	   <![CDATA[
+    <select id="getList" resultType="MMap">
+        <![CDATA[
 		 SELECT
 		 	id				as "id"
 			, name			as "name"
@@ -19,10 +19,10 @@
 		FROM company
 		 WHERE status != #{status}
 	     ]]>
-	</select>
+    </select>
 
-	<select id="getValueById" resultType="MMap">
-	   <![CDATA[
+    <select id="getValueById" resultType="MMap">
+        <![CDATA[
 		 SELECT
 		 	id				as "id"
 			, name			as "name"
@@ -38,10 +38,10 @@
 		FROM company
 		 WHERE id = #{id}
 	     ]]>
-	</select>
+    </select>
 
-	<insert id="save">
-    	<![CDATA[
+    <insert id="save">
+        <![CDATA[
 	    	INSERT INTO company
 			(
 				  name
@@ -67,16 +67,16 @@
     	]]>
     </insert>
 
-	<select id="count">
-	   <![CDATA[
+    <select id="count">
+        <![CDATA[
 		  SELECT
 	     	COUNT (*)
 	     FROM company
 	     ]]>
-	</select>
+    </select>
 
-	<update id="update" >
-		<![CDATA[
+    <update id="update">
+        <![CDATA[
 		UPDATE company
 		SET
 			  name 			= #{name}
@@ -89,10 +89,10 @@
 			, modify_date	= to_char(NOW(), 'YYYYMMDD')
 		WHERE id 			= #{id}
 		]]>
-	</update>
+    </update>
 
-	<update id="delete">
-		<![CDATA[
+    <update id="delete">
+        <![CDATA[
 		update company
         set
              status  		= #{status}
@@ -100,6 +100,6 @@
             , modify_date	= to_char(NOW(), 'YYYYMMDD')
         where id   			= #{id}
 		]]>
-	</update>
+    </update>
 
 </mapper>

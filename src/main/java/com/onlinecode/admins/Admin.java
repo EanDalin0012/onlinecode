@@ -1,4 +1,4 @@
-package com.bizcode.admins;
+package com.onlinecode.admins;
 
 public class Admin {
 }

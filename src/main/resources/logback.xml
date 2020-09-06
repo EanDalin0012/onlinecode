@@ -2,11 +2,11 @@
 <configuration>
     <!-- ${APP_HOME}/log -->
 
-    <property name="rootDir" value="Logs" />
-    <property name="archiveDir" value="${rootDir}/archived" />
-    <property name="fileSize" value="10MB" />
+    <property name="rootDir" value="Logs"/>
+    <property name="archiveDir" value="${rootDir}/archived"/>
+    <property name="fileSize" value="10MB"/>
 
-    <property name="pattern" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] [%level] %logger{36} - %msg%n" />
+    <property name="pattern" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] [%level] %logger{36} - %msg%n"/>
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
@@ -48,13 +48,13 @@
     <logger name="org.springframework.beans" level="INFO" additivity="true"/>
     <logger name="org.springframework.context" level="INFO" additivity="true"/>
     <logger name="org.springframework.web" level="INFO" additivity="true"/>
-    <logger name="org.mybatis" level="DEBUG" />
-    <logger name="org.springframework.web.filter.CommonsRequestLoggingFilter" level="DEBUG" />
+    <logger name="org.mybatis" level="DEBUG"/>
+    <logger name="org.springframework.web.filter.CommonsRequestLoggingFilter" level="DEBUG"/>
 
-    <logger name="com.bizcode" level="DEBUG" />
+    <logger name="com.onlinecode" level="DEBUG"/>
 
     <root level="INFO">
-        <appender-ref ref="STDOUT" />
+        <appender-ref ref="STDOUT"/>
         <appender-ref ref="DEBUG-FILE"/>
         <appender-ref ref="ERROR-FILE"/>
     </root>

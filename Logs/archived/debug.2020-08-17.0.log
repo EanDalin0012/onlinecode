@@ -1,0 +1,935 @@
+2020-08-17 00:00:01 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 00:00:01 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d8724eb] was not registered for synchronization because synchronization is not active
+2020-08-17 00:00:01 [http-nio-8080-exec-1] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@985661656 wrapping org.postgresql.jdbc.PgConnection@64ab194a] will not be managed by Spring
+2020-08-17 00:00:01 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.getUserByName - ==>  Preparing: select u.id , u.user_name , u."password" , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , a."name" as "authority_name" , a.id as "authority_id" from user_ u inner join users_authorities ua on ua.user_id = u.id inner join authority a on a.id = ua.authority_id where u.user_name = ? 
+2020-08-17 00:00:01 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: miracle(String)
+2020-08-17 00:00:01 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 0
+2020-08-17 00:00:01 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d8724eb]
+2020-08-17 00:00:01 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.UserAPI - 
+ ==>> ***get error class DefaultAuthenticationProvider ***<<==
+
+java.lang.NullPointerException: null
+	at com.bizcode.core.provider.DefaultAuthenticationProvider.authenticate(DefaultAuthenticationProvider.java:44)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:220)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
+	at org.springframework.security.oauth2.provider.password.ResourceOwnerPasswordTokenGranter.getOAuth2Authentication(ResourceOwnerPasswordTokenGranter.java:71)
+	at org.springframework.security.oauth2.provider.token.AbstractTokenGranter.getAccessToken(AbstractTokenGranter.java:72)
+	at org.springframework.security.oauth2.provider.token.AbstractTokenGranter.grant(AbstractTokenGranter.java:67)
+	at org.springframework.security.oauth2.provider.CompositeTokenGranter.grant(CompositeTokenGranter.java:38)
+	at org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer$4.grant(AuthorizationServerEndpointsConfigurer.java:583)
+	at org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.postAccessToken(TokenEndpoint.java:132)
+	at jdk.internal.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:802)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1062)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:339)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:204)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:223)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:184)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-08-17 00:00:01 [http-nio-8080-exec-1] [ERROR] o.s.s.o.p.endpoint.TokenEndpoint - Handling error: ProviderNotFoundException, No AuthenticationProvider found for org.springframework.security.authentication.UsernamePasswordAuthenticationToken
+org.springframework.security.authentication.ProviderNotFoundException: No AuthenticationProvider found for org.springframework.security.authentication.UsernamePasswordAuthenticationToken
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:252)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:524)
+	at org.springframework.security.oauth2.provider.password.ResourceOwnerPasswordTokenGranter.getOAuth2Authentication(ResourceOwnerPasswordTokenGranter.java:71)
+	at org.springframework.security.oauth2.provider.token.AbstractTokenGranter.getAccessToken(AbstractTokenGranter.java:72)
+	at org.springframework.security.oauth2.provider.token.AbstractTokenGranter.grant(AbstractTokenGranter.java:67)
+	at org.springframework.security.oauth2.provider.CompositeTokenGranter.grant(CompositeTokenGranter.java:38)
+	at org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer$4.grant(AuthorizationServerEndpointsConfigurer.java:583)
+	at org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.postAccessToken(TokenEndpoint.java:132)
+	at jdk.internal.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:802)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1062)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:339)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:204)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:223)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:184)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-08-17 00:00:01 [http-nio-8080-exec-1] [WARN] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.ProviderNotFoundException: No AuthenticationProvider found for org.springframework.security.authentication.UsernamePasswordAuthenticationToken]
+2020-08-17 00:00:14 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 00:00:14 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e146f0b] was not registered for synchronization because synchronization is not active
+2020-08-17 00:00:14 [http-nio-8080-exec-2] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@586505281 wrapping org.postgresql.jdbc.PgConnection@64ab194a] will not be managed by Spring
+2020-08-17 00:00:14 [http-nio-8080-exec-2] [DEBUG] c.b.c.d.D.getUserByName - ==>  Preparing: select u.id , u.user_name , u."password" , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , a."name" as "authority_name" , a.id as "authority_id" from user_ u inner join users_authorities ua on ua.user_id = u.id inner join authority a on a.id = ua.authority_id where u.user_name = ? 
+2020-08-17 00:00:14 [http-nio-8080-exec-2] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: admin(String)
+2020-08-17 00:00:14 [http-nio-8080-exec-2] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 9
+2020-08-17 00:00:14 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e146f0b]
+2020-08-17 00:00:15 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 00:00:15 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@14f3b8b4] was not registered for synchronization because synchronization is not active
+2020-08-17 00:00:15 [http-nio-8080-exec-3] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1819773204 wrapping org.postgresql.jdbc.PgConnection@64ab194a] will not be managed by Spring
+2020-08-17 00:00:15 [http-nio-8080-exec-3] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id from user_ u where u.user_name = ? 
+2020-08-17 00:00:15 [http-nio-8080-exec-3] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==> Parameters: admin(String)
+2020-08-17 00:00:15 [http-nio-8080-exec-3] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - <==      Total: 1
+2020-08-17 00:00:15 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@14f3b8b4]
+2020-08-17 00:01:39 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 00:01:39 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@76bf61bc] was not registered for synchronization because synchronization is not active
+2020-08-17 00:01:39 [http-nio-8080-exec-5] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@346362912 wrapping org.postgresql.jdbc.PgConnection@64ab194a] will not be managed by Spring
+2020-08-17 00:01:39 [http-nio-8080-exec-5] [DEBUG] c.b.c.d.D.getUserByName - ==>  Preparing: select u.id , u.user_name , u."password" , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , a."name" as "authority_name" , a.id as "authority_id" from user_ u inner join users_authorities ua on ua.user_id = u.id inner join authority a on a.id = ua.authority_id where u.user_name = ? 
+2020-08-17 00:01:39 [http-nio-8080-exec-5] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: admin(String)
+2020-08-17 00:01:39 [http-nio-8080-exec-5] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 9
+2020-08-17 00:01:39 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@76bf61bc]
+2020-08-17 00:01:39 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 00:01:39 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@236ea6b2] was not registered for synchronization because synchronization is not active
+2020-08-17 00:01:39 [http-nio-8080-exec-6] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@766074031 wrapping org.postgresql.jdbc.PgConnection@64ab194a] will not be managed by Spring
+2020-08-17 00:01:39 [http-nio-8080-exec-6] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id from user_ u where u.user_name = ? 
+2020-08-17 00:01:39 [http-nio-8080-exec-6] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==> Parameters: admin(String)
+2020-08-17 00:01:39 [http-nio-8080-exec-6] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - <==      Total: 1
+2020-08-17 00:01:39 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@236ea6b2]
+2020-08-17 00:02:37 [http-nio-8080-exec-8] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 00:02:37 [http-nio-8080-exec-8] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@227b3332] was not registered for synchronization because synchronization is not active
+2020-08-17 00:02:37 [http-nio-8080-exec-8] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1908859583 wrapping org.postgresql.jdbc.PgConnection@64ab194a] will not be managed by Spring
+2020-08-17 00:02:37 [http-nio-8080-exec-8] [DEBUG] c.b.c.d.D.getUserByName - ==>  Preparing: select u.id , u.user_name , u."password" , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , a."name" as "authority_name" , a.id as "authority_id" from user_ u inner join users_authorities ua on ua.user_id = u.id inner join authority a on a.id = ua.authority_id where u.user_name = ? 
+2020-08-17 00:02:37 [http-nio-8080-exec-8] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: admin(String)
+2020-08-17 00:02:37 [http-nio-8080-exec-8] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 9
+2020-08-17 00:02:37 [http-nio-8080-exec-8] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@227b3332]
+2020-08-17 00:02:37 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 00:02:37 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26b91f5a] was not registered for synchronization because synchronization is not active
+2020-08-17 00:02:37 [http-nio-8080-exec-9] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@430134428 wrapping org.postgresql.jdbc.PgConnection@64ab194a] will not be managed by Spring
+2020-08-17 00:02:37 [http-nio-8080-exec-9] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id from user_ u where u.user_name = ? 
+2020-08-17 00:02:37 [http-nio-8080-exec-9] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==> Parameters: admin(String)
+2020-08-17 00:02:37 [http-nio-8080-exec-9] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - <==      Total: 1
+2020-08-17 00:02:37 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26b91f5a]
+2020-08-17 00:05:25 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 00:05:25 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b2cef5b] was not registered for synchronization because synchronization is not active
+2020-08-17 00:05:25 [http-nio-8080-exec-1] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@660307611 wrapping org.postgresql.jdbc.PgConnection@64ab194a] will not be managed by Spring
+2020-08-17 00:05:25 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.getUserByName - ==>  Preparing: select u.id , u.user_name , u."password" , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , a."name" as "authority_name" , a.id as "authority_id" from user_ u inner join users_authorities ua on ua.user_id = u.id inner join authority a on a.id = ua.authority_id where u.user_name = ? 
+2020-08-17 00:05:25 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: admin(String)
+2020-08-17 00:05:25 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 9
+2020-08-17 00:05:25 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b2cef5b]
+2020-08-17 00:05:30 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 00:05:30 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a24332d] was not registered for synchronization because synchronization is not active
+2020-08-17 00:05:30 [http-nio-8080-exec-2] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@695289319 wrapping org.postgresql.jdbc.PgConnection@64ab194a] will not be managed by Spring
+2020-08-17 00:05:30 [http-nio-8080-exec-2] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id from user_ u where u.user_name = ? 
+2020-08-17 00:05:30 [http-nio-8080-exec-2] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==> Parameters: admin(String)
+2020-08-17 00:05:30 [http-nio-8080-exec-2] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - <==      Total: 1
+2020-08-17 00:05:30 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a24332d]
+2020-08-17 00:07:12 [http-nio-8080-exec-4] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 00:07:12 [http-nio-8080-exec-4] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d098542] was not registered for synchronization because synchronization is not active
+2020-08-17 00:07:12 [http-nio-8080-exec-4] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@471831270 wrapping org.postgresql.jdbc.PgConnection@64ab194a] will not be managed by Spring
+2020-08-17 00:07:12 [http-nio-8080-exec-4] [DEBUG] c.b.c.d.D.getUserByName - ==>  Preparing: select u.id , u.user_name , u."password" , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , a."name" as "authority_name" , a.id as "authority_id" from user_ u inner join users_authorities ua on ua.user_id = u.id inner join authority a on a.id = ua.authority_id where u.user_name = ? 
+2020-08-17 00:07:12 [http-nio-8080-exec-4] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: admin(String)
+2020-08-17 00:07:12 [http-nio-8080-exec-4] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 9
+2020-08-17 00:07:12 [http-nio-8080-exec-4] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d098542]
+2020-08-17 00:09:31 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 00:09:31 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2996cdc2] was not registered for synchronization because synchronization is not active
+2020-08-17 00:09:31 [http-nio-8080-exec-6] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1821660820 wrapping org.postgresql.jdbc.PgConnection@64ab194a] will not be managed by Spring
+2020-08-17 00:09:31 [http-nio-8080-exec-6] [DEBUG] c.b.c.d.D.getUserByName - ==>  Preparing: select u.id , u.user_name , u."password" , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , a."name" as "authority_name" , a.id as "authority_id" from user_ u inner join users_authorities ua on ua.user_id = u.id inner join authority a on a.id = ua.authority_id where u.user_name = ? 
+2020-08-17 00:09:31 [http-nio-8080-exec-6] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: admin(String)
+2020-08-17 00:09:31 [http-nio-8080-exec-6] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 9
+2020-08-17 00:09:31 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2996cdc2]
+2020-08-17 00:13:54 [http-nio-8080-exec-8] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 00:13:54 [http-nio-8080-exec-8] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c926ff6] was not registered for synchronization because synchronization is not active
+2020-08-17 00:13:54 [http-nio-8080-exec-8] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@821265472 wrapping org.postgresql.jdbc.PgConnection@64ab194a] will not be managed by Spring
+2020-08-17 00:13:54 [http-nio-8080-exec-8] [DEBUG] c.b.c.d.D.getUserByName - ==>  Preparing: select u.id , u.user_name , u."password" , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , a."name" as "authority_name" , a.id as "authority_id" from user_ u inner join users_authorities ua on ua.user_id = u.id inner join authority a on a.id = ua.authority_id where u.user_name = ? 
+2020-08-17 00:13:54 [http-nio-8080-exec-8] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: admin(String)
+2020-08-17 00:13:54 [http-nio-8080-exec-8] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 9
+2020-08-17 00:13:54 [http-nio-8080-exec-8] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c926ff6]
+2020-08-17 00:13:55 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 00:13:55 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@391bb8ef] was not registered for synchronization because synchronization is not active
+2020-08-17 00:13:55 [http-nio-8080-exec-9] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1463169881 wrapping org.postgresql.jdbc.PgConnection@64ab194a] will not be managed by Spring
+2020-08-17 00:13:55 [http-nio-8080-exec-9] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id from user_ u where u.user_name = ? 
+2020-08-17 00:13:55 [http-nio-8080-exec-9] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==> Parameters: admin(String)
+2020-08-17 00:13:55 [http-nio-8080-exec-9] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - <==      Total: 1
+2020-08-17 00:13:55 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@391bb8ef]
+2020-08-17 00:14:35 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 00:14:35 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a88fd51] was not registered for synchronization because synchronization is not active
+2020-08-17 00:14:35 [http-nio-8080-exec-1] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@892200242 wrapping org.postgresql.jdbc.PgConnection@64ab194a] will not be managed by Spring
+2020-08-17 00:14:35 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.getUserByName - ==>  Preparing: select u.id , u.user_name , u."password" , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , a."name" as "authority_name" , a.id as "authority_id" from user_ u inner join users_authorities ua on ua.user_id = u.id inner join authority a on a.id = ua.authority_id where u.user_name = ? 
+2020-08-17 00:14:35 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: admin(String)
+2020-08-17 00:14:35 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 9
+2020-08-17 00:14:35 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a88fd51]
+2020-08-17 00:14:35 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 00:14:35 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1548f68] was not registered for synchronization because synchronization is not active
+2020-08-17 00:14:35 [http-nio-8080-exec-2] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@2019030267 wrapping org.postgresql.jdbc.PgConnection@64ab194a] will not be managed by Spring
+2020-08-17 00:14:35 [http-nio-8080-exec-2] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id from user_ u where u.user_name = ? 
+2020-08-17 00:14:35 [http-nio-8080-exec-2] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==> Parameters: admin(String)
+2020-08-17 00:14:35 [http-nio-8080-exec-2] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - <==      Total: 1
+2020-08-17 00:14:35 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1548f68]
+2020-08-17 00:17:41 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 00:17:41 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7ab41525] was not registered for synchronization because synchronization is not active
+2020-08-17 00:17:41 [http-nio-8080-exec-5] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@211205295 wrapping org.postgresql.jdbc.PgConnection@2bedd969] will not be managed by Spring
+2020-08-17 00:17:41 [http-nio-8080-exec-5] [DEBUG] c.b.c.d.D.getUserByName - ==>  Preparing: select u.id , u.user_name , u."password" , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , a."name" as "authority_name" , a.id as "authority_id" from user_ u inner join users_authorities ua on ua.user_id = u.id inner join authority a on a.id = ua.authority_id where u.user_name = ? 
+2020-08-17 00:17:41 [http-nio-8080-exec-5] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: admin(String)
+2020-08-17 00:17:41 [http-nio-8080-exec-5] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 9
+2020-08-17 00:17:41 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7ab41525]
+2020-08-17 00:17:50 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 00:17:50 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51c18a3a] was not registered for synchronization because synchronization is not active
+2020-08-17 00:17:50 [http-nio-8080-exec-6] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@712452566 wrapping org.postgresql.jdbc.PgConnection@2bedd969] will not be managed by Spring
+2020-08-17 00:17:50 [http-nio-8080-exec-6] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id from user_ u where u.user_name = ? 
+2020-08-17 00:17:50 [http-nio-8080-exec-6] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==> Parameters: admin(String)
+2020-08-17 00:17:50 [http-nio-8080-exec-6] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - <==      Total: 1
+2020-08-17 00:17:50 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51c18a3a]
+2020-08-17 00:19:22 [SpringContextShutdownHook] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-17 00:19:22 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-08-17 00:19:22 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-08-17 21:19:18 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 900 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-08-17 21:19:18 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
+2020-08-17 21:19:18 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-08-17 21:19:18 [restartedMain] [INFO] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Eanda\.gradle\caches\modules-2\files-2.1\javax.xml\jaxb-impl\2.1\8c86d5d4eac7f89cec63432274d712ba82cd201b\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb-api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/activation.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jsr173_1.0_api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb1-impl.jar
+2020-08-17 21:19:18 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-17 21:19:18 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-17 21:19:19 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-08-17 21:19:19 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-08-17 21:19:20 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-08-17 21:19:20 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 0 JDBC repository interfaces.
+2020-08-17 21:19:20 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\CompanyDao.class]
+2020-08-17 21:19:20 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\UserDao.class]
+2020-08-17 21:19:20 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\core\dao\DefaultAuthenticationProviderDao.class]
+2020-08-17 21:19:20 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.bizcode.admins.dao.CompanyDao' mapperInterface
+2020-08-17 21:19:20 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'companyDao'.
+2020-08-17 21:19:20 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.bizcode.admins.dao.UserDao' mapperInterface
+2020-08-17 21:19:20 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userDao'.
+2020-08-17 21:19:20 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.bizcode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
+2020-08-17 21:19:20 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'defaultAuthenticationProviderDao'.
+2020-08-17 21:19:20 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$78589790] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-17 21:19:20 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-08-17 21:19:20 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2fc76c9a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-17 21:19:20 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-17 21:19:22 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-08-17 21:19:22 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-17 21:19:22 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-08-17 21:19:22 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-17 21:19:23 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-08-17 21:19:23 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4691 ms
+2020-08-17 21:19:26 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis/mybatis_config.xml]'
+2020-08-17 21:19:27 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'
+2020-08-17 21:19:27 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\userDao.xml]'
+2020-08-17 21:19:27 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\core\defaultAuthenticationProviderDao.xml]'
+2020-08-17 21:19:28 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/api/web/**'], []
+2020-08-17 21:19:28 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/api/mobile/**'], []
+2020-08-17 21:19:28 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/401.html'], []
+2020-08-17 21:19:28 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/404.html'], []
+2020-08-17 21:19:28 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/500.html'], []
+2020-08-17 21:19:28 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4b11197, org.springframework.security.web.context.SecurityContextPersistenceFilter@38784dae, org.springframework.security.web.header.HeaderWriterFilter@6b2f83f1, org.springframework.security.web.authentication.logout.LogoutFilter@209e1bf0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7fcd5ba3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e7564bb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@635d7421, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15e1999e, org.springframework.security.web.session.SessionManagementFilter@13f67234, org.springframework.security.web.access.ExceptionTranslationFilter@25e26977, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@57303e5d]
+2020-08-17 21:19:28 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/api/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15587078, org.springframework.security.web.context.SecurityContextPersistenceFilter@785bfe26, org.springframework.security.web.header.HeaderWriterFilter@3f97933c, org.springframework.security.web.authentication.logout.LogoutFilter@3f13b00d, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@673c7910, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ed4b9ab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4dd9cd3e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b2eb2c8, org.springframework.security.web.session.SessionManagementFilter@19198172, org.springframework.security.web.access.ExceptionTranslationFilter@24f24977, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c277f1e]
+2020-08-17 21:19:28 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32babda1, org.springframework.security.web.context.SecurityContextPersistenceFilter@5491742, org.springframework.security.web.header.HeaderWriterFilter@3360862b, org.springframework.security.web.csrf.CsrfFilter@380c113b, org.springframework.security.web.authentication.logout.LogoutFilter@6c75f991, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@243d0bb8, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2973aafb, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@719855f8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@85f7911, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ccb072, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@37aa3f9e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3a2c77c7, org.springframework.security.web.session.SessionManagementFilter@31e5f444, org.springframework.security.web.access.ExceptionTranslationFilter@6b3dd7be, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@18726b8c]
+2020-08-17 21:19:29 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-17 21:19:29 [restartedMain] [WARN] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-08-17 21:19:29 [restartedMain] [WARN] o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-17 21:19:29 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2020-08-17 21:19:29 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-08-17 21:19:29 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-08-17 21:19:29 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-08-17 21:19:29 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-08-17 21:19:30 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-17 21:19:30 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Started BizcodeApplication in 11.673 seconds (JVM running for 14.124)
+2020-08-17 22:08:54 [http-nio-8080-exec-2] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-17 22:08:54 [http-nio-8080-exec-2] [INFO] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-08-17 22:08:54 [http-nio-8080-exec-2] [INFO] o.s.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+2020-08-17 22:08:55 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 22:08:55 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71538b7e] was not registered for synchronization because synchronization is not active
+2020-08-17 22:08:55 [http-nio-8080-exec-2] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1642481170 wrapping org.postgresql.jdbc.PgConnection@24cecd64] will not be managed by Spring
+2020-08-17 22:08:55 [http-nio-8080-exec-2] [DEBUG] c.b.c.d.D.getUserByName - ==>  Preparing: select u.id , u.user_name , u."password" , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , a."name" as "authority_name" , a.id as "authority_id" from user_ u inner join users_authorities ua on ua.user_id = u.id inner join authority a on a.id = ua.authority_id where u.user_name = ? 
+2020-08-17 22:08:55 [http-nio-8080-exec-2] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: admin(String)
+2020-08-17 22:08:55 [http-nio-8080-exec-2] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 9
+2020-08-17 22:08:55 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71538b7e]
+2020-08-17 22:08:56 [http-nio-8080-exec-2] [INFO] o.s.s.o.p.token.store.JdbcTokenStore - Failed to find access token for token 7d1d9c5b-6d4b-484d-b4e7-0fa566b95201
+2020-08-17 22:08:56 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 22:08:56 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e5d0752] was not registered for synchronization because synchronization is not active
+2020-08-17 22:08:56 [http-nio-8080-exec-3] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1087954072 wrapping org.postgresql.jdbc.PgConnection@24cecd64] will not be managed by Spring
+2020-08-17 22:08:56 [http-nio-8080-exec-3] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id from user_ u where u.user_name = ? 
+2020-08-17 22:08:56 [http-nio-8080-exec-3] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==> Parameters: admin(String)
+2020-08-17 22:08:56 [http-nio-8080-exec-3] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - <==      Total: 1
+2020-08-17 22:08:56 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e5d0752]
+2020-08-17 22:11:59 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 22:11:59 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e03faf7] was not registered for synchronization because synchronization is not active
+2020-08-17 22:11:59 [http-nio-8080-exec-5] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@122157234 wrapping org.postgresql.jdbc.PgConnection@24cecd64] will not be managed by Spring
+2020-08-17 22:11:59 [http-nio-8080-exec-5] [DEBUG] c.b.c.d.D.getUserByName - ==>  Preparing: select u.id , u.user_name , u."password" , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , a."name" as "authority_name" , a.id as "authority_id" from user_ u inner join users_authorities ua on ua.user_id = u.id inner join authority a on a.id = ua.authority_id where u.user_name = ? 
+2020-08-17 22:11:59 [http-nio-8080-exec-5] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: admin(String)
+2020-08-17 22:11:59 [http-nio-8080-exec-5] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 9
+2020-08-17 22:11:59 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e03faf7]
+2020-08-17 22:11:59 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 22:11:59 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d702478] was not registered for synchronization because synchronization is not active
+2020-08-17 22:11:59 [http-nio-8080-exec-6] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@599252902 wrapping org.postgresql.jdbc.PgConnection@24cecd64] will not be managed by Spring
+2020-08-17 22:11:59 [http-nio-8080-exec-6] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id from user_ u where u.user_name = ? 
+2020-08-17 22:11:59 [http-nio-8080-exec-6] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==> Parameters: admin(String)
+2020-08-17 22:11:59 [http-nio-8080-exec-6] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - <==      Total: 1
+2020-08-17 22:11:59 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d702478]
+2020-08-17 22:12:08 [http-nio-8080-exec-8] [ERROR] o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+org.springframework.security.web.firewall.RequestRejectedException: The request was rejected because the URL contained a potentially malicious String "//"
+	at org.springframework.security.web.firewall.StrictHttpFirewall.rejectedBlocklistedUrls(StrictHttpFirewall.java:634)
+	at org.springframework.security.web.firewall.StrictHttpFirewall.getFirewalledRequest(StrictHttpFirewall.java:463)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:202)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:184)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-08-17 22:12:09 [http-nio-8080-exec-10] [WARN] o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [202] milliseconds.
+2020-08-17 22:14:40 [SpringContextShutdownHook] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-17 22:14:40 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-08-17 22:14:40 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-08-17 22:14:50 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 1404 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-08-17 22:14:50 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
+2020-08-17 22:14:50 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-08-17 22:14:50 [restartedMain] [INFO] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Eanda\.gradle\caches\modules-2\files-2.1\javax.xml\jaxb-impl\2.1\8c86d5d4eac7f89cec63432274d712ba82cd201b\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb-api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/activation.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jsr173_1.0_api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb1-impl.jar
+2020-08-17 22:14:50 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-17 22:14:50 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-17 22:14:51 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-08-17 22:14:51 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-08-17 22:14:51 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-08-17 22:14:51 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 JDBC repository interfaces.
+2020-08-17 22:14:51 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\CategoryDao.class]
+2020-08-17 22:14:51 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\CompanyDao.class]
+2020-08-17 22:14:51 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\UserDao.class]
+2020-08-17 22:14:51 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\core\dao\DefaultAuthenticationProviderDao.class]
+2020-08-17 22:14:51 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'categoryDao' and 'com.bizcode.admins.dao.CategoryDao' mapperInterface
+2020-08-17 22:14:51 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'categoryDao'.
+2020-08-17 22:14:51 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.bizcode.admins.dao.CompanyDao' mapperInterface
+2020-08-17 22:14:51 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'companyDao'.
+2020-08-17 22:14:51 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.bizcode.admins.dao.UserDao' mapperInterface
+2020-08-17 22:14:51 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userDao'.
+2020-08-17 22:14:51 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.bizcode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
+2020-08-17 22:14:51 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'defaultAuthenticationProviderDao'.
+2020-08-17 22:14:51 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$5c17dea] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-17 22:14:51 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-08-17 22:14:52 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@204901e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-17 22:14:52 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-17 22:14:52 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-08-17 22:14:52 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-17 22:14:52 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-08-17 22:14:52 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-17 22:14:52 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-08-17 22:14:52 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1668 ms
+2020-08-17 22:14:52 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis/mybatis_config.xml]'
+2020-08-17 22:14:52 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'
+2020-08-17 22:14:52 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\mainCategoryDao.xml]'
+2020-08-17 22:14:52 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\userDao.xml]'
+2020-08-17 22:14:52 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\core\defaultAuthenticationProviderDao.xml]'
+2020-08-17 22:14:53 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/api/web/**'], []
+2020-08-17 22:14:53 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/api/mobile/**'], []
+2020-08-17 22:14:53 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/401.html'], []
+2020-08-17 22:14:53 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/404.html'], []
+2020-08-17 22:14:53 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/500.html'], []
+2020-08-17 22:14:53 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d3e8e7a, org.springframework.security.web.context.SecurityContextPersistenceFilter@65dd96ee, org.springframework.security.web.header.HeaderWriterFilter@741e3ee7, org.springframework.security.web.authentication.logout.LogoutFilter@65d8bc96, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@18456f9e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62a88615, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@647d2e3e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@755afea9, org.springframework.security.web.session.SessionManagementFilter@197e03f1, org.springframework.security.web.access.ExceptionTranslationFilter@2c67aa1c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@75db324c]
+2020-08-17 22:14:53 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/api/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d967cec, org.springframework.security.web.context.SecurityContextPersistenceFilter@7a2e5e5d, org.springframework.security.web.header.HeaderWriterFilter@24fac205, org.springframework.security.web.authentication.logout.LogoutFilter@720076dc, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@1f29e88a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f046116, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d1c7019, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5624bd8, org.springframework.security.web.session.SessionManagementFilter@75003e4, org.springframework.security.web.access.ExceptionTranslationFilter@52e4f771, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1795cdf5]
+2020-08-17 22:14:53 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@560886c4, org.springframework.security.web.context.SecurityContextPersistenceFilter@256e55ec, org.springframework.security.web.header.HeaderWriterFilter@34fae540, org.springframework.security.web.csrf.CsrfFilter@37c53675, org.springframework.security.web.authentication.logout.LogoutFilter@36bbeee8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@663f9a9e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3e9a8621, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@52389ab2, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1db2f00a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1f8144e8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c3262bd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f802636, org.springframework.security.web.session.SessionManagementFilter@7426c98b, org.springframework.security.web.access.ExceptionTranslationFilter@2a1208e9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ed362ea]
+2020-08-17 22:14:53 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-17 22:14:54 [restartedMain] [WARN] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-08-17 22:14:54 [restartedMain] [WARN] o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-17 22:14:54 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2020-08-17 22:14:54 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-08-17 22:14:54 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-08-17 22:14:54 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-08-17 22:14:54 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-08-17 22:14:54 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-17 22:14:54 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Started BizcodeApplication in 4.415 seconds (JVM running for 5.621)
+2020-08-17 22:15:04 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-17 22:15:04 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-08-17 22:15:04 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2020-08-17 22:15:04 [http-nio-8080-exec-1] [ERROR] com.bizcode.admins.api.CompanyAPI - api category retrieve category list get error exception:
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.bizcode.admins.dao.CategoryDao.retrieveList
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedMapperMethod$0(MapperProxy.java:98)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:97)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:92)
+	at com.sun.proxy.$Proxy68.retrieveList(Unknown Source)
+	at com.bizcode.admins.services.implement.MainCategoryServiceImplement.retrieveList(MainCategoryServiceImplement.java:18)
+	at com.bizcode.admins.services.implement.MainCategoryServiceImplement$$FastClassBySpringCGLIB$$30ede5d1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.bizcode.admins.services.implement.MainCategoryServiceImplement$$EnhancerBySpringCGLIB$$c04f7f3c.retrieveList(<generated>)
+	at com.bizcode.admins.api.MainCategoryApi.retrieveCategoryList(MainCategoryApi.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:802)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1062)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:339)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter.doFilter(OAuth2AuthenticationProcessingFilter.java:176)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:223)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:184)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-08-17 22:15:04 [http-nio-8080-exec-1] [ERROR] o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.bizcode.admins.dao.CategoryDao.retrieveList] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.bizcode.admins.dao.CategoryDao.retrieveList
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedMapperMethod$0(MapperProxy.java:98)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:97)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:92)
+	at com.sun.proxy.$Proxy68.retrieveList(Unknown Source)
+	at com.bizcode.admins.services.implement.MainCategoryServiceImplement.retrieveList(MainCategoryServiceImplement.java:18)
+	at com.bizcode.admins.services.implement.MainCategoryServiceImplement$$FastClassBySpringCGLIB$$30ede5d1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.bizcode.admins.services.implement.MainCategoryServiceImplement$$EnhancerBySpringCGLIB$$c04f7f3c.retrieveList(<generated>)
+	at com.bizcode.admins.api.MainCategoryApi.retrieveCategoryList(MainCategoryApi.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:802)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1062)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:339)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter.doFilter(OAuth2AuthenticationProcessingFilter.java:176)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:353)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:223)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:184)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.bizcode.core.config.CorsFilter.doFilter(CorsFilter.java:29)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-08-17 22:16:03 [SpringContextShutdownHook] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-17 22:16:03 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-08-17 22:16:03 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-08-17 22:16:07 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 2244 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-08-17 22:16:07 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
+2020-08-17 22:16:07 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-08-17 22:16:07 [restartedMain] [INFO] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Eanda\.gradle\caches\modules-2\files-2.1\javax.xml\jaxb-impl\2.1\8c86d5d4eac7f89cec63432274d712ba82cd201b\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb-api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/activation.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jsr173_1.0_api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb1-impl.jar
+2020-08-17 22:16:07 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-17 22:16:07 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-17 22:16:08 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-08-17 22:16:08 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-08-17 22:16:08 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-08-17 22:16:08 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 JDBC repository interfaces.
+2020-08-17 22:16:08 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\CategoryDao.class]
+2020-08-17 22:16:08 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\CompanyDao.class]
+2020-08-17 22:16:08 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\UserDao.class]
+2020-08-17 22:16:08 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\core\dao\DefaultAuthenticationProviderDao.class]
+2020-08-17 22:16:08 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'categoryDao' and 'com.bizcode.admins.dao.CategoryDao' mapperInterface
+2020-08-17 22:16:08 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'categoryDao'.
+2020-08-17 22:16:08 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.bizcode.admins.dao.CompanyDao' mapperInterface
+2020-08-17 22:16:08 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'companyDao'.
+2020-08-17 22:16:08 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.bizcode.admins.dao.UserDao' mapperInterface
+2020-08-17 22:16:08 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userDao'.
+2020-08-17 22:16:08 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.bizcode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
+2020-08-17 22:16:08 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'defaultAuthenticationProviderDao'.
+2020-08-17 22:16:08 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f86a6427] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-17 22:16:08 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-08-17 22:16:08 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@317620d4' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-17 22:16:08 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-17 22:16:09 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-08-17 22:16:09 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-17 22:16:09 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-08-17 22:16:09 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-17 22:16:09 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-08-17 22:16:09 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1465 ms
+2020-08-17 22:16:09 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis/mybatis_config.xml]'
+2020-08-17 22:16:09 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'
+2020-08-17 22:16:09 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\mainCategoryDao.xml]'
+2020-08-17 22:16:09 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\userDao.xml]'
+2020-08-17 22:16:09 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\core\defaultAuthenticationProviderDao.xml]'
+2020-08-17 22:16:10 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/api/web/**'], []
+2020-08-17 22:16:10 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/api/mobile/**'], []
+2020-08-17 22:16:10 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/401.html'], []
+2020-08-17 22:16:10 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/404.html'], []
+2020-08-17 22:16:10 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/500.html'], []
+2020-08-17 22:16:10 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d38055d, org.springframework.security.web.context.SecurityContextPersistenceFilter@4002433, org.springframework.security.web.header.HeaderWriterFilter@53d0dba3, org.springframework.security.web.authentication.logout.LogoutFilter@7a026950, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@98e253d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b135d72, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@444c14b2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@995bc55, org.springframework.security.web.session.SessionManagementFilter@7ba27dc9, org.springframework.security.web.access.ExceptionTranslationFilter@1b892571, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7d547f80]
+2020-08-17 22:16:10 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/api/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7dddb56, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f6ff79f, org.springframework.security.web.header.HeaderWriterFilter@2ee22249, org.springframework.security.web.authentication.logout.LogoutFilter@65ed9804, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@e679eb6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f3df1f9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6072603d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d5b4841, org.springframework.security.web.session.SessionManagementFilter@558609fd, org.springframework.security.web.access.ExceptionTranslationFilter@17aae70c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@9a7d45]
+2020-08-17 22:16:10 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14ed27e7, org.springframework.security.web.context.SecurityContextPersistenceFilter@236b5786, org.springframework.security.web.header.HeaderWriterFilter@430bfb5f, org.springframework.security.web.csrf.CsrfFilter@17d752a2, org.springframework.security.web.authentication.logout.LogoutFilter@7be791e7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1b30cb5b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@79149fbc, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@668539c7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5adf0e76, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6af57ae6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76b8b5e4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35033297, org.springframework.security.web.session.SessionManagementFilter@751f4788, org.springframework.security.web.access.ExceptionTranslationFilter@6e64e673, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17461661]
+2020-08-17 22:16:10 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-17 22:16:10 [restartedMain] [WARN] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-08-17 22:16:10 [restartedMain] [WARN] o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-17 22:16:10 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2020-08-17 22:16:10 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-08-17 22:16:10 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-08-17 22:16:11 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-08-17 22:16:11 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-08-17 22:16:11 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-17 22:16:11 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Started BizcodeApplication in 3.87 seconds (JVM running for 4.878)
+2020-08-17 22:16:19 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-17 22:16:19 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-08-17 22:16:19 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2020-08-17 22:16:19 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 22:16:19 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a204632] was not registered for synchronization because synchronization is not active
+2020-08-17 22:16:19 [http-nio-8080-exec-1] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@375239035 wrapping org.postgresql.jdbc.PgConnection@41ebf599] will not be managed by Spring
+2020-08-17 22:16:19 [http-nio-8080-exec-1] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==>  Preparing: SELECT id as "id" ,"name" as "name" , status as "status" , create_by as "createBy" , create_date as "createDate" , modify_by as "modifyBy" , modify_date as "modifyDate" FROM main_category WHERE status != ? 
+2020-08-17 22:16:19 [http-nio-8080-exec-1] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==> Parameters: 6(String)
+2020-08-17 22:16:19 [http-nio-8080-exec-1] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - <==      Total: 2
+2020-08-17 22:16:19 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a204632]
+2020-08-17 22:17:22 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 22:17:22 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2097ddc6] was not registered for synchronization because synchronization is not active
+2020-08-17 22:17:22 [http-nio-8080-exec-3] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@2004767482 wrapping org.postgresql.jdbc.PgConnection@41ebf599] will not be managed by Spring
+2020-08-17 22:17:22 [http-nio-8080-exec-3] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==>  Preparing: SELECT id as "id" ,"name" as "name" , status as "status" , create_by as "createBy" , create_date as "createDate" , modify_by as "modifyBy" , modify_date as "modifyDate" FROM main_category WHERE status != ? 
+2020-08-17 22:17:22 [http-nio-8080-exec-3] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==> Parameters: 6(String)
+2020-08-17 22:17:22 [http-nio-8080-exec-3] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - <==      Total: 2
+2020-08-17 22:17:22 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2097ddc6]
+2020-08-17 22:29:44 [SpringContextShutdownHook] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-17 22:29:44 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-08-17 22:29:44 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-08-17 22:29:49 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Starting BizcodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 14316 (D:\gradle-project\bizcode\build\classes\java\main started by Eanda in D:\gradle-project\bizcode)
+2020-08-17 22:29:49 [restartedMain] [DEBUG] com.bizcode.BizcodeApplication - Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-SNAPSHOT
+2020-08-17 22:29:49 [restartedMain] [INFO] com.bizcode.BizcodeApplication - No active profile set, falling back to default profiles: default
+2020-08-17 22:29:49 [restartedMain] [INFO] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Eanda\.gradle\caches\modules-2\files-2.1\javax.xml\jaxb-impl\2.1\8c86d5d4eac7f89cec63432274d712ba82cd201b\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb-api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/activation.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jsr173_1.0_api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb1-impl.jar
+2020-08-17 22:29:49 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-17 22:29:49 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-17 22:29:49 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-08-17 22:29:49 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.bizcode'
+2020-08-17 22:29:49 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-08-17 22:29:49 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 JDBC repository interfaces.
+2020-08-17 22:29:50 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\CategoryDao.class]
+2020-08-17 22:29:50 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\CompanyDao.class]
+2020-08-17 22:29:50 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\admins\dao\UserDao.class]
+2020-08-17 22:29:50 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\bizcode\build\classes\java\main\com\bizcode\core\dao\DefaultAuthenticationProviderDao.class]
+2020-08-17 22:29:50 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'categoryDao' and 'com.bizcode.admins.dao.CategoryDao' mapperInterface
+2020-08-17 22:29:50 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'categoryDao'.
+2020-08-17 22:29:50 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.bizcode.admins.dao.CompanyDao' mapperInterface
+2020-08-17 22:29:50 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'companyDao'.
+2020-08-17 22:29:50 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.bizcode.admins.dao.UserDao' mapperInterface
+2020-08-17 22:29:50 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userDao'.
+2020-08-17 22:29:50 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.bizcode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
+2020-08-17 22:29:50 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'defaultAuthenticationProviderDao'.
+2020-08-17 22:29:50 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$e2997d0c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-17 22:29:50 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-08-17 22:29:50 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2c3b067e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-17 22:29:50 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-17 22:29:50 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-08-17 22:29:50 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-17 22:29:50 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-08-17 22:29:50 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-17 22:29:50 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-08-17 22:29:50 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1547 ms
+2020-08-17 22:29:51 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis/mybatis_config.xml]'
+2020-08-17 22:29:51 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'
+2020-08-17 22:29:51 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\mainCategoryDao.xml]'
+2020-08-17 22:29:51 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\admins\userDao.xml]'
+2020-08-17 22:29:51 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\bizcode\build\resources\main\mybatis\mapper\core\defaultAuthenticationProviderDao.xml]'
+2020-08-17 22:29:51 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/api/web/**'], []
+2020-08-17 22:29:51 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/api/mobile/**'], []
+2020-08-17 22:29:51 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/401.html'], []
+2020-08-17 22:29:51 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/404.html'], []
+2020-08-17 22:29:51 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/500.html'], []
+2020-08-17 22:29:51 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47d6a04f, org.springframework.security.web.context.SecurityContextPersistenceFilter@501397ba, org.springframework.security.web.header.HeaderWriterFilter@2bf872cb, org.springframework.security.web.authentication.logout.LogoutFilter@434c8caa, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5f1a912a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6bb9acb9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6900b646, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b6b2098, org.springframework.security.web.session.SessionManagementFilter@7c3c355f, org.springframework.security.web.access.ExceptionTranslationFilter@6ca529c3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56502964]
+2020-08-17 22:29:51 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/api/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36f1f0a5, org.springframework.security.web.context.SecurityContextPersistenceFilter@74356900, org.springframework.security.web.header.HeaderWriterFilter@4d347e96, org.springframework.security.web.authentication.logout.LogoutFilter@7b6444d6, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@403278f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@769c9db6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18b29d3d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7935a56e, org.springframework.security.web.session.SessionManagementFilter@5b5ce28e, org.springframework.security.web.access.ExceptionTranslationFilter@206449f1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e42dcf3]
+2020-08-17 22:29:52 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1b9892e3, org.springframework.security.web.context.SecurityContextPersistenceFilter@5038d6e8, org.springframework.security.web.header.HeaderWriterFilter@a86c22, org.springframework.security.web.csrf.CsrfFilter@3744f17f, org.springframework.security.web.authentication.logout.LogoutFilter@b7b07d1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6ef634c4, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@375f335b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@53836ab6, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@52414117, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d20114d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3eaabbb7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7794b93a, org.springframework.security.web.session.SessionManagementFilter@18e233da, org.springframework.security.web.access.ExceptionTranslationFilter@10f7b84a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e2b335d]
+2020-08-17 22:29:52 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-17 22:29:52 [restartedMain] [WARN] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-08-17 22:29:52 [restartedMain] [WARN] o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-17 22:29:52 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2020-08-17 22:29:52 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-08-17 22:29:52 [restartedMain] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-08-17 22:29:52 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-08-17 22:29:52 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-08-17 22:29:52 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-17 22:29:52 [restartedMain] [INFO] com.bizcode.BizcodeApplication - Started BizcodeApplication in 4.127 seconds (JVM running for 5.326)
+2020-08-17 22:30:22 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-17 22:30:22 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-08-17 22:30:22 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+2020-08-17 22:30:22 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 22:30:22 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e4eb7d] was not registered for synchronization because synchronization is not active
+2020-08-17 22:30:22 [http-nio-8080-exec-1] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1414760491 wrapping org.postgresql.jdbc.PgConnection@9a4bdc0] will not be managed by Spring
+2020-08-17 22:30:22 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.getUserByName - ==>  Preparing: select u.id , u.user_name , u."password" , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , a."name" as "authority_name" , a.id as "authority_id" from user_ u inner join users_authorities ua on ua.user_id = u.id inner join authority a on a.id = ua.authority_id where u.user_name = ? 
+2020-08-17 22:30:22 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.getUserByName - ==> Parameters: admin(String)
+2020-08-17 22:30:22 [http-nio-8080-exec-1] [DEBUG] c.b.c.d.D.getUserByName - <==      Total: 9
+2020-08-17 22:30:22 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e4eb7d]
+2020-08-17 22:30:22 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 22:30:22 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@601291a2] was not registered for synchronization because synchronization is not active
+2020-08-17 22:30:22 [http-nio-8080-exec-2] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1672336311 wrapping org.postgresql.jdbc.PgConnection@9a4bdc0] will not be managed by Spring
+2020-08-17 22:30:22 [http-nio-8080-exec-2] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id from user_ u where u.user_name = ? 
+2020-08-17 22:30:22 [http-nio-8080-exec-2] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - ==> Parameters: admin(String)
+2020-08-17 22:30:22 [http-nio-8080-exec-2] [DEBUG] c.b.a.dao.UserDao.loadUserByUserName - <==      Total: 1
+2020-08-17 22:30:22 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@601291a2]
+2020-08-17 22:30:35 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 22:30:35 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1755de3c] was not registered for synchronization because synchronization is not active
+2020-08-17 22:30:35 [http-nio-8080-exec-3] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1613372298 wrapping org.postgresql.jdbc.PgConnection@9a4bdc0] will not be managed by Spring
+2020-08-17 22:30:35 [http-nio-8080-exec-3] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==>  Preparing: SELECT id as "id" ,"name" as "name" , status as "status" , create_by as "createBy" , create_date as "createDate" , modify_by as "modifyBy" , modify_date as "modifyDate" FROM main_category WHERE status != ? 
+2020-08-17 22:30:35 [http-nio-8080-exec-3] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==> Parameters: 6(String)
+2020-08-17 22:30:35 [http-nio-8080-exec-3] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - <==      Total: 2
+2020-08-17 22:30:35 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1755de3c]
+2020-08-17 22:34:32 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 22:34:32 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f91a61f] was not registered for synchronization because synchronization is not active
+2020-08-17 22:34:32 [http-nio-8080-exec-5] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1538140469 wrapping org.postgresql.jdbc.PgConnection@9a4bdc0] will not be managed by Spring
+2020-08-17 22:34:32 [http-nio-8080-exec-5] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==>  Preparing: SELECT id as "id" ,"name" as "name" , status as "status" , create_by as "createBy" , create_date as "createDate" , modify_by as "modifyBy" , modify_date as "modifyDate" FROM main_category WHERE status != ? 
+2020-08-17 22:34:32 [http-nio-8080-exec-5] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==> Parameters: 6(String)
+2020-08-17 22:34:32 [http-nio-8080-exec-5] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - <==      Total: 2
+2020-08-17 22:34:32 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f91a61f]
+2020-08-17 22:34:38 [http-nio-8080-exec-7] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 22:34:38 [http-nio-8080-exec-7] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1107ac21] was not registered for synchronization because synchronization is not active
+2020-08-17 22:34:38 [http-nio-8080-exec-7] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1409626213 wrapping org.postgresql.jdbc.PgConnection@9a4bdc0] will not be managed by Spring
+2020-08-17 22:34:38 [http-nio-8080-exec-7] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==>  Preparing: SELECT id as "id" ,"name" as "name" , status as "status" , create_by as "createBy" , create_date as "createDate" , modify_by as "modifyBy" , modify_date as "modifyDate" FROM main_category WHERE status != ? 
+2020-08-17 22:34:38 [http-nio-8080-exec-7] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==> Parameters: 6(String)
+2020-08-17 22:34:38 [http-nio-8080-exec-7] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - <==      Total: 2
+2020-08-17 22:34:38 [http-nio-8080-exec-7] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1107ac21]
+2020-08-17 22:34:58 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 22:34:58 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@65d7c68f] was not registered for synchronization because synchronization is not active
+2020-08-17 22:34:58 [http-nio-8080-exec-9] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@550847569 wrapping org.postgresql.jdbc.PgConnection@9a4bdc0] will not be managed by Spring
+2020-08-17 22:34:58 [http-nio-8080-exec-9] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==>  Preparing: SELECT id as "id" ,"name" as "name" , status as "status" , create_by as "createBy" , create_date as "createDate" , modify_by as "modifyBy" , modify_date as "modifyDate" FROM main_category WHERE status != ? 
+2020-08-17 22:34:58 [http-nio-8080-exec-9] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==> Parameters: 6(String)
+2020-08-17 22:34:58 [http-nio-8080-exec-9] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - <==      Total: 2
+2020-08-17 22:34:58 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@65d7c68f]
+2020-08-17 22:35:10 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 22:35:10 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21dc6151] was not registered for synchronization because synchronization is not active
+2020-08-17 22:35:10 [http-nio-8080-exec-1] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1143234817 wrapping org.postgresql.jdbc.PgConnection@9a4bdc0] will not be managed by Spring
+2020-08-17 22:35:10 [http-nio-8080-exec-1] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==>  Preparing: SELECT id as "id" ,"name" as "name" , status as "status" , create_by as "createBy" , create_date as "createDate" , modify_by as "modifyBy" , modify_date as "modifyDate" FROM main_category WHERE status != ? 
+2020-08-17 22:35:10 [http-nio-8080-exec-1] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==> Parameters: 6(String)
+2020-08-17 22:35:10 [http-nio-8080-exec-1] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - <==      Total: 2
+2020-08-17 22:35:10 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21dc6151]
+2020-08-17 22:35:41 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 22:35:41 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c3e00f9] was not registered for synchronization because synchronization is not active
+2020-08-17 22:35:41 [http-nio-8080-exec-3] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1212829313 wrapping org.postgresql.jdbc.PgConnection@9a4bdc0] will not be managed by Spring
+2020-08-17 22:35:41 [http-nio-8080-exec-3] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==>  Preparing: SELECT id as "id" ,"name" as "name" , status as "status" , create_by as "createBy" , create_date as "createDate" , modify_by as "modifyBy" , modify_date as "modifyDate" FROM main_category WHERE status != ? 
+2020-08-17 22:35:41 [http-nio-8080-exec-3] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==> Parameters: 6(String)
+2020-08-17 22:35:41 [http-nio-8080-exec-3] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - <==      Total: 2
+2020-08-17 22:35:41 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c3e00f9]
+2020-08-17 22:36:01 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 22:36:01 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e83536b] was not registered for synchronization because synchronization is not active
+2020-08-17 22:36:01 [http-nio-8080-exec-5] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1596438548 wrapping org.postgresql.jdbc.PgConnection@9a4bdc0] will not be managed by Spring
+2020-08-17 22:36:01 [http-nio-8080-exec-5] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==>  Preparing: SELECT id as "id" ,"name" as "name" , status as "status" , create_by as "createBy" , create_date as "createDate" , modify_by as "modifyBy" , modify_date as "modifyDate" FROM main_category WHERE status != ? 
+2020-08-17 22:36:01 [http-nio-8080-exec-5] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==> Parameters: 6(String)
+2020-08-17 22:36:01 [http-nio-8080-exec-5] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - <==      Total: 2
+2020-08-17 22:36:01 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e83536b]
+2020-08-17 22:36:17 [http-nio-8080-exec-7] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 22:36:18 [http-nio-8080-exec-7] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2814932c] was not registered for synchronization because synchronization is not active
+2020-08-17 22:36:18 [http-nio-8080-exec-7] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@285532603 wrapping org.postgresql.jdbc.PgConnection@9a4bdc0] will not be managed by Spring
+2020-08-17 22:36:18 [http-nio-8080-exec-7] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==>  Preparing: SELECT id as "id" ,"name" as "name" , status as "status" , create_by as "createBy" , create_date as "createDate" , modify_by as "modifyBy" , modify_date as "modifyDate" FROM main_category WHERE status != ? 
+2020-08-17 22:36:18 [http-nio-8080-exec-7] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==> Parameters: 6(String)
+2020-08-17 22:36:18 [http-nio-8080-exec-7] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - <==      Total: 2
+2020-08-17 22:36:18 [http-nio-8080-exec-7] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2814932c]
+2020-08-17 22:37:09 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-17 22:37:09 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@320755e1] was not registered for synchronization because synchronization is not active
+2020-08-17 22:37:09 [http-nio-8080-exec-9] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@297780949 wrapping org.postgresql.jdbc.PgConnection@9a4bdc0] will not be managed by Spring
+2020-08-17 22:37:09 [http-nio-8080-exec-9] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==>  Preparing: SELECT id as "id" ,"name" as "name" , status as "status" , create_by as "createBy" , create_date as "createDate" , modify_by as "modifyBy" , modify_date as "modifyDate" FROM main_category WHERE status != ? 
+2020-08-17 22:37:09 [http-nio-8080-exec-9] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - ==> Parameters: 6(String)
+2020-08-17 22:37:09 [http-nio-8080-exec-9] [DEBUG] c.b.a.dao.CategoryDao.retrieveList - <==      Total: 2
+2020-08-17 22:37:09 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@320755e1]
+2020-08-17 22:37:57 [SpringContextShutdownHook] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-17 22:37:57 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-08-17 22:37:57 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

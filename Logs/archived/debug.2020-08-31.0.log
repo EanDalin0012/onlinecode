@@ -1,0 +1,129 @@
+2020-08-31 00:00:33 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-31 00:00:33 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6501588] was not registered for synchronization because synchronization is not active
+2020-08-31 00:00:33 [http-nio-8080-exec-9] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1942362810 wrapping org.postgresql.jdbc.PgConnection@782b3ecf] will not be managed by Spring
+2020-08-31 00:00:33 [http-nio-8080-exec-9] [DEBUG] c.bizcode.admins.dao.UserDao.getList - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id , u.create_date as "createDate" , u.create_by as "createBy" , u.modify_date as "modifyDate" , u.modify_by as "modifyBy" from user_ u 
+2020-08-31 00:00:33 [http-nio-8080-exec-9] [DEBUG] c.bizcode.admins.dao.UserDao.getList - ==> Parameters: 
+2020-08-31 00:00:33 [http-nio-8080-exec-9] [DEBUG] c.bizcode.admins.dao.UserDao.getList - <==      Total: 4
+2020-08-31 00:00:33 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6501588]
+2020-08-31 00:00:33 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-31 00:00:33 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@553df31c] was not registered for synchronization because synchronization is not active
+2020-08-31 00:00:33 [http-nio-8080-exec-9] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1899961634 wrapping org.postgresql.jdbc.PgConnection@782b3ecf] will not be managed by Spring
+2020-08-31 00:00:33 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
+2020-08-31 00:00:33 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
+2020-08-31 00:00:33 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-08-31 00:00:33 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@553df31c]
+2020-08-31 00:01:34 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-31 00:01:34 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33e8c3b5] was not registered for synchronization because synchronization is not active
+2020-08-31 00:01:34 [http-nio-8080-exec-2] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1697800159 wrapping org.postgresql.jdbc.PgConnection@782b3ecf] will not be managed by Spring
+2020-08-31 00:01:34 [http-nio-8080-exec-2] [DEBUG] c.bizcode.admins.dao.UserDao.getList - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id , u.create_date as "createDate" , u.create_by as "createBy" , u.modify_date as "modifyDate" , u.modify_by as "modifyBy" from user_ u 
+2020-08-31 00:01:34 [http-nio-8080-exec-2] [DEBUG] c.bizcode.admins.dao.UserDao.getList - ==> Parameters: 
+2020-08-31 00:01:34 [http-nio-8080-exec-2] [DEBUG] c.bizcode.admins.dao.UserDao.getList - <==      Total: 4
+2020-08-31 00:01:34 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33e8c3b5]
+2020-08-31 00:01:34 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-31 00:01:34 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e90887e] was not registered for synchronization because synchronization is not active
+2020-08-31 00:01:34 [http-nio-8080-exec-2] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1988003357 wrapping org.postgresql.jdbc.PgConnection@782b3ecf] will not be managed by Spring
+2020-08-31 00:01:34 [http-nio-8080-exec-2] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
+2020-08-31 00:01:34 [http-nio-8080-exec-2] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
+2020-08-31 00:01:34 [http-nio-8080-exec-2] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-08-31 00:01:34 [http-nio-8080-exec-2] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e90887e]
+2020-08-31 00:04:52 [http-nio-8080-exec-4] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-31 00:04:52 [http-nio-8080-exec-4] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fdf0043] was not registered for synchronization because synchronization is not active
+2020-08-31 00:04:52 [http-nio-8080-exec-4] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@2042030194 wrapping org.postgresql.jdbc.PgConnection@782b3ecf] will not be managed by Spring
+2020-08-31 00:04:52 [http-nio-8080-exec-4] [DEBUG] c.bizcode.admins.dao.UserDao.getList - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id , u.create_date as "createDate" , u.create_by as "createBy" , u.modify_date as "modifyDate" , u.modify_by as "modifyBy" from user_ u 
+2020-08-31 00:04:52 [http-nio-8080-exec-4] [DEBUG] c.bizcode.admins.dao.UserDao.getList - ==> Parameters: 
+2020-08-31 00:04:52 [http-nio-8080-exec-4] [DEBUG] c.bizcode.admins.dao.UserDao.getList - <==      Total: 4
+2020-08-31 00:04:52 [http-nio-8080-exec-4] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fdf0043]
+2020-08-31 00:04:52 [http-nio-8080-exec-4] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-31 00:04:52 [http-nio-8080-exec-4] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5600dcd7] was not registered for synchronization because synchronization is not active
+2020-08-31 00:04:52 [http-nio-8080-exec-4] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1975657774 wrapping org.postgresql.jdbc.PgConnection@782b3ecf] will not be managed by Spring
+2020-08-31 00:04:52 [http-nio-8080-exec-4] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
+2020-08-31 00:04:52 [http-nio-8080-exec-4] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
+2020-08-31 00:04:52 [http-nio-8080-exec-4] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-08-31 00:04:52 [http-nio-8080-exec-4] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5600dcd7]
+2020-08-31 00:05:41 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-31 00:05:41 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@12479c8b] was not registered for synchronization because synchronization is not active
+2020-08-31 00:05:41 [http-nio-8080-exec-5] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1370823435 wrapping org.postgresql.jdbc.PgConnection@782b3ecf] will not be managed by Spring
+2020-08-31 00:05:41 [http-nio-8080-exec-5] [DEBUG] c.bizcode.admins.dao.UserDao.getList - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id , u.create_date as "createDate" , u.create_by as "createBy" , u.modify_date as "modifyDate" , u.modify_by as "modifyBy" from user_ u 
+2020-08-31 00:05:41 [http-nio-8080-exec-5] [DEBUG] c.bizcode.admins.dao.UserDao.getList - ==> Parameters: 
+2020-08-31 00:05:41 [http-nio-8080-exec-5] [DEBUG] c.bizcode.admins.dao.UserDao.getList - <==      Total: 4
+2020-08-31 00:05:41 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@12479c8b]
+2020-08-31 00:05:41 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-31 00:05:41 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ec27531] was not registered for synchronization because synchronization is not active
+2020-08-31 00:05:41 [http-nio-8080-exec-5] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@671313777 wrapping org.postgresql.jdbc.PgConnection@782b3ecf] will not be managed by Spring
+2020-08-31 00:05:41 [http-nio-8080-exec-5] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
+2020-08-31 00:05:41 [http-nio-8080-exec-5] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
+2020-08-31 00:05:41 [http-nio-8080-exec-5] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-08-31 00:05:41 [http-nio-8080-exec-5] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ec27531]
+2020-08-31 00:06:34 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-31 00:06:34 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e7ee179] was not registered for synchronization because synchronization is not active
+2020-08-31 00:06:34 [http-nio-8080-exec-6] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1027018031 wrapping org.postgresql.jdbc.PgConnection@782b3ecf] will not be managed by Spring
+2020-08-31 00:06:34 [http-nio-8080-exec-6] [DEBUG] c.bizcode.admins.dao.UserDao.getList - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id , u.create_date as "createDate" , u.create_by as "createBy" , u.modify_date as "modifyDate" , u.modify_by as "modifyBy" from user_ u 
+2020-08-31 00:06:34 [http-nio-8080-exec-6] [DEBUG] c.bizcode.admins.dao.UserDao.getList - ==> Parameters: 
+2020-08-31 00:06:34 [http-nio-8080-exec-6] [DEBUG] c.bizcode.admins.dao.UserDao.getList - <==      Total: 4
+2020-08-31 00:06:34 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e7ee179]
+2020-08-31 00:06:34 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-31 00:06:34 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6979147c] was not registered for synchronization because synchronization is not active
+2020-08-31 00:06:34 [http-nio-8080-exec-6] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@2044804133 wrapping org.postgresql.jdbc.PgConnection@782b3ecf] will not be managed by Spring
+2020-08-31 00:06:34 [http-nio-8080-exec-6] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
+2020-08-31 00:06:34 [http-nio-8080-exec-6] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
+2020-08-31 00:06:34 [http-nio-8080-exec-6] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-08-31 00:06:34 [http-nio-8080-exec-6] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6979147c]
+2020-08-31 00:07:37 [http-nio-8080-exec-8] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-31 00:07:37 [http-nio-8080-exec-8] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15ecfd09] was not registered for synchronization because synchronization is not active
+2020-08-31 00:07:37 [http-nio-8080-exec-8] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1705525258 wrapping org.postgresql.jdbc.PgConnection@782b3ecf] will not be managed by Spring
+2020-08-31 00:07:37 [http-nio-8080-exec-8] [DEBUG] c.bizcode.admins.dao.UserDao.getList - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id , u.create_date as "createDate" , u.create_by as "createBy" , u.modify_date as "modifyDate" , u.modify_by as "modifyBy" from user_ u 
+2020-08-31 00:07:37 [http-nio-8080-exec-8] [DEBUG] c.bizcode.admins.dao.UserDao.getList - ==> Parameters: 
+2020-08-31 00:07:37 [http-nio-8080-exec-8] [DEBUG] c.bizcode.admins.dao.UserDao.getList - <==      Total: 4
+2020-08-31 00:07:37 [http-nio-8080-exec-8] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15ecfd09]
+2020-08-31 00:07:37 [http-nio-8080-exec-8] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-31 00:07:37 [http-nio-8080-exec-8] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e34f1d5] was not registered for synchronization because synchronization is not active
+2020-08-31 00:07:37 [http-nio-8080-exec-8] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1439129344 wrapping org.postgresql.jdbc.PgConnection@782b3ecf] will not be managed by Spring
+2020-08-31 00:07:37 [http-nio-8080-exec-8] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
+2020-08-31 00:07:37 [http-nio-8080-exec-8] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
+2020-08-31 00:07:37 [http-nio-8080-exec-8] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-08-31 00:07:37 [http-nio-8080-exec-8] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e34f1d5]
+2020-08-31 00:08:06 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-31 00:08:06 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7745aad8] was not registered for synchronization because synchronization is not active
+2020-08-31 00:08:06 [http-nio-8080-exec-9] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@873823552 wrapping org.postgresql.jdbc.PgConnection@782b3ecf] will not be managed by Spring
+2020-08-31 00:08:06 [http-nio-8080-exec-9] [DEBUG] c.bizcode.admins.dao.UserDao.getList - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id , u.create_date as "createDate" , u.create_by as "createBy" , u.modify_date as "modifyDate" , u.modify_by as "modifyBy" from user_ u 
+2020-08-31 00:08:06 [http-nio-8080-exec-9] [DEBUG] c.bizcode.admins.dao.UserDao.getList - ==> Parameters: 
+2020-08-31 00:08:06 [http-nio-8080-exec-9] [DEBUG] c.bizcode.admins.dao.UserDao.getList - <==      Total: 4
+2020-08-31 00:08:06 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7745aad8]
+2020-08-31 00:08:06 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-31 00:08:06 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e0acdcd] was not registered for synchronization because synchronization is not active
+2020-08-31 00:08:06 [http-nio-8080-exec-9] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@131401507 wrapping org.postgresql.jdbc.PgConnection@782b3ecf] will not be managed by Spring
+2020-08-31 00:08:06 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
+2020-08-31 00:08:06 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
+2020-08-31 00:08:06 [http-nio-8080-exec-9] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-08-31 00:08:06 [http-nio-8080-exec-9] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e0acdcd]
+2020-08-31 00:10:52 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-31 00:10:52 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6696ba71] was not registered for synchronization because synchronization is not active
+2020-08-31 00:10:52 [http-nio-8080-exec-1] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1322399892 wrapping org.postgresql.jdbc.PgConnection@782b3ecf] will not be managed by Spring
+2020-08-31 00:10:52 [http-nio-8080-exec-1] [DEBUG] c.bizcode.admins.dao.UserDao.getList - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id , u.create_date as "createDate" , u.create_by as "createBy" , u.modify_date as "modifyDate" , u.modify_by as "modifyBy" from user_ u 
+2020-08-31 00:10:52 [http-nio-8080-exec-1] [DEBUG] c.bizcode.admins.dao.UserDao.getList - ==> Parameters: 
+2020-08-31 00:10:52 [http-nio-8080-exec-1] [DEBUG] c.bizcode.admins.dao.UserDao.getList - <==      Total: 4
+2020-08-31 00:10:52 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6696ba71]
+2020-08-31 00:10:52 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-31 00:10:52 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f43cec2] was not registered for synchronization because synchronization is not active
+2020-08-31 00:10:52 [http-nio-8080-exec-1] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1184869336 wrapping org.postgresql.jdbc.PgConnection@782b3ecf] will not be managed by Spring
+2020-08-31 00:10:52 [http-nio-8080-exec-1] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
+2020-08-31 00:10:52 [http-nio-8080-exec-1] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
+2020-08-31 00:10:52 [http-nio-8080-exec-1] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-08-31 00:10:52 [http-nio-8080-exec-1] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f43cec2]
+2020-08-31 00:11:58 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-31 00:11:58 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@364f8eb8] was not registered for synchronization because synchronization is not active
+2020-08-31 00:11:58 [http-nio-8080-exec-3] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@2039329760 wrapping org.postgresql.jdbc.PgConnection@782b3ecf] will not be managed by Spring
+2020-08-31 00:11:58 [http-nio-8080-exec-3] [DEBUG] c.bizcode.admins.dao.UserDao.getList - ==>  Preparing: select u.id , u.account_expired , u.account_locked , u.credentials_expired , u.enabled , u.user_name , u.resource_img_id , u.create_date as "createDate" , u.create_by as "createBy" , u.modify_date as "modifyDate" , u.modify_by as "modifyBy" from user_ u 
+2020-08-31 00:11:58 [http-nio-8080-exec-3] [DEBUG] c.bizcode.admins.dao.UserDao.getList - ==> Parameters: 
+2020-08-31 00:11:58 [http-nio-8080-exec-3] [DEBUG] c.bizcode.admins.dao.UserDao.getList - <==      Total: 4
+2020-08-31 00:11:58 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@364f8eb8]
+2020-08-31 00:11:58 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2020-08-31 00:11:58 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@80656ff] was not registered for synchronization because synchronization is not active
+2020-08-31 00:11:58 [http-nio-8080-exec-3] [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1062091303 wrapping org.postgresql.jdbc.PgConnection@782b3ecf] will not be managed by Spring
+2020-08-31 00:11:58 [http-nio-8080-exec-3] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==>  Preparing: SELECT COUNT (*) FROM "user_" 
+2020-08-31 00:11:58 [http-nio-8080-exec-3] [DEBUG] com.bizcode.admins.dao.UserDao.count - ==> Parameters: 
+2020-08-31 00:11:58 [http-nio-8080-exec-3] [DEBUG] com.bizcode.admins.dao.UserDao.count - <==      Total: 1
+2020-08-31 00:11:58 [http-nio-8080-exec-3] [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@80656ff]
+2020-08-31 00:14:56 [SpringContextShutdownHook] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-31 00:14:56 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-08-31 00:14:56 [SpringContextShutdownHook] [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

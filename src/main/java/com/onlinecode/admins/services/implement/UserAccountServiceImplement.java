@@ -1,10 +1,10 @@
-package com.onlinecode.admins.services.implement;
+package com.bizcode.admins.services.implement;
 
-import com.onlinecode.admins.dao.UserAccountDao;
-import com.onlinecode.admins.services.UserAccountService;
-import com.onlinecode.core.map.MMap;
-import com.onlinecode.core.map.MultiMap;
-import com.onlinecode.utils.ValidatorUtil;
+import com.bizcode.admins.dao.UserAccountDao;
+import com.bizcode.admins.services.UserAccountService;
+import com.bizcode.core.map.MMap;
+import com.bizcode.core.map.MultiMap;
+import com.bizcode.utils.ValidatorUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

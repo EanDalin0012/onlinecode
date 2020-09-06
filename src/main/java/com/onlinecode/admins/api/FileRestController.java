@@ -1,13 +1,13 @@
-package com.onlinecode.admins.api;
+package com.bizcode.admins.api;
 
-import com.onlinecode.admins.dao.ResourceFileInfoDao;
-import com.onlinecode.admins.services.implement.ResourceFileInfoServiceImplement;
-import com.onlinecode.constants.BizResultCodeType;
-import com.onlinecode.constants.ChannelTypeCode;
-import com.onlinecode.constants.LangaugeCode;
-import com.onlinecode.constants.SYN;
-import com.onlinecode.core.map.MMap;
-import com.onlinecode.core.template.ResponseData;
+import com.bizcode.admins.dao.ResourceFileInfoDao;
+import com.bizcode.admins.services.implement.ResourceFileInfoServiceImplement;
+import com.bizcode.constants.BizResultCodeType;
+import com.bizcode.constants.ChannelTypeCode;
+import com.bizcode.constants.LangaugeCode;
+import com.bizcode.constants.SYN;
+import com.bizcode.core.map.MMap;
+import com.bizcode.core.template.ResponseData;
 import org.apache.commons.io.IOUtils;
 import org.imgscalr.Scalr;
 import org.slf4j.Logger;

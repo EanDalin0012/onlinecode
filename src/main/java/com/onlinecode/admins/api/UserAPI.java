@@ -4,6 +4,7 @@ import com.onlinecode.admins.dao.UserAccountDao;
 import com.onlinecode.admins.services.implement.UserServiceImplement;
 import com.onlinecode.admins.utils.DefaultResponse;
 import com.onlinecode.constants.Status;
+import com.onlinecode.core.exception.ApplicationException;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.core.map.MultiMap;
 import com.onlinecode.core.template.ResponseData;
@@ -36,21 +37,12 @@ public class UserAPI {
      *     get list of user
      * </pre>
      *
-     * @param <pre> header: { msg: string,
-     *              sessionId: string,
-     *              authData: string,
-     *              userID: int,
-     *              languageCode: string,
-     *              channelTypeCode: string,
-     *              result: boolean
-     *              }
-     *              body: {}
-     *              </pre>
+     * @param
      * @return
      */
     @GetMapping(value = "/get/list")
-    public ResponseEntity<ResponseData<MMap, MMap>> getUserList() throws Exception {
-        ResponseData<MMap, MMap> responseData = new ResponseData<>();
+    public ResponseEntity<ResponseData<MMap>> getUserList() throws Exception {
+        ResponseData<MMap> responseData = new ResponseData<>();
         try {
             MMap header = DefaultResponse.defaultHeader();
             ;
@@ -64,10 +56,8 @@ public class UserAPI {
             int count = userService.count();
             body.setMultiMap("items", userList);
             body.setInt("totalRecords", count);
-            output.setMMap("header", header);
 
             responseData.setBody(body);
-            responseData.setHeader(header);
             return new ResponseEntity<>(responseData, HttpStatus.OK);
         } catch (Exception e) {
             throw e;
@@ -98,7 +88,7 @@ public class UserAPI {
      * @throws
      **/
     @PostMapping(value = "/save")
-    public ResponseEntity<ResponseData<MMap, MMap>> save(@RequestBody MMap param) throws Exception {
+    public ResponseEntity<ResponseData<MMap>> save(@RequestBody MMap param) throws Exception {
         return execute(param, "save");
     }
 
@@ -112,8 +102,8 @@ public class UserAPI {
      * @return ResponseEntity<MMap>
      * @throws Exception
      */
-    private ResponseEntity<ResponseData<MMap, MMap>> execute(MMap param, String function) throws Exception {
-        ResponseData<MMap, MMap> response = new ResponseData<>();
+    private ResponseEntity<ResponseData<MMap>> execute(MMap param, String function) throws Exception {
+        ResponseData<MMap> response = new ResponseData<>();
         MMap getHeader = param.getMMap("header");
         MMap body = param.getMMap("body");
         TransactionStatus transactionStatus = transactionManager.getTransaction(new DefaultTransactionDefinition());
@@ -155,7 +145,6 @@ public class UserAPI {
 
             transactionManager.commit(transactionStatus);
             responseBody.setString("returnYN", Yn);
-            response.setHeader(getHeader);
             response.setBody(responseBody);
             return new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception e) {
@@ -166,12 +155,15 @@ public class UserAPI {
     }
 
     @GetMapping(value = "/load_user")
-    public ResponseEntity<ResponseData<MMap, MMap>> getUserByUserName(@RequestParam("user_name") String name) throws Exception {
-        ResponseData<MMap, MMap> out = new ResponseData<>();
+    public ResponseEntity<ResponseData<MMap>> getUserByUserName(@RequestParam("user_name") String name) throws ApplicationException,  Exception {
+        ResponseData<MMap> out = new ResponseData<>();
         try {
+
+
             if (name == null || name == "") {
                 throw new Exception("user name is null");
             }
+
             MMap input = new MMap();
             MMap outPut = new MMap();
             MMap header = new MMap();
@@ -183,8 +175,13 @@ public class UserAPI {
             outPut = userService.loadUserByUserName(input);
 
             out.setBody(outPut);
-            out.setHeader(header);
+            if (outPut != null ) {
+                throw new ApplicationException("50", "eedee");
+            }
 
+        } catch (ApplicationException ex) {
+            log.error("load user by user name get exception error:", ex);
+            throw new ApplicationException(ex, "5000df", "ee");
         } catch (Exception e) {
             log.error("load user by user name get exception error:", e);
             throw e;

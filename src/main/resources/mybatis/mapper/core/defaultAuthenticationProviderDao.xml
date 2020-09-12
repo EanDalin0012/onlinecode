@@ -33,7 +33,7 @@
 			from user_ u
 			inner join users_authorities ua on ua.user_id = u.id
 			inner join authority a on a.id = ua.authority_id
-			where u.user_name = #{username}
+			where u.user_name = #{user_name}
 	   ]]>
     </select>
 
@@ -49,7 +49,7 @@
 			, message	as "message"
 			, islocked	as "islocked"
 			FROM user_lock_count
-			Where user_name = #{userName}
+			Where user_name = #{user_name}
 			AND islocked 	= #{isLocked};
 
 	     ]]>
@@ -60,7 +60,7 @@
 			UPDATE user_
 			SET
 				account_locked 	= #{accountLocked}
-			WHERE user_name 	= #{userName}
+			WHERE user_name 	= #{user_name}
 		]]>
     </update>
 

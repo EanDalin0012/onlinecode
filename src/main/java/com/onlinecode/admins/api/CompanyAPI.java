@@ -37,8 +37,8 @@ public class CompanyAPI {
      * @throws
      **/
     @GetMapping(value = "/get/list")
-    public ResponseEntity<ResponseData<MMap, MMap>> getList(@RequestParam("lang") String param) {
-        ResponseData<MMap, MMap> response = new ResponseData<>();
+    public ResponseEntity<ResponseData<MMap>> getList(@RequestParam("lang") String param) {
+        ResponseData<MMap> response = new ResponseData<>();
         MMap header = new MMap();
 
         try {
@@ -48,8 +48,6 @@ public class CompanyAPI {
             MultiMap list = companyService.getList(input);
             MMap out = new MMap();
             out.setMultiMap("list", list);
-
-            response.setHeader(header);
             response.setBody(out);
 
             return new ResponseEntity<>(response, HttpStatus.OK);
@@ -69,7 +67,7 @@ public class CompanyAPI {
      * @throws
      **/
     @PostMapping(value = "/save")
-    public ResponseEntity<ResponseData<MMap, MMap>> save(@RequestBody MMap param) throws Exception {
+    public ResponseEntity<ResponseData<MMap>> save(@RequestBody MMap param) throws Exception {
         return execute(param, "save");
     }
 
@@ -83,7 +81,7 @@ public class CompanyAPI {
      * @throws Exception
      **/
     @PostMapping(value = "/update")
-    public ResponseEntity<ResponseData<MMap, MMap>> update(@RequestBody MMap param) throws Exception {
+    public ResponseEntity<ResponseData<MMap>> update(@RequestBody MMap param) throws Exception {
         return execute(param, "update");
     }
 
@@ -97,8 +95,8 @@ public class CompanyAPI {
      * @description delete main category by id list
      **/
     @PostMapping(value = "/update/status/to/delete")
-    public ResponseEntity<ResponseData<MMap, MMap>> delete(@RequestBody MMap param) {
-        ResponseData<MMap, MMap> response = new ResponseData<>();
+    public ResponseEntity<ResponseData<MMap>> delete(@RequestBody MMap param) {
+        ResponseData<MMap> response = new ResponseData<>();
         MMap header = param.getMMap("header");
         MMap body = param.getMMap("body");
         MultiMap list = body.getMultiMap("list");
@@ -117,7 +115,6 @@ public class CompanyAPI {
             MMap resBody = new MMap();
             resBody.setString("returnYN", "Y");
 
-            response.setHeader(header);
             response.setBody(resBody);
             transactionManager.commit(transactionStatus);
             return new ResponseEntity<>(response, HttpStatus.OK);
@@ -138,8 +135,8 @@ public class CompanyAPI {
      * @return ResponseEntity<MMap>
      * @throws Exception
      */
-    private ResponseEntity<ResponseData<MMap, MMap>> execute(MMap param, String function) throws Exception {
-        ResponseData<MMap, MMap> response = new ResponseData<>();
+    private ResponseEntity<ResponseData<MMap>> execute(MMap param, String function) throws Exception {
+        ResponseData<MMap> response = new ResponseData<>();
         MMap getHeader = param.getMMap("header");
         MMap body = param.getMMap("body");
         TransactionStatus transactionStatus = transactionManager.getTransaction(new DefaultTransactionDefinition());
@@ -176,7 +173,6 @@ public class CompanyAPI {
 
             transactionManager.commit(transactionStatus);
             responseBody.setString("returnYN", Yn);
-            response.setHeader(getHeader);
             response.setBody(responseBody);
             return new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception e) {
@@ -197,17 +193,15 @@ public class CompanyAPI {
      *               </pre>
      */
     @PostMapping(value = "/get/value/by/id")
-    public ResponseEntity<ResponseData<MMap, MMap>> getValueById(@RequestBody MMap param) throws Exception {
-        ResponseData<MMap, MMap> response = new ResponseData<>();
+    public ResponseEntity<ResponseData<MMap>> getValueById(@RequestBody MMap param) throws Exception {
+        ResponseData<MMap> response = new ResponseData<>();
         try {
-            MMap header = param.getMMap("header");
             MMap body = param.getMMap("body");
             ValidatorUtil.validate(body, "id");
             MMap input = new MMap();
             input.setInt("id", body.getInt("id"));
 
             MMap output = companyService.getValueById(input);
-            response.setHeader(header);
             response.setBody(output);
 
             return new ResponseEntity<>(response, HttpStatus.OK);

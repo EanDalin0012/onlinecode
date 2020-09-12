@@ -49,10 +49,10 @@ public class FileRestController {
      * @throws
      */
     @PostMapping("/upload/product")
-    public ResponseEntity<ResponseData<MMap, MMap>> handleFileUpload(@RequestParam("file") MultipartFile multipartFile,
+    public ResponseEntity<ResponseData<MMap>> handleFileUpload(@RequestParam("file") MultipartFile multipartFile,
                                                                      @RequestParam("fileImageURL") String fileImageURL,
                                                                      @RequestParam("userID") String userID) throws IOException {
-        ResponseData<MMap, MMap> response = new ResponseData<>();
+        ResponseData<MMap> response = new ResponseData<>();
         InputStream is = null;
         MMap header = new MMap();
         MMap responseBody = new MMap();
@@ -92,7 +92,6 @@ public class FileRestController {
                     responseBody.setString("id", input.getString("id"));
                     responseBody.setString("imageURL", input.getString("/images/resources/" + resID));
                     header.setBoolean("result", true);
-                    response.setHeader(header);
                     response.setBody(responseBody);
                     return new ResponseEntity<>(response, HttpStatus.OK);
                 }
@@ -156,8 +155,8 @@ public class FileRestController {
     }
 
     @PostMapping("/removeUrl")
-    public ResponseEntity<ResponseData<MMap, MMap>> handleFileRemove(@RequestParam("resourceFileInfoId") String resourceFileInfoId) throws IOException {
-        ResponseData<MMap, MMap> response = new ResponseData<>();
+    public ResponseEntity<ResponseData<MMap>> handleFileRemove(@RequestParam("resourceFileInfoId") String resourceFileInfoId) throws IOException {
+        ResponseData<MMap> response = new ResponseData<>();
         MMap header = new MMap();
         MMap body = new MMap();
 
@@ -180,8 +179,6 @@ public class FileRestController {
                 if (delete > 0) {
                     header.setBoolean("result", true);
                     body.setBoolean("result", true);
-
-                    response.setHeader(header);
                     response.setBody(body);
 
                     return new ResponseEntity<>(response, HttpStatus.OK);

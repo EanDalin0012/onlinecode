@@ -27,8 +27,8 @@ public class MainCategoryApi {
     private PlatformTransactionManager transactionManager;
 
     @GetMapping(value = "/get/list")
-    public ResponseEntity<ResponseData<MMap, MultiMap>> retrieveCategoryList() throws Exception {
-        ResponseData<MMap, MultiMap> _response = new ResponseData<>();
+    public ResponseEntity<ResponseData<MultiMap>> retrieveCategoryList() throws Exception {
+        ResponseData<MultiMap> _response = new ResponseData<>();
         try {
             MMap input = new MMap();
             input.setString("status", Status.Delete.getValueStr());
@@ -36,7 +36,6 @@ public class MainCategoryApi {
 
             MMap header = new MMap();
             header = DefaultResponse.defaultHeader();
-            _response.setHeader(header);
             _response.setBody(out);
 
         } catch (Exception e) {
@@ -51,15 +50,12 @@ public class MainCategoryApi {
      *     save information of main category
      * </pre>
      *
-     * @param <pre> id(require): main category id
-     *              name(require): main category name
-     *              description(optional): description
-     *              </pre>
+     * @param
      * @return
      * @throws
      */
     @PostMapping(value = "/update")
-    public ResponseEntity<ResponseData<MMap, MMap>> update(@RequestBody MMap param) throws Exception {
+    public ResponseEntity<ResponseData<MMap>> update(@RequestBody MMap param) throws Exception {
         return execute(param, "update");
     }
 
@@ -68,14 +64,12 @@ public class MainCategoryApi {
      *     save information of main category
      * </pre>
      *
-     * @param <pre> name(require): main category name
-     *              description(optional): description
-     *              </pre>
+     * @param
      * @return
      * @throws
      */
     @PostMapping(value = "/save")
-    public ResponseEntity<ResponseData<MMap, MMap>> save(@RequestBody MMap param) throws Exception {
+    public ResponseEntity<ResponseData<MMap>> save(@RequestBody MMap param) throws Exception {
         return execute(param, "save");
     }
 
@@ -89,8 +83,8 @@ public class MainCategoryApi {
      * @return ResponseEntity<MMap>
      * @throws Exception
      */
-    private ResponseEntity<ResponseData<MMap, MMap>> execute(MMap param, String function) throws Exception {
-        ResponseData<MMap, MMap> response = new ResponseData<>();
+    private ResponseEntity<ResponseData<MMap>> execute(MMap param, String function) throws Exception {
+        ResponseData<MMap> response = new ResponseData<>();
         MMap getHeader = param.getMMap("header");
         MMap body = param.getMMap("body");
         TransactionStatus transactionStatus = transactionManager.getTransaction(new DefaultTransactionDefinition());
@@ -115,7 +109,6 @@ public class MainCategoryApi {
             }
 
             transactionManager.commit(transactionStatus);
-            response.setHeader(DefaultResponse.defaultHeader());
             response.setBody(DefaultResponse.defaultBody());
             return new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception e) {
@@ -127,8 +120,8 @@ public class MainCategoryApi {
 
 
     @PostMapping(value = "/delete")
-    public ResponseEntity<ResponseData<MMap, MMap>> delete(@RequestBody MMap param) {
-        ResponseData<MMap, MMap> response = new ResponseData<>();
+    public ResponseEntity<ResponseData<MMap>> delete(@RequestBody MMap param) {
+        ResponseData<MMap> response = new ResponseData<>();
         try {
             MMap header = param.getMMap("header");
             MMap body = param.getMMap("body");

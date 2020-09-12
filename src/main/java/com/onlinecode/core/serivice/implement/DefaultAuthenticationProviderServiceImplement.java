@@ -26,7 +26,7 @@ public class DefaultAuthenticationProviderServiceImplement implements UserDetail
 
     @Override
     public MMap getUserByName(MMap param) throws Exception {
-        ValidatorUtil.validate(param, "username");
+        ValidatorUtil.validate(param, "user_name");
         return defaultAuthenticationProviderDao.getUserByName(param);
     }
 
@@ -34,10 +34,10 @@ public class DefaultAuthenticationProviderServiceImplement implements UserDetail
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         try {
             MMap input = new MMap();
-            input.setString("userName", username);
+            input.setString("user_name", username);
             MMap userInfo = defaultAuthenticationProviderDao.getUserByName(input);
 
-            String userName = userInfo.getString("username");
+            String userName = userInfo.getString("user_name");
             String password = userInfo.getString("password");
             Collection<? extends GrantedAuthority> authorities = (Collection<? extends GrantedAuthority>) userInfo.getMMap("authorities");
             if (userInfo != null) {
@@ -59,7 +59,7 @@ public class DefaultAuthenticationProviderServiceImplement implements UserDetail
     public MMap getTrackUserLockByUserName(MMap param) throws Exception {
         MMap out = new MMap();
         try {
-            ValidatorUtil.validate(param, "userName", "isLocked");
+            ValidatorUtil.validate(param, "user_name", "isLocked");
             out = defaultAuthenticationProviderDao.getTrackUserLockByUserName(param);
         } catch (Exception e) {
             log.error("get error exception service getTrackUserLockByUserName:", e);
@@ -70,7 +70,7 @@ public class DefaultAuthenticationProviderServiceImplement implements UserDetail
 
     public int lockedUser(MMap param) throws Exception {
         try {
-            ValidatorUtil.validate(param, "userName", "accountLocked");
+            ValidatorUtil.validate(param, "user_name", "accountLocked");
             return defaultAuthenticationProviderDao.lockedUser(param);
         } catch (Exception e) {
             log.error("get error exception service lockedUser:", e);
@@ -80,7 +80,7 @@ public class DefaultAuthenticationProviderServiceImplement implements UserDetail
 
     public int trackLockSaveUserLock(MMap param) throws Exception {
         try {
-            ValidatorUtil.validate(param, "userName", "message", "count", "status", "isLocked");
+            ValidatorUtil.validate(param, "user_name", "message", "count", "status", "isLocked");
             return defaultAuthenticationProviderDao.trackSaveUserLock(param);
         } catch (Exception e) {
             log.error("get error exception service trackLockSaveUserLock:", e);

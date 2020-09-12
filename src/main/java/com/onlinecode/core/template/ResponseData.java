@@ -1,23 +1,13 @@
 package com.onlinecode.core.template;
 
-public class ResponseData<H, B> {
-    private H header;
+public class ResponseData<B> {
     private B body;
 
-    public ResponseData(H header, B body) {
-        this.header = header;
+    public ResponseData(B body) {
         this.body = body;
     }
 
     public ResponseData() {
-    }
-
-    public H getHeader() {
-        return header;
-    }
-
-    public void setHeader(H header) {
-        this.header = header;
     }
 
     public B getBody() {
@@ -31,7 +21,6 @@ public class ResponseData<H, B> {
     @Override
     public String toString() {
         return "ResponseData{" +
-                "header=" + header +
                 ", body=" + body +
                 '}';
     }

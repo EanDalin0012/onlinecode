@@ -21,8 +21,8 @@ public class UserAccountAPI {
     private UserAccountServiceImplement userAccountService;
 
     @PostMapping(value = "/update")
-    public ResponseEntity<ResponseData<MMap, MMap>> updateUserAccount(@RequestBody MMap param) throws Exception {
-        ResponseData<MMap, MMap> response = new ResponseData<>();
+    public ResponseEntity<ResponseData<MMap>> updateUserAccount(@RequestBody MMap param) throws Exception {
+        ResponseData<MMap> response = new ResponseData<>();
         try {
             MMap header = param.getMMap("header");
             MMap body = param.getMMap("body");
@@ -44,7 +44,6 @@ public class UserAccountAPI {
                 isSuccess = "Y";
                 resp.setString("isSuccessYN", isSuccess);
             }
-            response.setHeader(header);
             response.setBody(resp);
         } catch (Exception e) {
             log.error("get error exception api usr account update e:", e);
@@ -58,21 +57,12 @@ public class UserAccountAPI {
      *     get list of user
      * </pre>
      *
-     * @param <pre> header: { msg: string,
-     *              sessionId: string,
-     *              authData: string,
-     *              userID: int,
-     *              languageCode: string,
-     *              channelTypeCode: string,
-     *              result: boolean
-     *              }
-     *              body: {}
-     *              </pre>
+     * @param
      * @return
      */
     @GetMapping(value = "/list")
-    public ResponseEntity<ResponseData<MMap, MMap>> getUserList() throws Exception {
-        ResponseData<MMap, MMap> responseData = new ResponseData<>();
+    public ResponseEntity<ResponseData<MMap>> getUserList() throws Exception {
+        ResponseData<MMap> responseData = new ResponseData<>();
         try {
             MMap header = DefaultResponse.defaultHeader();
             ;
@@ -89,7 +79,6 @@ public class UserAccountAPI {
             output.setMMap("header", header);
 
             responseData.setBody(body);
-            responseData.setHeader(header);
             return new ResponseEntity<>(responseData, HttpStatus.OK);
         } catch (Exception e) {
             throw e;

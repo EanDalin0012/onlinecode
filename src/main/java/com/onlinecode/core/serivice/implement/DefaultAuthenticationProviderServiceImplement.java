@@ -37,7 +37,7 @@ public class DefaultAuthenticationProviderServiceImplement implements UserDetail
             input.setString("user_name", username);
             MMap userInfo = defaultAuthenticationProviderDao.getUserByName(input);
 
-            String userName = userInfo.getString("user_name");
+            String userName = userInfo.getString("userName");
             String password = userInfo.getString("password");
             Collection<? extends GrantedAuthority> authorities = (Collection<? extends GrantedAuthority>) userInfo.getMMap("authorities");
             if (userInfo != null) {
@@ -90,7 +90,7 @@ public class DefaultAuthenticationProviderServiceImplement implements UserDetail
 
     public int trackUpdateUserLock(MMap param) throws Exception {
         try {
-            ValidatorUtil.validate(param, "id", "userName", "message", "count", "status", "isLocked");
+            ValidatorUtil.validate(param, "id", "user_name", "message", "count", "status", "isLocked");
             return defaultAuthenticationProviderDao.trackUpdateUserLock(param);
         } catch (Exception e) {
             log.error("get error exception service trackLockUpdateUserLock:", e);
@@ -111,7 +111,7 @@ public class DefaultAuthenticationProviderServiceImplement implements UserDetail
     public int updateLoginSuccess(MMap param) throws Exception {
         int _return = 0;
         try {
-            ValidatorUtil.validate(param, "userName");
+            ValidatorUtil.validate(param, "user_name");
             _return = defaultAuthenticationProviderDao.updateLoginSuccess(param);
         } catch (Exception e) {
             log.error("get error exception service updateLoginSuccess", e);

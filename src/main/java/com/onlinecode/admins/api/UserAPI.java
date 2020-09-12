@@ -1,8 +1,6 @@
 package com.onlinecode.admins.api;
 
-import com.onlinecode.admins.dao.UserAccountDao;
 import com.onlinecode.admins.services.implement.UserServiceImplement;
-import com.onlinecode.admins.utils.DefaultResponse;
 import com.onlinecode.constants.Status;
 import com.onlinecode.core.exception.ApplicationException;
 import com.onlinecode.core.map.MMap;
@@ -27,11 +25,6 @@ public class UserAPI {
     private UserServiceImplement userService;
     @Autowired
     private PlatformTransactionManager transactionManager;
-    @Autowired
-    private UserAccountDao _userLockService;
-
-    // private final BCryptPasswordEncoder bCryptPasswordEncoder;
-
     /**
      * <pre>
      *     get list of user
@@ -44,10 +37,7 @@ public class UserAPI {
     public ResponseEntity<ResponseData<MMap>> getUserList() throws Exception {
         ResponseData<MMap> responseData = new ResponseData<>();
         try {
-            MMap header = DefaultResponse.defaultHeader();
-            ;
             MMap input = new MMap();
-            MMap output = new MMap();
             MMap body = new MMap();
 
             input.setString("status", Status.Delete.getValueStr());
@@ -158,8 +148,6 @@ public class UserAPI {
     public ResponseEntity<ResponseData<MMap>> getUserByUserName(@RequestParam("user_name") String name) throws ApplicationException,  Exception {
         ResponseData<MMap> out = new ResponseData<>();
         try {
-
-
             if (name == null || name == "") {
                 throw new Exception("user name is null");
             }
@@ -175,10 +163,6 @@ public class UserAPI {
             outPut = userService.loadUserByUserName(input);
 
             out.setBody(outPut);
-            if (outPut != null ) {
-                throw new ApplicationException("50", "eedee");
-            }
-
         } catch (ApplicationException ex) {
             log.error("load user by user name get exception error:", ex);
             throw new ApplicationException(ex, "5000df", "ee");

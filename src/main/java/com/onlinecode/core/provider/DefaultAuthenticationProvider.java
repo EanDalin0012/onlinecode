@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DefaultAuthenticationProvider implements AuthenticationProvider {
-    private static final Logger log = LoggerFactory.getLogger(UserAPI.class);
+    private static final Logger log = LoggerFactory.getLogger(DefaultAuthenticationProvider.class);
     @Autowired
     private DefaultAuthenticationProviderServiceImplement userService;
 
@@ -33,10 +33,11 @@ public class DefaultAuthenticationProvider implements AuthenticationProvider {
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         log.info("\n<<<<<==============Start Authorization ===============>>>>>>>>>>>>\n");
         try {
+            log.info("\n<<<<<==============param:["+authentication+"] ===============>>>>>>>>>>>>\n");
             MMap input = new MMap();
             input.setString("user_name", authentication.getName());
             MMap userInfo = userService.getUserByName(input);
-            log.info("<<<<<==============authorization param : {user_name:"+authentication.getName()+"}===============>>>>>>>>>>>>");
+            log.info("<<<<<==============authorization param : {userName:"+authentication.getName()+"}===============>>>>>>>>>>>>");
 
             if (userInfo == null) {
                 log.info("<<<<<==============Authorization user not found===============>>>>>>>>>>>>");
@@ -84,7 +85,7 @@ public class DefaultAuthenticationProvider implements AuthenticationProvider {
             }
 
             MMap param = new MMap();
-            param.setString("userName", authentication.getName());
+            param.setString("user_name", authentication.getName());
             userService.updateLoginSuccess(param);
             log.info("\n<<<<<==============End Authorization ===============>>>>>>>>>>>>\n");
             return new UsernamePasswordAuthenticationToken(

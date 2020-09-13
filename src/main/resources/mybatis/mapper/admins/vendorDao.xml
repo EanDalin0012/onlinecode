@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.onlinecode.admins.dao.CategoryDao">
+<mapper namespace="com.onlinecode.admins.dao.VendorDao">
 
     <select id="retrieveList" resultType="MMap">
         <![CDATA[
@@ -14,26 +14,9 @@
 			, (SELECT u.user_name FROM user_ u WHERE u.id = c.create_by) as "create_by"
 		    , (SELECT u.user_name FROM user_ u WHERE u.id = c.modify_by) as "modify_by"
 		FROM category c
-		WHERE status    = #{status}
 	     ]]>
     </select>
 
-    <select id="retrieveCategoryById" resultType="MMap">
-        <![CDATA[
-		SELECT
-			c."id"
-			, c.name
-		 	, c.description
-			, c.create_date
-			, c.modify_date
-			, c.status
-			, (SELECT u.user_name FROM user_ u WHERE u.id = c.create_by) as "create_by"
-		  , (SELECT u.user_name FROM user_ u WHERE u.id = c.modify_by) as "modify_by"
-		FROM category c
-		WHERE status    = #{status}
-		AND id          = #{id}
-	     ]]>
-    </select>
 
     <insert id="save">
         <![CDATA[
@@ -83,7 +66,7 @@
 		update category
         set
              status  		= #{status}
-            , modify_by   	= #{user_id}
+            , modify_by   	= #{userID}
             , modify_date	= to_char(NOW(), 'YYYYMMDD')
         where id   			= #{id}
 		]]>
@@ -91,7 +74,7 @@
 
     <select id="sequence" resultType="java.lang.Integer">
         <![CDATA[
-            SELECT nextval('sequence_category');
+            SELECT nextval('sequence_vendor');
         ]]>
     </select>
 

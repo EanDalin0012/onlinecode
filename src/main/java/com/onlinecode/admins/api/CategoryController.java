@@ -8,15 +8,20 @@ import com.onlinecode.core.template.ResponseData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/api/category")
 public class CategoryController {
-    private static final Logger log = LoggerFactory.getLogger(CompanyAPI.class);
+    private static final Logger log = LoggerFactory.getLogger(CategoryController.class);
 
     @Autowired
     private CategoryServiceImplement categoryService;
+    @Autowired
+    private PlatformTransactionManager transactionManager;
 
     @GetMapping(value = "/list")
     public ResponseData<MultiMap> list() throws Exception {
@@ -109,6 +114,40 @@ public class CategoryController {
 
         } catch (Exception e) {
             log.error("\n<<<<<<<========get error api category update", e);
+            throw e;
+        }
+        return responseData;
+    }
+
+    @PostMapping(value = "/delete")
+    public ResponseData<MMap> delete(@RequestParam("userId") int user_id, @RequestParam("lang") String lang, @RequestBody MMap param) throws Exception {
+        ResponseData<MMap> responseData = new ResponseData<>();
+        TransactionStatus transactionStatus = transactionManager.getTransaction(new DefaultTransactionDefinition());
+        try {
+            log.info("\n\n<<<<<============***********Start delete api category delete***********=============>>>>>>>>>>>>>\n\n");
+            log.info("\n\n<<<<<============***********Start delete api category param: "+param+"***********=============>>>>>>>>>>>>>\n\n");
+
+            MMap out = new MMap();
+            out.setString("status", "N");
+            MultiMap body = param.getMultiMap("body");
+
+            if (body.size()>0) {
+                MMap input = new MMap();
+                for (MMap data : body.toListData()) {
+                    input.setInt("id", data.getInt("id"));
+                    input.setInt("user_id", user_id);
+                    input.setString("status", Status.Delete.getValueStr());
+                    categoryService.delete(input);
+                }
+
+                transactionManager.commit(transactionStatus);
+                out.setString("status", "Y");
+                responseData.setBody(out);
+            }
+
+        } catch (Exception e) {
+            transactionManager.rollback(transactionStatus);
+            log.error("get error exception category delete:",e);
             throw e;
         }
         return responseData;

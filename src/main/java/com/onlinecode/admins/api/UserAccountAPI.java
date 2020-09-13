@@ -6,6 +6,7 @@ import com.onlinecode.constants.Status;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.core.map.MultiMap;
 import com.onlinecode.core.template.ResponseData;
+import org.apache.ibatis.annotations.Lang;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class UserAccountAPI {
     private UserAccountServiceImplement userAccountService;
 
     @PostMapping(value = "/update")
-    public ResponseEntity<ResponseData<MMap>> updateUserAccount(@RequestParam("user_id") int user_id, @RequestBody MMap param) throws Exception {
+    public ResponseEntity<ResponseData<MMap>> updateUserAccount(@RequestParam("userId") int user_id, @RequestBody MMap param) throws Exception {
         ResponseData<MMap> response = new ResponseData<>();
         try {
             log.info("\n<<<<====Start update user account api param:["+param+"]\n");

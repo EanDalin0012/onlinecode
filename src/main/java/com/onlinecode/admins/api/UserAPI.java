@@ -145,10 +145,11 @@ public class UserAPI {
     }
 
     @GetMapping(value = "/load_user")
-    public ResponseEntity<ResponseData<MMap>> getUserByUserName(@RequestParam("user_name") String name) throws ApplicationException,  Exception {
+    public ResponseEntity<ResponseData<MMap>> getUserByUserName(@RequestParam("userName") String userName) throws ApplicationException,  Exception {
         ResponseData<MMap> out = new ResponseData<>();
         try {
-            if (name == null || name == "") {
+            log.info("\n\n<<<<====***user api loader user param: ["+userName+"]***====>>>> \n");
+            if (userName == null || userName == "") {
                 throw new Exception("user name is null");
             }
 
@@ -158,10 +159,10 @@ public class UserAPI {
             header.setBoolean("result", true);
             header.setString("mgs", "test");
 
-            input.setString("user_name", name);
+            input.setString("userName", userName);
 
             outPut = userService.loadUserByUserName(input);
-
+            log.info("\n\n<<<<====***user api loader user out put : "+outPut+"***====>>>> \n");
             out.setBody(outPut);
         } catch (ApplicationException ex) {
             log.error("load user by user name get exception error:", ex);

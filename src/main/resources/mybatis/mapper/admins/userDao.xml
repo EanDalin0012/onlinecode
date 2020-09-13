@@ -96,7 +96,7 @@
 				, u.user_name
 				, u.resource_img_id
 			from user_ u
-			where u.user_name = #{user_name}
+			where u.user_name = #{userName}
 	     ]]>
     </select>
 

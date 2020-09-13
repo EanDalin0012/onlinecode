@@ -1,6 +1,5 @@
 package com.onlinecode.core.provider;
 
-import com.onlinecode.admins.api.UserAPI;
 import com.onlinecode.core.constant.UserLockStatus;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.core.map.MultiMap;
@@ -33,11 +32,9 @@ public class DefaultAuthenticationProvider implements AuthenticationProvider {
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         log.info("\n<<<<<==============Start Authorization ===============>>>>>>>>>>>>\n");
         try {
-            log.info("\n<<<<<==============param:["+authentication+"] ===============>>>>>>>>>>>>\n");
             MMap input = new MMap();
             input.setString("user_name", authentication.getName());
             MMap userInfo = userService.getUserByName(input);
-            log.info("<<<<<==============authorization param : {userName:"+authentication.getName()+"}===============>>>>>>>>>>>>");
 
             if (userInfo == null) {
                 log.info("<<<<<==============Authorization user not found===============>>>>>>>>>>>>");
@@ -63,7 +60,6 @@ public class DefaultAuthenticationProvider implements AuthenticationProvider {
                 log.info("<<<<<==============user account credentials expired ===============>>>>>>>>>>>>");
                 throw new UsernameNotFoundException("Your user account credentials expired");
             }
-
 
             BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
             String _password = userInfo.getString("password");

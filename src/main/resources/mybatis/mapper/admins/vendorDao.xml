@@ -4,26 +4,33 @@
 
     <select id="retrieveList" resultType="MMap">
         <![CDATA[
-		 SELECT
-			  c."id"
-			, c.name
-		 	, c.description
-			, c.create_date
-			, c.modify_date
-			, c.status
-			, (SELECT u.user_name FROM user_ u WHERE u.id = c.create_by) as "create_by"
-		    , (SELECT u.user_name FROM user_ u WHERE u.id = c.modify_by) as "modify_by"
-		FROM category c
+		   SELECT
+			  v.id
+			, v.name
+			, v.address
+			, v.contact
+			, v.email
+		 	, v.description
+			, v.create_date
+			, v.modify_date
+			, v.status
+			, (SELECT u.user_name FROM user_ u WHERE u.id = v.create_by) as "create_by"
+		    , (SELECT u.user_name FROM user_ u WHERE u.id = v.modify_by) as "modify_by"
+		FROM vendor v
 	     ]]>
     </select>
 
 
     <insert id="save">
         <![CDATA[
-	    	INSERT INTO category
+	    	INSERT INTO vendor
 			(
 			    id
 			    , name
+			    , address
+			    , contact
+			    , other_contact
+			    , email
 				, description
 				, create_date
 				, create_by
@@ -32,6 +39,10 @@
 			VALUES (
 			#{id}
 			, #{name}
+			, #{address}
+			, #{contact}
+			, #{other_contact}
+			, #{email}
 			, COALESCE(#{description}, '' )
 			, to_char(NOW(), 'YYYYMMDD')
 			, #{user_id}
@@ -44,15 +55,19 @@
         <![CDATA[
 		  SELECT
 	     	COUNT (*)
-	     FROM category
+	     FROM vendor
 	     ]]>
     </select>
 
     <update id="update">
         <![CDATA[
-		UPDATE category
+		UPDATE vendor
 		SET
 			  name 			= #{name}
+			, address  		= #{address}
+			, contact  		= #{contact}
+			, email  		= #{email}
+			, other_contact = #{other_contact}
 			, description 	= COALESCE(#{description},'')
 			, status		= #{status}
 			, modify_by		= #{user_id}
@@ -63,7 +78,7 @@
 
     <update id="delete">
         <![CDATA[
-		update category
+		update vendor
         set
              status  		= #{status}
             , modify_by   	= #{userID}

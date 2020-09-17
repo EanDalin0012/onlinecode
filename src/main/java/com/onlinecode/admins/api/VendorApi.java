@@ -1,6 +1,7 @@
 package com.onlinecode.admins.api;
 
 import com.onlinecode.admins.services.implement.VendorServiceImplement;
+import com.onlinecode.constants.Status;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.core.map.MultiMap;
 import com.onlinecode.core.template.ResponseData;
@@ -25,10 +26,14 @@ public class VendorApi {
           log.info("\n\n<<<===****Start Vendor get list***====>>>\n\n");
 
           MMap input = new MMap();
+          input.setString("status", Status.Active.getValueStr());
+
           MultiMap responseBody = vendorService.retrieveList(input);
           responseData.setBody(responseBody);
 
+          log.info("\n\n<<<===****Vendor list value:"+responseData+"***====>>>\n\n");
           log.info("\n\n<<<===****End Vendor get list***====>>>\n\n");
+
         } catch (Exception e) {
             log.error("\n<<<=====get error api vendor get list=====>>>",e);
             throw  e;
@@ -54,6 +59,9 @@ public class VendorApi {
             input.setString("contact",  body.getString("contact"));
             input.setString("email",    body.getString("email"));
             input.setString("description", body.getString("description"));
+            input.setString("other_contact", body.getString("other_contact"));
+            input.setString("address", body.getString("address"));
+            input.setString("status", Status.Active.getValueStr());
             Long save = vendorService.save(input);
 
             MMap out = new MMap();

@@ -1,6 +1,6 @@
 package com.onlinecode.admins.api;
 
-import com.onlinecode.admins.services.implement.VendorServiceImplement;
+import com.onlinecode.admins.services.implement.ProductServiceImplement;
 import com.onlinecode.constants.Status;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.core.map.MultiMap;
@@ -14,35 +14,18 @@ import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/api/vendor")
-public class VendorApi {
-    private static final Logger log = LoggerFactory.getLogger(VendorApi.class);
+@RequestMapping(value = "/api/product")
+public class ProductAPI {
 
+    private static final Logger log = LoggerFactory.getLogger(ProductAPI.class);
     @Autowired
-    private VendorServiceImplement vendorService;
+    private ProductServiceImplement productService;
     @Autowired
     private PlatformTransactionManager transactionManager;
 
     @GetMapping(value = "/list")
-    public ResponseData<MultiMap> list () throws Exception {
-        ResponseData<MultiMap> responseData = new ResponseData<>();
-        try {
-          log.info("\n\n<<<===****Start Vendor get list***====>>>\n\n");
-
-          MMap input = new MMap();
-          input.setString("status", Status.Delete.getValueStr());
-
-          MultiMap responseBody = vendorService.retrieveList(input);
-          responseData.setBody(responseBody);
-
-          log.info("\n\n<<<===****Vendor list value:"+responseData+"***====>>>\n\n");
-          log.info("\n\n<<<===****End Vendor get list***====>>>\n\n");
-
-        } catch (Exception e) {
-            log.error("\n<<<=====get error api vendor get list=====>>>",e);
-            throw  e;
-        }
-        return responseData;
+    public ResponseData<MultiMap> list() throws Exception {
+        return getProductList();
     }
 
     @PostMapping(value = "/save")
@@ -69,24 +52,22 @@ public class VendorApi {
 
             input.setInt("user_id",     user_id);
             input.setString("name",     param.getString("name"));
-            input.setString("contact",  param.getString("contact"));
-            input.setString("email",    param.getString("email"));
             input.setString("description", param.getString("description"));
-            input.setString("other_contact", param.getString("other_contact"));
-            input.setString("address", param.getString("address"));
             input.setString("status", Status.Active.getValueStr());
+            input.setInt("resource_img_id", param.getInt("resource_img_id"));
+
 
             if (function == "save") {
-                int id = vendorService.sequence();
+                int id = productService.sequence();
                 input.setInt("id",          id);
-                Long save = vendorService.save(input);
+                Long save = productService.save(input);
                 if (save > 0 ) {
                     out.setString("status", "Y");
                 }
 
             } else if (function == "update") {
                 input.setInt("id",          param.getInt("id"));
-                Long update = vendorService.update(input);
+                Long update = productService.update(input);
                 if (update > 0) {
                     out.setString("status", "Y");
                 }
@@ -94,10 +75,10 @@ public class VendorApi {
 
             responseData.setBody(out);
 
-            log.info("\n\n<<<===****Vendor response : "+responseData+"***====>>>\n\n");
-            log.info("\n\n<<<===****End Vendor save api***====>>>\n\n");
+            log.info("\n\n<<<===****Product response : "+responseData+"***====>>>\n\n");
+            log.info("\n\n<<<===****End product "+function+" api***====>>>\n\n");
         }catch (Exception e) {
-            log.error("******====get error api save or update vendor", e);
+            log.error("******====get error api "+function+" product", e);
             throw e;
         }
         return responseData;
@@ -118,7 +99,7 @@ public class VendorApi {
                     input.setInt("id", data.getInt("id"));
                     input.setInt("user_id", user_id);
                     input.setString("status", Status.Delete.getValueStr());
-                    vendorService.delete(input);
+                    productService.delete(input);
                 }
 
                 transactionManager.commit(transactionStatus);
@@ -127,9 +108,31 @@ public class VendorApi {
             }
             log.info("\n\n***End");
         }catch (Exception e) {
-            log.error("******====get error api delete or update vendor", e);
+            log.error("******====get error api delete product", e);
             throw e;
         }
         return responseData;
     }
+
+    private  ResponseData<MultiMap> getProductList() throws Exception {
+        ResponseData<MultiMap> responseData = new ResponseData<>();
+        try {
+            log.info("\n\n<<<===****Start Product get list***====>>>\n\n");
+
+            MMap input = new MMap();
+            input.setString("status", Status.Delete.getValueStr());
+
+            MultiMap responseBody = productService.retrieveList(input);
+            responseData.setBody(responseBody);
+
+            log.info("\n\n<<<===****Product list value:"+responseData+"***====>>>\n\n");
+            log.info("\n\n<<<===****End Product get list***====>>>\n\n");
+
+        } catch (Exception e) {
+            log.error("\n<<<=====get error api Product get list=====>>>",e);
+            throw  e;
+        }
+        return responseData;
+    }
+
 }

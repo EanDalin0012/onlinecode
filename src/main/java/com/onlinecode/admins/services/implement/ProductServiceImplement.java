@@ -1,7 +1,7 @@
 package com.onlinecode.admins.services.implement;
 
-import com.onlinecode.admins.dao.VendorDao;
-import com.onlinecode.admins.services.VendorService;
+import com.onlinecode.admins.dao.ProductDao;
+import com.onlinecode.admins.services.ProductService;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.core.map.MultiMap;
 import com.onlinecode.utils.ValidatorUtil;
@@ -9,42 +9,42 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class VendorServiceImplement implements VendorService {
+public class ProductServiceImplement implements ProductService {
 
     @Autowired
-    private VendorDao vendorDao;
+    private ProductDao productDao;
 
     @Override
     public MultiMap retrieveList(MMap param) throws Exception {
         ValidatorUtil.validate(param, "status");
-        return vendorDao.retrieveList(param);
+        return productDao.retrieveList(param);
     }
 
     @Override
     public Long save(MMap param) throws Exception {
-        ValidatorUtil.validate(param, "id", "name", "contact", "user_id", "status");
-        return vendorDao.save(param);
+        ValidatorUtil.validate(param, "id", "name", "status", "user_id");
+        return productDao.save(param);
     }
 
     @Override
     public Long delete(MMap param) throws Exception {
-        ValidatorUtil.validate(param, "id", "user_id", "status");
-        return vendorDao.delete(param);
+        ValidatorUtil.validate(param, "id", "status","user_id");
+        return productDao.delete(param);
     }
 
     @Override
     public Long update(MMap param) throws Exception {
-        ValidatorUtil.validate(param, "id", "name", "contact", "user_id", "status");
-        return vendorDao.update(param);
+        ValidatorUtil.validate(param, "id", "name", "status", "user_id");
+        return productDao.update(param);
     }
 
     @Override
     public int count() {
-        return 0;
+        return productDao.count();
     }
 
     @Override
     public int sequence() {
-        return vendorDao.sequence();
+        return productDao.sequence();
     }
 }

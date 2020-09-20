@@ -30,7 +30,7 @@ public class CategoryController {
             log.info("\n\n <<<<=====******Start get list of category******=====>>>\n");
 
             MMap input = new MMap();
-            input.setString("status", Status.Active.getValueStr());
+            input.setString("status", Status.Delete.getValueStr());
 
             MultiMap out    = categoryService.retrieveList(input);
             response.setBody(out);

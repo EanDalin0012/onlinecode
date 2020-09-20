@@ -14,7 +14,7 @@
 			, (SELECT u.user_name FROM user_ u WHERE u.id = c.create_by) as "create_by"
 		    , (SELECT u.user_name FROM user_ u WHERE u.id = c.modify_by) as "modify_by"
 		FROM category c
-		WHERE status    = #{status}
+		WHERE status    != #{status}
 	     ]]>
     </select>
 

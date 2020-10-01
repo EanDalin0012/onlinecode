@@ -16,6 +16,7 @@ public interface DefaultAuthenticationProviderDao {
     int trackUpdateUserIsLocked(MMap param);
 
     int updateLoginSuccess(MMap param);
-
+    int deleteUserLockCountBYUserName(MMap param);
     MMap getTrackUserLockByUserName(MMap param);
+    MMap getUserAccountLockByUserName(MMap param);
 }

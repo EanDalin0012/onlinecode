@@ -82,7 +82,8 @@ public class DefaultAuthenticationProvider implements AuthenticationProvider {
 
             MMap param = new MMap();
             param.setString("user_name", authentication.getName());
-            userService.updateLoginSuccess(param);
+//            userService.updateLoginSuccess(param);
+            isLoginSuccess(param);
             log.info("\n<<<<<==============End Authorization ===============>>>>>>>>>>>>\n");
             return new UsernamePasswordAuthenticationToken(
                     userInfo.getString("username"),
@@ -156,5 +157,19 @@ public class DefaultAuthenticationProvider implements AuthenticationProvider {
             throw e;
         }
         return count;
+    }
+
+    private void isLoginSuccess(MMap param) throws Exception {
+        try {
+            MMap input = new MMap();
+            input.setString("user_name", param.getString("user_name"));
+            MMap obj = userService.getUserAccountLockByUserName(input);
+            if (obj != null) {
+                int d = userService.deleteUserLockCountBYUserName(input);
+            }
+
+        } catch (Exception e) {
+            throw e;
+        }
     }
 }

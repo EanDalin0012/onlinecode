@@ -120,4 +120,14 @@ public class DefaultAuthenticationProviderServiceImplement implements UserDetail
 
         return _return;
     }
+
+    public  int deleteUserLockCountBYUserName(MMap param) throws Exception {
+        ValidatorUtil.validate(param, "user_name");
+        return defaultAuthenticationProviderDao.deleteUserLockCountBYUserName(param);
+    }
+
+    public MMap getUserAccountLockByUserName(MMap param) throws Exception {
+        ValidatorUtil.validate(param, "user_name");
+        return defaultAuthenticationProviderDao.getUserAccountLockByUserName(param);
+    }
 }

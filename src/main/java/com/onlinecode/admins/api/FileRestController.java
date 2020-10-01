@@ -1,12 +1,14 @@
 package com.onlinecode.admins.api;
 
 import com.onlinecode.admins.dao.ResourceFileInfoDao;
+import com.onlinecode.admins.services.implement.FileServiceImplement;
 import com.onlinecode.admins.services.implement.ResourceFileInfoServiceImplement;
 import com.onlinecode.constants.BizResultCodeType;
 import com.onlinecode.constants.ChannelTypeCode;
 import com.onlinecode.constants.LangaugeCode;
 import com.onlinecode.constants.SYN;
 import com.onlinecode.core.map.MMap;
+import com.onlinecode.core.serivice.implement.FileSystemStorageService;
 import com.onlinecode.core.template.ResponseData;
 import org.apache.commons.io.IOUtils;
 import org.imgscalr.Scalr;
@@ -17,6 +19,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -29,7 +32,7 @@ import java.io.InputStream;
 import java.util.UUID;
 
 @RestController
-@RequestMapping(value = "/api/file")
+@RequestMapping(value = "/file/api")
 public class FileRestController {
     private static final Logger log = LoggerFactory.getLogger(FileRestController.class);
 
@@ -37,6 +40,8 @@ public class FileRestController {
     private ResourceFileInfoServiceImplement resourceFileInfoService;
     @Autowired
     private ResourceFileInfoDao resourceFileInfoDao;
+    @Autowired
+    private FileServiceImplement fileService;
 
     /**
      * <pre>
@@ -48,16 +53,18 @@ public class FileRestController {
      * @return ResponseData<MMap, MMap>
      * @throws
      */
-    @PostMapping("/upload/product")
+    @PostMapping("/upload")
     public ResponseEntity<ResponseData<MMap>> handleFileUpload(@RequestParam("file") MultipartFile multipartFile,
                                                                      @RequestParam("fileImageURL") String fileImageURL,
-                                                                     @RequestParam("userID") String userID) throws IOException {
+                                                                     @RequestParam("userID") String userID) throws Exception {
         ResponseData<MMap> response = new ResponseData<>();
         InputStream is = null;
         MMap header = new MMap();
         MMap responseBody = new MMap();
 
         try {
+//            fileService.uploadFile(multipartFile);
+//            fileSystemStorageService.storeFile(multipartFile);
             boolean file = multipartFile.isEmpty();
             if (!file) {
                 MMap input = new MMap();
@@ -190,5 +197,30 @@ public class FileRestController {
             throw e;
         }
         return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+
+    @PostMapping(value = "/image")
+    public ResponseData<MMap> save (@RequestBody  MMap body, @RequestParam("userID") int userId, @RequestParam("lang") String lange) throws Exception {
+        ResponseData<MMap> responseData = new ResponseData<>();
+        try {
+            MMap out = new MMap();
+//            MMap multipartFile =  body.getMMap("body");
+
+//            String[] originalFilename = multipartFile.getOriginalFilename().split("\\.(?=[^\\.]+$)");
+            out.setString("status", "N");
+            log.info("\n\n&&&&file:"+body);
+            responseData.setBody(out);
+        }catch (Exception e) {
+            throw e;
+        }
+        return responseData;
+    }
+
+    @GetMapping("/image/resources/{resID}")
+    public @ResponseBody byte[] getImage(@PathVariable("resID") String resID) throws IOException {
+        InputStream in = getClass()
+                .getResourceAsStream("/com/baeldung/produceimage/image.jpg");
+        return IOUtils.toByteArray(in);
     }
 }

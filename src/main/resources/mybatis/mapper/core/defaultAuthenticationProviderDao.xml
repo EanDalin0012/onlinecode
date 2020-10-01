@@ -43,7 +43,7 @@
 			SELECT
 			id			as "id"
 			, user_name	as "userName"
-			, count		as "co unt"
+			, count
 			, date		as "date"
 			, status	as "status"
 			, message	as "message"
@@ -52,6 +52,21 @@
 			Where user_name = #{user_name}
 			AND islocked 	= #{isLocked};
 
+	     ]]>
+    </select>
+
+    <select id="getUserAccountLockByUserName" resultType="MMap">
+        <![CDATA[
+			SELECT
+			id			as "id"
+			, user_name	as "userName"
+			, count
+			, date		as "date"
+			, status	as "status"
+			, message	as "message"
+			, islocked	as "islocked"
+			FROM user_lock_count
+			Where user_name = #{user_name}
 	     ]]>
     </select>
 
@@ -124,5 +139,10 @@
 			WHERE  user_name = #{user_name}
 		]]>
     </update>
+
+    <delete id="deleteUserLockCountBYUserName" >
+        DELETE from user_lock_count
+        WHERE user_name = #{user_name};
+    </delete>
 
 </mapper>

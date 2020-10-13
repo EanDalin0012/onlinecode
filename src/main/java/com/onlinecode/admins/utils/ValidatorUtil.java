@@ -13,7 +13,7 @@
 package com.onlinecode.admins.utils;
 
 import com.onlinecode.core.exception.ApplicationException;
-import com.onlinecode.core.exception.ValueException;
+import com.onlinecode.core.exception.ValidatorException;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.utils.MRUtil;
 import org.slf4j.Logger;
@@ -33,11 +33,11 @@ import java.math.BigDecimal;
 public class ValidatorUtil {
     private static final Logger logger = LoggerFactory.getLogger(ValidatorUtil.class);
 
-    public static void validate(MMap ipParam, String... ipFields) throws ApplicationException {
+    public static void validate(MMap ipParam, String... ipFields) throws ValidatorException {
         for (String sKey : ipFields) {
             if (MRUtil.isEmpty(MRUtil.trim(ipParam.getString(sKey)))) {
                 logger.info("Error : " + sKey + " is empty !!!");
-                throw new ApplicationException(sKey, "Invalid field[" + sKey + "]. Please add field");
+                throw new ValidatorException(sKey, "Invalid field[" + sKey + "]. Please add "+sKey+"field");
             }
         }
     }
@@ -47,14 +47,6 @@ public class ValidatorUtil {
             if (MRUtil.isNull(ipParam.getString(sKey))) {
                 logger.info(String.join(" ", "<<<<< *****", sKey, "is null !!!"));
                 throw new ApplicationException(sKey, "field["+sKey+"] is null");
-            }
-        }
-    }
-
-    public static void validateValue(MMap ipParam, String... ipFields) throws ValueException {
-        for (String sKey : ipFields) {
-            if (MRUtil.isNull(ipParam.getString(sKey)) || StringUtils.isEmpty(sKey)) {
-                throw new ValueException(sKey);
             }
         }
     }

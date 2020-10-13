@@ -5,8 +5,7 @@ import com.onlinecode.component.Translator;
 import com.onlinecode.constants.ErrorCode;
 import com.onlinecode.constants.Status;
 import com.onlinecode.core.dto.Message;
-import com.onlinecode.core.exception.ApplicationException;
-import com.onlinecode.core.exception.ValueException;
+import com.onlinecode.core.exception.ValidatorException;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.core.map.MultiMap;
 import com.onlinecode.core.template.ResponseData;
@@ -42,16 +41,10 @@ public class CategoryController {
             log.info("\n\n <<<<=====******result : "+response+"******=====>>>\n");
             log.info("\n\n <<<<=====******End get list of category******=====>>>\n\n");
             return response;
-        } catch (ApplicationException ex) {
-            log.error("error ApplicationException api category get list", ex);
-            ex.printStackTrace();
-            Message message = message(ex.getKey(), lang);
-            response.setError(message);
-            return response;
-        } catch (ValueException ev) {
-            log.error("error ApplicationException api category get list", ev);
+        } catch (ValidatorException ev) {
+            log.error("error ValueException api category get list", ev);
             ev.printStackTrace();
-            Message message = message(ev.getValue(), lang);
+            Message message = message(ev.getKey(), lang);
             response.setError(message);
             return response;
         } catch (Exception e) {
@@ -68,7 +61,7 @@ public class CategoryController {
     public ResponseData<MMap> save (@RequestParam("userId") int user_id, @RequestParam("lang") String lang, @RequestBody MMap param) {
         ResponseData<MMap> responseData = new ResponseData<>();
         try {
-            log.info("\n\n<<<=====*******Start save category********====>>>\n\n");
+            log.info("\n\n<<<=====*******Start save category********====>>>\n\n"+lang);
             MMap body  = param.getMMap("body");
 
             MMap responseBody = new MMap();
@@ -94,16 +87,10 @@ public class CategoryController {
 
             log.info("\n\n<<<=====*******responseData "+responseData+"********====>>>\n\n");
             log.info("\n\n<<<=====*******End save category********====>>>\n\n");
-        } catch (ApplicationException ex) {
-            ex.printStackTrace();
-            log.error("error Application Exception api save category", ex);
-            Message message = message(ex.getKey(), lang);
-            responseData.setError(message);
-            return responseData;
-        }catch (ValueException ev) {
-            log.error("error ApplicationException api category get list", ev);
+        } catch (ValidatorException ev) {
+            log.error("error ValidatorException api category get list", ev);
             ev.printStackTrace();
-            Message message = message(ev.getValue(), lang);
+            Message message = message(ev.getKey(), lang);
             responseData.setError(message);
             return responseData;
         } catch (Exception e) {
@@ -145,16 +132,10 @@ public class CategoryController {
           log.info("\n\n<<<<<<<======**************** Out put data: "+responseData+" ****************======>>>>>\n\n");
           log.info("\n\n<<<<<<<======****************End Update category update data ****************======>>>>>\n\n");
 
-        } catch (ApplicationException ex){
-            ex.printStackTrace();
-            log.error("", ex);
-            Message message = message(ex.getKey(), lang);
-            responseData.setError(message);
-            return responseData;
-        } catch (ValueException ev){
+        } catch (ValidatorException ev){
             ev.printStackTrace();
             log.error("", ev);
-            Message message = message(ev.getValue(), lang);
+            Message message = message(ev.getKey(), lang);
             responseData.setError(message);
             return responseData;
         } catch (Exception e) {
@@ -193,17 +174,10 @@ public class CategoryController {
                 responseData.setBody(out);
             }
 
-        } catch (ApplicationException ex) {
-            transactionManager.rollback(transactionStatus);
-            ex.printStackTrace();
-            log.error("", ex);
-            Message message = message(ex.getKey(), lang);
-            responseData.setError(message);
-            return responseData;
-        }catch (ValueException ev) {
+        } catch (ValidatorException ev) {
             ev.printStackTrace();
             log.error("error Application Exception api save category", ev);
-            Message message = message(ev.getValue(), lang);
+            Message message = message(ev.getKey(), lang);
             responseData.setError(message);
             return responseData;
         }
@@ -221,6 +195,9 @@ public class CategoryController {
     private Message message(String key, String lang) {
         Message data = new Message();
         String message = Translator.toLocale(lang, "category_"+key);
+        if (ErrorCode.EXCEPTION_ERR == key) {
+            message = Translator.toLocale(lang, key);
+        }
         data.setCode(key);
         data.setMessage(message);
         return data;

@@ -17,12 +17,12 @@ public class Translator {
 
     public static String toLocale(String languageCode, String msgCode) {
         String language = "en";
-        if (languageCode == "02") {
+        if (languageCode == "") {
             language = "kh";
         } else if (languageCode == "05") {
             language = "ch";
         }
-        Locale locale = new Locale(language); // en || fr
+        Locale locale = new Locale(languageCode); // en || fr
         System.out.println(locale);
         return messageSource.getMessage(msgCode, null, locale);
     }

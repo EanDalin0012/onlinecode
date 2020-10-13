@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.onlinecode.admins.dao.ProductDao">
+
+    <select id="retrieveList" resultType="MMap">
+        <![CDATA[
+		   SELECT
+			  p.id
+			, p.name
+		 	, p.description
+			, p.create_date
+			, p.modify_date
+			, p.status
+			, p.resource_img_id
+			, p.category_id
+			, (SELECT u.user_name FROM user_ u WHERE u.id = p.create_by) as "create_by"
+		    , (SELECT u.user_name FROM user_ u WHERE u.id = p.modify_by) as "modify_by"
+		FROM product p
+		where p.status != #{status}
+	     ]]>
+    </select>
+
+
+    <insert id="save">
+        <![CDATA[
+	    	INSERT INTO product
+			(
+			    id
+			    , name
+			    , category_id
+			    , resource_img_id
+				, description
+				, create_date
+				, create_by
+				, status
+			)
+			VALUES (
+			#{id}
+			, #{name}
+			, #{category_id}
+			, #{resource_img_id}
+			, COALESCE(#{description}, '' )
+			, to_char(NOW(), 'YYYYMMDD')
+			, #{user_id}
+			, #{status}
+			)
+    	]]>
+    </insert>
+
+    <select id="count">
+        <![CDATA[
+		  SELECT
+	     	COUNT (*)
+	     FROM product
+	     ]]>
+    </select>
+
+    <update id="update">
+        <![CDATA[
+		UPDATE product
+		SET
+			  name 			    = #{name}
+			, category_id  		= #{category_id}
+			, resource_img_id  	= #{resource_img_id}
+			, description 	    = COALESCE(#{description},'')
+			, status		    = #{status}
+			, modify_by		    = #{user_id}
+			, modify_date	    = to_char(NOW(), 'YYYYMMDD')
+		WHERE id 			    = #{id}
+		]]>
+    </update>
+
+    <update id="delete">
+        <![CDATA[
+		update product
+        set
+             status  		= #{status}
+            , modify_by   	= #{user_id}
+            , modify_date	= to_char(NOW(), 'YYYYMMDD')
+        where id   			= #{id}
+		]]>
+    </update>
+
+    <select id="sequence" resultType="java.lang.Integer">
+        <![CDATA[
+            SELECT nextval('sequence_product');
+        ]]>
+    </select>
+
+</mapper>

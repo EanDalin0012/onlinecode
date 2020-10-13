@@ -2,11 +2,13 @@ package com.onlinecode.admins.api;
 
 import com.onlinecode.admins.services.implement.UserServiceImplement;
 import com.onlinecode.constants.Status;
+import com.onlinecode.core.encryption.AESUtils;
 import com.onlinecode.core.exception.ApplicationException;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.core.map.MultiMap;
 import com.onlinecode.core.template.ResponseData;
 import com.onlinecode.utils.ValidatorUtil;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -145,10 +147,11 @@ public class UserAPI {
     }
 
     @GetMapping(value = "/load_user")
-    public ResponseEntity<ResponseData<MMap>> getUserByUserName(@RequestParam("userName") String userName) throws ApplicationException,  Exception {
+    public ResponseEntity<ResponseData<MMap>> getUserByUserName(@RequestParam("userName") String userName) throws  Exception {
         ResponseData<MMap> out = new ResponseData<>();
         try {
-            log.info("\n\n<<<<====***user api loader user param: ["+userName+"]***====>>>> \n");
+            testing();
+            log.info("\n\n<<<<====***user api loader user param: [" + userName + "]***====>>>> \n");
             if (userName == null || userName == "") {
                 throw new Exception("user name is null");
             }
@@ -162,16 +165,31 @@ public class UserAPI {
             input.setString("userName", userName);
 
             outPut = userService.loadUserByUserName(input);
-            log.info("\n\n<<<<====***user api loader user out put : "+outPut+"***====>>>> \n");
+            log.info("\n\n<<<<====***user api loader user out put : " + outPut + "***====>>>> \n");
             out.setBody(outPut);
-        } catch (ApplicationException ex) {
-            log.error("load user by user name get exception error:", ex);
-            throw new ApplicationException(ex, "5000df", "ee");
-        } catch (Exception e) {
+        }catch (Exception e) {
             log.error("load user by user name get exception error:", e);
             throw e;
         }
         return new ResponseEntity<>(out, HttpStatus.OK);
+    }
+
+
+    private void testing() {
+        try{
+            String key = "admin";
+            MMap data = new MMap();
+            data.setString("id", "jdaklf");
+            ObjectMapper objectMapper = new ObjectMapper();
+            String jsonString = objectMapper.writeValueAsString(data);
+            String encryptedData = AESUtils.encrypt(key, jsonString);
+            String decrtyptedData = AESUtils.decrypt(encryptedData, key);
+
+            System.out.println("encrypt data:\n"+encryptedData);
+            System.out.println("decrypted data:\n"+decrtyptedData);
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }

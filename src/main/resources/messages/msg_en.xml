@@ -7,7 +7,7 @@
     <entry key="Email_Required">Can not process cause email is required (1000)</entry>
     <entry key="Role_Name_Require">Can not process cause role name is required Code(1000)</entry>
 
-    <!--Main Category-->
+    <!--MainApplcationTesting Category-->
     <entry key="Main_Category_Name_Required">Main Category Name is required. Error: Code(1000)</entry>
     <!--GET_ERROR_EXCEPTION -->
     <entry key="GET_ERROR_EXCEPTION">Throw Exception. Error: Code(1100)</entry>

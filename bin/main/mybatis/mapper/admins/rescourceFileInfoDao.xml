@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.onlinecode.admins.dao.ResourceFileInfoDao">
+
+    <select id="getLastId" resultType="Long">
+		SELECT COUNT(res_file_id) FROM tb_resource_file_info
+	</select>
+
+    <insert id="fileUpload">
+		INSERT INTO tb_resource_file_info
+		(
+			file_id,
+			file_type_code,
+			file_name,
+			file_ext,
+			file_content_type,
+			file_size,
+			file_data,
+			created_by,
+			created_date
+		)VALUES
+		(
+			#{id},
+			#{fileTypeCode},
+			#{fileName},
+			#{fileExt},
+			#{fileContentType},
+			#{fileSize},
+			#{fileData},
+			#{createdBy},
+			to_char(NOW(), 'YYYYMMDD')
+		)
+
+	</insert>
+    <update id="updateCompanyProfile">
+		UPDATE tb_resource_file_info SET
+			res_file_type_code = #{fileTypeCode},
+			res_file_name = #{fileName},
+			res_file_ext = #{fileExt},
+			res_file_content_type = #{fileContentType},
+			res_file_size = #{fileSize},
+			res_file_data = #{fileData},
+			updated_by = #{updatedBy},
+			updated_date = NOW()
+		WHERE res_file_id = #{id}
+	</update>
+    <select id="getResourceById" resultType="MMap">
+		SELECT * FROM tb_resource_file_info WHERE file_id = #{id} LIMIT 1
+	</select>
+
+
+    <select id="getResource" resultType="MMap">
+		select
+			trfi.file_id 				as "id"
+			, trfi.file_type_code 		as "fileTypeCode"
+			, trfi.file_name 			as "fileName"
+			, trfi.file_ext 			as "fileExtension"
+			, trfi.file_content_type 	as "fileContentType"
+			, trfi.file_data 		 	as "fileData"
+		from tb_resource_file_info trfi
+		where trfi.file_id = #{id}
+
+	</select>
+
+
+    <delete id = "deleteById">
+		DELETE from tb_resource_file_info WHERE res_file_id = #{resourceFileInfoId};
+	</delete>
+
+</mapper>

@@ -35,7 +35,6 @@ public class WebSecurityConfigAdapter extends WebSecurityConfigurerAdapter {
         return super.authenticationManagerBean();
     }
 
-
     @Override
     public void configure(WebSecurity webSecurity) throws Exception {
         webSecurity

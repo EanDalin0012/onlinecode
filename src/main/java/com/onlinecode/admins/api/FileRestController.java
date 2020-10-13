@@ -19,6 +19,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -32,7 +33,7 @@ import java.io.InputStream;
 import java.util.UUID;
 
 @RestController
-@RequestMapping(value = "/file/api")
+@RequestMapping(value = "/api/file")
 public class FileRestController {
     private static final Logger log = LoggerFactory.getLogger(FileRestController.class);
 
@@ -53,12 +54,15 @@ public class FileRestController {
      * @return ResponseData<MMap, MMap>
      * @throws
      */
+    @PreAuthorize("#oauth2.hasScope('write')")
     @PostMapping("/upload")
     public ResponseEntity<ResponseData<MMap>> handleFileUpload(@RequestParam("file") MultipartFile multipartFile,
                                                                      @RequestParam("fileImageURL") String fileImageURL,
                                                                      @RequestParam("userID") String userID) throws Exception {
         ResponseData<MMap> response = new ResponseData<>();
         InputStream is = null;
+
+
         MMap header = new MMap();
         MMap responseBody = new MMap();
 

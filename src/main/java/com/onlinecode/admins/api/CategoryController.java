@@ -1,7 +1,12 @@
 package com.onlinecode.admins.api;
 
 import com.onlinecode.admins.services.implement.CategoryServiceImplement;
+import com.onlinecode.component.Translator;
+import com.onlinecode.constants.ErrorCode;
 import com.onlinecode.constants.Status;
+import com.onlinecode.core.dto.Message;
+import com.onlinecode.core.exception.ApplicationException;
+import com.onlinecode.core.exception.ValueException;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.core.map.MultiMap;
 import com.onlinecode.core.template.ResponseData;
@@ -12,9 +17,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.springframework.web.bind.annotation.*;
-
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 @RestController
 @RequestMapping(value = "/api/category")
@@ -27,11 +29,10 @@ public class CategoryController {
     private PlatformTransactionManager transactionManager;
 
     @GetMapping(value = "/list")
-    public ResponseData<MultiMap> list() throws Exception {
+    public ResponseData<MultiMap> list(@RequestParam("userId") int user_id, @RequestParam("lang") String lang) {
         ResponseData<MultiMap> response = new ResponseData<>();
         try {
             log.info("\n\n <<<<=====******Start get list of category******=====>>>\n");
-
             MMap input = new MMap();
             input.setString("status", Status.Delete.getValueStr());
 
@@ -40,16 +41,31 @@ public class CategoryController {
 
             log.info("\n\n <<<<=====******result : "+response+"******=====>>>\n");
             log.info("\n\n <<<<=====******End get list of category******=====>>>\n\n");
-
+            return response;
+        } catch (ApplicationException ex) {
+            log.error("error ApplicationException api category get list", ex);
+            ex.printStackTrace();
+            Message message = message(ex.getKey(), lang);
+            response.setError(message);
+            return response;
+        } catch (ValueException ev) {
+            log.error("error ApplicationException api category get list", ev);
+            ev.printStackTrace();
+            Message message = message(ev.getValue(), lang);
+            response.setError(message);
+            return response;
         } catch (Exception e) {
-            log.error("get error exception of api category get list error",e);
-            throw e;
+            e.printStackTrace();
+            log.error("error Exception api category get list", e);
+            Message message = message(ErrorCode.EXCEPTION_ERR, lang);
+            response.setError(message);
+            return response;
         }
-        return response;
+
     }
 
     @PostMapping(value = "/save")
-    public ResponseData<MMap> save (@RequestParam("userId") int user_id, @RequestParam("lang") String lang, @RequestBody MMap param) throws Exception {
+    public ResponseData<MMap> save (@RequestParam("userId") int user_id, @RequestParam("lang") String lang, @RequestBody MMap param) {
         ResponseData<MMap> responseData = new ResponseData<>();
         try {
             log.info("\n\n<<<=====*******Start save category********====>>>\n\n");
@@ -78,9 +94,23 @@ public class CategoryController {
 
             log.info("\n\n<<<=====*******responseData "+responseData+"********====>>>\n\n");
             log.info("\n\n<<<=====*******End save category********====>>>\n\n");
+        } catch (ApplicationException ex) {
+            ex.printStackTrace();
+            log.error("error Application Exception api save category", ex);
+            Message message = message(ex.getKey(), lang);
+            responseData.setError(message);
+            return responseData;
+        }catch (ValueException ev) {
+            log.error("error ApplicationException api category get list", ev);
+            ev.printStackTrace();
+            Message message = message(ev.getValue(), lang);
+            responseData.setError(message);
+            return responseData;
         } catch (Exception e) {
-            log.error("get error exception of category api save",e);
-            throw e;
+            e.printStackTrace();
+            log.error("error Exception api save category", e);
+            Message message = message(ErrorCode.EXCEPTION_ERR, lang);
+            return responseData;
         }
         return responseData;
     }
@@ -115,9 +145,24 @@ public class CategoryController {
           log.info("\n\n<<<<<<<======**************** Out put data: "+responseData+" ****************======>>>>>\n\n");
           log.info("\n\n<<<<<<<======****************End Update category update data ****************======>>>>>\n\n");
 
+        } catch (ApplicationException ex){
+            ex.printStackTrace();
+            log.error("", ex);
+            Message message = message(ex.getKey(), lang);
+            responseData.setError(message);
+            return responseData;
+        } catch (ValueException ev){
+            ev.printStackTrace();
+            log.error("", ev);
+            Message message = message(ev.getValue(), lang);
+            responseData.setError(message);
+            return responseData;
         } catch (Exception e) {
-            log.error("\n<<<<<<<========get error api category update", e);
-            throw e;
+            e.printStackTrace();
+            log.error("", e);
+            Message message = message(ErrorCode.EXCEPTION_ERR, lang);
+            responseData.setError(message);
+            return responseData;
         }
         return responseData;
     }
@@ -148,11 +193,36 @@ public class CategoryController {
                 responseData.setBody(out);
             }
 
-        } catch (Exception e) {
+        } catch (ApplicationException ex) {
             transactionManager.rollback(transactionStatus);
-            log.error("get error exception category delete:",e);
-            throw e;
+            ex.printStackTrace();
+            log.error("", ex);
+            Message message = message(ex.getKey(), lang);
+            responseData.setError(message);
+            return responseData;
+        }catch (ValueException ev) {
+            ev.printStackTrace();
+            log.error("error Application Exception api save category", ev);
+            Message message = message(ev.getValue(), lang);
+            responseData.setError(message);
+            return responseData;
+        }
+        catch (Exception e) {
+            transactionManager.rollback(transactionStatus);
+            e.printStackTrace();
+            log.error("", e);
+            Message message = message(ErrorCode.EXCEPTION_ERR, lang);
+            responseData.setError(message);
+            return responseData;
         }
         return responseData;
+    }
+
+    private Message message(String key, String lang) {
+        Message data = new Message();
+        String message = Translator.toLocale(lang, "category_"+key);
+        data.setCode(key);
+        data.setMessage(message);
+        return data;
     }
 }

@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/online-code
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 5
+
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 2000MB
+      max-request-size: 250MB
+
+  jackson:
+    serialization:
+      wrap-root-value: true
+mybatis:
+  type-aliases-package: com.onlinecode.core.map
+  config-location: classpath:mybatis/mybatis_config.xml
+  mapper-locations: classpath:mybatis/mapper/**/*.xml

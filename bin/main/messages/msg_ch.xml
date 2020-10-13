@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="welcome">សុូស្ដី</entry>
+    <entry key="Company_Name_Required">Can not process company name is required (1000)</entry>
+    <entry key="Contact_Required">Can not process contact is required (1000)</entry>
+    <entry key="Email_Required">Can not process cause email is required (1000)</entry>
+</properties>

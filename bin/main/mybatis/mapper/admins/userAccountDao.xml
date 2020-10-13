@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.onlinecode.admins.dao.UserAccountDao">
+
+    <update id="updateUserAccount">
+        <![CDATA[
+			UPDATE user_
+			SET
+				account_expired 		= 	#{accountExpired}
+				, account_locked		=	#{accountLocked}
+				, credentials_expired	=	#{credentialsExpired}
+				, enabled				=	#{enabled}
+				, status				=	#{status}
+				, modify_date			=	to_char(NOW(), 'YYYYMMDD')
+				, modify_by				=	#{userID}
+			WHERE id					=	#{id};
+		]]>
+    </update>
+
+    <select id="getList" resultType="MMap">
+        <![CDATA[
+			 	select
+				u.id
+				, u.account_expired
+				, u.account_locked
+				, u.credentials_expired
+				, u.enabled
+				, u.user_name
+				, u.resource_img_id
+				, u.create_date			as "createDate"
+				, u.create_by			as "createBy"
+				, u.modify_date			as "modifyDate"
+				, u.modify_by			as "modifyBy"
+			from user_ u
+	     ]]>
+    </select>
+
+    <select id="count" resultType="java.lang.Integer">
+        <![CDATA[
+		  SELECT
+	     	COUNT (*)
+	     FROM user_
+	     ]]>
+    </select>
+
+</mapper>

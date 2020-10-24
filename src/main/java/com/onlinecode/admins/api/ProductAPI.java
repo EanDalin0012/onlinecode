@@ -1,7 +1,11 @@
 package com.onlinecode.admins.api;
 
 import com.onlinecode.admins.services.implement.ProductServiceImplement;
+import com.onlinecode.component.Translator;
+import com.onlinecode.constants.ErrorCode;
 import com.onlinecode.constants.Status;
+import com.onlinecode.core.dto.Message;
+import com.onlinecode.core.exception.ValidatorException;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.core.map.MultiMap;
 import com.onlinecode.core.template.ResponseData;
@@ -24,26 +28,26 @@ public class ProductAPI {
     private PlatformTransactionManager transactionManager;
 
     @GetMapping(value = "/list")
-    public ResponseData<MultiMap> list() throws Exception {
-        return getProductList();
+    public ResponseData<MultiMap> list(@RequestParam("userId") int user_id, @RequestParam("lang") String lang) {
+        return getProductList(lang);
     }
 
     @PostMapping(value = "/save")
-    public ResponseData<MMap> save (@RequestParam("userId") int user_id, @RequestParam("lang") String lang, @RequestBody MMap param) throws Exception {
+    public ResponseData<MMap> save (@RequestParam("userId") int user_id, @RequestParam("lang") String lang, @RequestBody MMap param) {
         return execute("save", user_id, lang, param.getMMap("body"));
     }
 
     @PostMapping(value = "/update")
-    public ResponseData<MMap> update (@RequestParam("userId") int user_id, @RequestParam("lang") String lang, @RequestBody MMap param) throws Exception {
+    public ResponseData<MMap> update (@RequestParam("userId") int user_id, @RequestParam("lang") String lang, @RequestBody MMap param) {
         return execute("update", user_id, lang, param.getMMap("body"));
     }
 
     @PostMapping(value = "/delete")
-    public ResponseData<MMap> delete(@RequestParam("userId") int user_id, @RequestParam("lang") String lang, @RequestBody MMap param) throws Exception {
+    public ResponseData<MMap> delete(@RequestParam("userId") int user_id, @RequestParam("lang") String lang, @RequestBody MMap param) {
         return delete(user_id, lang, param.getMultiMap("body"));
     }
 
-    private ResponseData<MMap> execute(String function, int user_id, String lang, MMap param) throws Exception {
+    private ResponseData<MMap> execute(String function, int user_id, String lang, MMap param) {
         ResponseData<MMap> responseData = new ResponseData<>();
         try {
             MMap input = new MMap();
@@ -77,14 +81,23 @@ public class ProductAPI {
 
             log.info("\n\n<<<===****Product response : "+responseData+"***====>>>\n\n");
             log.info("\n\n<<<===****End product "+function+" api***====>>>\n\n");
-        }catch (Exception e) {
-            log.error("******====get error api "+function+" product", e);
-            throw e;
+        } catch (ValidatorException ex) {
+            ex.printStackTrace();
+            log.error("get error save api product",ex);
+            Message message = message(ex.getKey(), lang);
+            responseData.setError(message);
+            return responseData;
+        } catch (Exception e) {
+            e.printStackTrace();
+            log.error("get error api product save exception",e);
+            Message message = message(ErrorCode.EXCEPTION_ERR, lang);
+            responseData.setError(message);
+            return responseData;
         }
         return responseData;
     }
 
-    private ResponseData<MMap> delete(int user_id, String lang, MultiMap param) throws Exception {
+    private ResponseData<MMap> delete(int user_id, String lang, MultiMap param) {
         ResponseData<MMap> responseData = new ResponseData<>();
         TransactionStatus transactionStatus = transactionManager.getTransaction(new DefaultTransactionDefinition());
         try {
@@ -107,14 +120,21 @@ public class ProductAPI {
                 responseData.setBody(out);
             }
             log.info("\n\n***End");
-        }catch (Exception e) {
-            log.error("******====get error api delete product", e);
-            throw e;
+        } catch (ValidatorException ex) {
+            ex.printStackTrace();
+            log.error("get error api product delete",ex);
+            Message message = message(ex.getKey(), lang);
+            return responseData;
+        } catch (Exception e) {
+            e.printStackTrace();
+            log.error("get error exception api product delete",e);
+            Message message = message(ErrorCode.EXCEPTION_ERR, lang);
+            return responseData;
         }
         return responseData;
     }
 
-    private  ResponseData<MultiMap> getProductList() throws Exception {
+    private  ResponseData<MultiMap> getProductList(String lang) {
         ResponseData<MultiMap> responseData = new ResponseData<>();
         try {
             log.info("\n\n<<<===****Start Product get list***====>>>\n\n");
@@ -128,11 +148,37 @@ public class ProductAPI {
             log.info("\n\n<<<===****Product list value:"+responseData+"***====>>>\n\n");
             log.info("\n\n<<<===****End Product get list***====>>>\n\n");
 
-        } catch (Exception e) {
-            log.error("\n<<<=====get error api Product get list=====>>>",e);
-            throw  e;
+        } catch (ValidatorException ex) {
+            log.error("get error api product list", ex);
+            ex.printStackTrace();
+            Message message = message(ex.getKey(), lang);
+            responseData.setError(message);
+            return responseData;
+        }
+        catch (Exception e) {
+            log.error("get error exception api product list", e);
+            e.printStackTrace();
+            Message message = message(ErrorCode.EXCEPTION_ERR, lang);
+            responseData.setError(message);
+            return responseData;
         }
         return responseData;
+    }
+
+
+    private Message message(String key, String lang) {
+        Message data = new Message();
+        String message = Translator.toLocale(lang, "product_"+key);
+        if (ErrorCode.EXCEPTION_ERR == key) {
+            message = Translator.toLocale(lang, key);
+        } else if (ErrorCode.STATUS.equals(key.trim())) {
+            message = Translator.toLocale(lang, ErrorCode.STATUS);
+        } else if (ErrorCode.USER_ID.equals(key.trim())) {
+            message = Translator.toLocale(lang, ErrorCode.USER_ID);
+        }
+        data.setCode(key);
+        data.setMessage(message);
+        return data;
     }
 
 }

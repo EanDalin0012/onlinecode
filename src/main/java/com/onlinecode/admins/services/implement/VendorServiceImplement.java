@@ -2,9 +2,10 @@ package com.onlinecode.admins.services.implement;
 
 import com.onlinecode.admins.dao.VendorDao;
 import com.onlinecode.admins.services.VendorService;
+import com.onlinecode.admins.utils.ValidatorUtil;
+import com.onlinecode.core.exception.ValidatorException;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.core.map.MultiMap;
-import com.onlinecode.utils.ValidatorUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,25 +16,25 @@ public class VendorServiceImplement implements VendorService {
     private VendorDao vendorDao;
 
     @Override
-    public MultiMap retrieveList(MMap param) throws Exception {
+    public MultiMap retrieveList(MMap param) throws Exception, ValidatorException {
         ValidatorUtil.validate(param, "status");
         return vendorDao.retrieveList(param);
     }
 
     @Override
-    public Long save(MMap param) throws Exception {
+    public Long save(MMap param) throws Exception, ValidatorException {
         ValidatorUtil.validate(param, "id", "name", "contact", "user_id", "status");
         return vendorDao.save(param);
     }
 
     @Override
-    public Long delete(MMap param) throws Exception {
+    public Long delete(MMap param) throws Exception, ValidatorException {
         ValidatorUtil.validate(param, "id", "user_id", "status");
         return vendorDao.delete(param);
     }
 
     @Override
-    public Long update(MMap param) throws Exception {
+    public Long update(MMap param) throws Exception, ValidatorException {
         ValidatorUtil.validate(param, "id", "name", "contact", "user_id", "status");
         return vendorDao.update(param);
     }

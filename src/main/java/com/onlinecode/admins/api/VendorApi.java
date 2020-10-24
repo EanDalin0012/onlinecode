@@ -1,7 +1,11 @@
 package com.onlinecode.admins.api;
 
 import com.onlinecode.admins.services.implement.VendorServiceImplement;
+import com.onlinecode.component.Translator;
+import com.onlinecode.constants.ErrorCode;
 import com.onlinecode.constants.Status;
+import com.onlinecode.core.dto.Message;
+import com.onlinecode.core.exception.ValidatorException;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.core.map.MultiMap;
 import com.onlinecode.core.template.ResponseData;
@@ -24,7 +28,7 @@ public class VendorApi {
     private PlatformTransactionManager transactionManager;
 
     @GetMapping(value = "/list")
-    public ResponseData<MultiMap> list () throws Exception {
+    public ResponseData<MultiMap> list (@RequestParam("userId") int user_id, @RequestParam("lang") String lang) throws Exception {
         ResponseData<MultiMap> responseData = new ResponseData<>();
         try {
           log.info("\n\n<<<===****Start Vendor get list***====>>>\n\n");
@@ -38,9 +42,18 @@ public class VendorApi {
           log.info("\n\n<<<===****Vendor list value:"+responseData+"***====>>>\n\n");
           log.info("\n\n<<<===****End Vendor get list***====>>>\n\n");
 
+        } catch (ValidatorException ex) {
+            log.error("get error", ex);
+            ex.printStackTrace();
+            Message message = message(ex.getKey(), lang);
+            responseData.setError(message);
+            return responseData;
         } catch (Exception e) {
-            log.error("\n<<<=====get error api vendor get list=====>>>",e);
-            throw  e;
+            log.error("get error", e);
+            e.printStackTrace();
+            Message message = message(ErrorCode.EXCEPTION_ERR, lang);
+            responseData.setError(message);
+            return responseData;
         }
         return responseData;
     }
@@ -96,9 +109,18 @@ public class VendorApi {
 
             log.info("\n\n<<<===****Vendor response : "+responseData+"***====>>>\n\n");
             log.info("\n\n<<<===****End Vendor save api***====>>>\n\n");
-        }catch (Exception e) {
-            log.error("******====get error api save or update vendor", e);
-            throw e;
+        } catch (ValidatorException ex) {
+            log.error("get error", ex);
+            ex.printStackTrace();
+            Message message = message(ex.getKey(), lang);
+            responseData.setError(message);
+            return responseData;
+        } catch (Exception e) {
+            log.error("error exception",e);
+            e.printStackTrace();
+            Message message = message(ErrorCode.EXCEPTION_ERR, lang);
+            responseData.setError(message);
+            return responseData;
         }
         return responseData;
     }
@@ -126,10 +148,34 @@ public class VendorApi {
                 responseData.setBody(out);
             }
             log.info("\n\n***End");
-        }catch (Exception e) {
-            log.error("******====get error api delete or update vendor", e);
-            throw e;
+        }  catch (ValidatorException ex) {
+            log.error("get error", ex);
+            ex.printStackTrace();
+            Message message = message(ex.getKey(), lang);
+            responseData.setError(message);
+            return responseData;
+        } catch (Exception e) {
+            log.error("get error", e);
+            e.printStackTrace();
+            Message message = message(ErrorCode.EXCEPTION_ERR, lang);
+            responseData.setError(message);
+            return responseData;
         }
         return responseData;
+    }
+
+    private Message message(String key, String lang) {
+        Message data = new Message();
+        String message = Translator.toLocale(lang, "vendor_"+key);
+        if (ErrorCode.EXCEPTION_ERR == key) {
+            message = Translator.toLocale(lang, key);
+        } else if ("status".equals(key)) {
+            message = Translator.toLocale(lang, "status");
+        } else if ("user_id".equals(key)) {
+            message = Translator.toLocale(lang, "user_id");
+        }
+        data.setCode(key);
+        data.setMessage(message);
+        return data;
     }
 }

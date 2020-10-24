@@ -35,7 +35,7 @@ public class ValidatorUtil {
 
     public static void validate(MMap ipParam, String... ipFields) throws ValidatorException {
         for (String sKey : ipFields) {
-            if (MRUtil.isEmpty(MRUtil.trim(ipParam.getString(sKey)))) {
+            if ( MRUtil.isEmpty(MRUtil.trim(ipParam.getString(sKey))) || sKey == null) {
                 logger.info("Error : " + sKey + " is empty !!!");
                 throw new ValidatorException(sKey, "Invalid field[" + sKey + "]. Please add "+sKey+"field");
             }

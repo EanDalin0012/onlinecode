@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.onlinecode.admins.dao.ResourceImageDao">
+
+    <select id="getResourcesImageById" resultType="java.lang.String">
+        <![CDATA[
+            SELECT
+                file_source
+            FROM resource_img
+            WHERE id = #{uuid}
+	     ]]>
+    </select>
+
+    <insert id="save">
+        <![CDATA[
+            INSERT INTO resource_img
+            (
+                id,
+                product_id,
+                file_source,
+                file_name,
+                file_size,
+                file_extension
+            ) VALUES (
+                #{uuid},
+                #{product_id},
+                #{file_source},
+                #{file_name},
+                #{file_size},
+                #{file_extension}
+            )
+    	]]>
+    </insert>
+
+    <update id="update">
+        <![CDATA[
+		UPDATE resource_img
+		SET
+			  id 			= #{uuid}
+			, product_id 	= #{product_id}
+			, file_source   = #{file_source}
+			, file_name      = #{file_name}
+			, file_size      = #{file_size}
+			, file_extension = #{file_extension}
+			, status		= #{status}
+			, modify_by		= #{user_id}
+			, modify_date	= to_char(NOW(), 'YYYYMMDD')
+		WHERE id 			= #{uuid}
+		]]>
+    </update>
+
+    <delete id="delete">
+        <![CDATA[
+            DELETE FROM resource_img
+            WHERE id = #{uuid}
+		]]>
+    </delete>
+
+</mapper>

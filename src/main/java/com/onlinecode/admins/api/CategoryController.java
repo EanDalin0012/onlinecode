@@ -160,7 +160,7 @@ public class CategoryController {
             out.setString("status", "N");
             MultiMap body = param.getMultiMap("body");
 
-            if (body.size()>0) {
+            if (body.size() > 0) {
                 MMap input = new MMap();
                 for (MMap data : body.toListData()) {
                     input.setInt("id", data.getInt("id"));
@@ -180,11 +180,10 @@ public class CategoryController {
             Message message = message(ev.getKey(), lang);
             responseData.setError(message);
             return responseData;
-        }
-        catch (Exception e) {
+        }catch (Exception e) {
             transactionManager.rollback(transactionStatus);
             e.printStackTrace();
-            log.error("", e);
+            log.error("get error exception delete api category", e);
             Message message = message(ErrorCode.EXCEPTION_ERR, lang);
             responseData.setError(message);
             return responseData;
@@ -197,6 +196,10 @@ public class CategoryController {
         String message = Translator.toLocale(lang, "category_"+key);
         if (ErrorCode.EXCEPTION_ERR == key) {
             message = Translator.toLocale(lang, key);
+        } else if ("status".equals(key)) {
+            message = Translator.toLocale(lang, "status");
+        } else if ("user_id".equals(key)) {
+            message = Translator.toLocale(lang, "user_id");
         }
         data.setCode(key);
         data.setMessage(message);

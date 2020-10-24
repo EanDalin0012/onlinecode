@@ -3,14 +3,17 @@ package com.onlinecode.admins.api;
 import com.onlinecode.admins.dao.ResourceFileInfoDao;
 import com.onlinecode.admins.services.implement.FileServiceImplement;
 import com.onlinecode.admins.services.implement.ResourceFileInfoServiceImplement;
-import com.onlinecode.constants.BizResultCodeType;
-import com.onlinecode.constants.ChannelTypeCode;
-import com.onlinecode.constants.LangaugeCode;
-import com.onlinecode.constants.SYN;
+import com.onlinecode.admins.services.implement.ResourceImageServiceImplement;
+import com.onlinecode.component.Translator;
+import com.onlinecode.constants.*;
+import com.onlinecode.core.dto.Message;
+import com.onlinecode.core.exception.ValidatorException;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.core.serivice.implement.FileSystemStorageService;
 import com.onlinecode.core.template.ResponseData;
+import com.onlinecode.utils.SystemUtil;
 import org.apache.commons.io.IOUtils;
+import org.apache.tomcat.util.codec.binary.Base64;
 import org.imgscalr.Scalr;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,11 +28,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.imageio.ImageIO;
+import javax.servlet.http.HttpServletRequest;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.UUID;
 
 @RestController
@@ -43,7 +44,8 @@ public class FileRestController {
     private ResourceFileInfoDao resourceFileInfoDao;
     @Autowired
     private FileServiceImplement fileService;
-
+    @Autowired
+    private ResourceImageServiceImplement resourceImageServiceImplement;
     /**
      * <pre>
      *     upload image
@@ -54,7 +56,6 @@ public class FileRestController {
      * @return ResponseData<MMap, MMap>
      * @throws
      */
-    @PreAuthorize("#oauth2.hasScope('write')")
     @PostMapping("/upload")
     public ResponseEntity<ResponseData<MMap>> handleFileUpload(@RequestParam("file") MultipartFile multipartFile,
                                                                      @RequestParam("fileImageURL") String fileImageURL,
@@ -62,7 +63,7 @@ public class FileRestController {
         ResponseData<MMap> response = new ResponseData<>();
         InputStream is = null;
 
-
+        log.info("======Start file upload=====");
         MMap header = new MMap();
         MMap responseBody = new MMap();
 
@@ -226,5 +227,80 @@ public class FileRestController {
         InputStream in = getClass()
                 .getResourceAsStream("/com/baeldung/produceimage/image.jpg");
         return IOUtils.toByteArray(in);
+    }
+
+    @PostMapping("/upload1")
+    public String Testing (@RequestParam("file") MultipartFile file) throws Exception {
+            log.info("tesing file");
+        log.info("getContentType"+file.getContentType());
+        log.info("getContentType"+file.getName());
+        log.info("getContentType"+file.getOriginalFilename());
+        log.info("getContentType"+file.getInputStream());
+            return "OK";
+    }
+
+    @PostMapping("/upload2")
+    public String Testing1 ( @RequestBody String data, HttpServletRequest request) throws Exception {
+        try
+        {
+            log.info("data", data);
+            String imageValue = "";
+            log.info(data);
+            //This will decode the String which is encoded by using Base64 class
+            byte[] imageByte= Base64.decodeBase64(data);
+
+            String directory = System.getProperty("user.dir")+"/";
+            System.out.println(directory);
+            log.info("path:" + directory);
+            log.info("path:" + imageByte);
+            new FileOutputStream(directory).write(imageByte);
+        }
+        catch(Exception e)
+        {
+            throw e;
+        }
+        return "OK";
+    }
+
+    @GetMapping("/resource")
+    public ResponseData<MMap>  resourcesImage(@RequestParam("resource_id") String resource_id) {
+        ResponseData<MMap> responseData = new ResponseData<>();
+        try {
+            log.info("=======Start get resource ========");
+            log.info("========== resource id :"+resource_id);
+            MMap input = new MMap();
+            input.setString("uuid",resource_id);
+            String data = resourceImageServiceImplement.getResourcesImageById(input);
+            MMap resData = new MMap();
+            resData.setString("file_source", data);
+            responseData.setBody(resData);
+            log.info("=======file resource ========"+data);
+            log.info("=======End get resource ========");
+        }catch (ValidatorException e) {
+            log.error("get error api file resourcesImage",e);
+            e.printStackTrace();
+            Message message = message(ErrorCode.EXCEPTION_ERR, "en");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            log.error("get error api file resourcesImage",ex);
+            ex.printStackTrace();
+            Message message = message(ErrorCode.EXCEPTION_ERR, "en");
+        }
+        return  responseData;
+    }
+
+    private Message message(String key, String lang) {
+        Message data = new Message();
+        String message = Translator.toLocale(lang, "category_"+key);
+        if (ErrorCode.EXCEPTION_ERR == key) {
+            message = Translator.toLocale(lang, key);
+        } else if ("status".equals(key)) {
+            message = Translator.toLocale(lang, "status");
+        } else if ("user_id".equals(key)) {
+            message = Translator.toLocale(lang, "user_id");
+        }
+        data.setCode(key);
+        data.setMessage(message);
+        return data;
     }
 }

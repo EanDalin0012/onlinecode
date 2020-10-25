@@ -23,7 +23,7 @@ public class SystemUtil {
 
     public static String resourcePath() {
         Path currentWorkingDir = Paths.get("").toAbsolutePath();
-        String path = currentWorkingDir.normalize().toString() + "/resources";
+        String path = currentWorkingDir.normalize().toString() + "\resources";
         return path;
     }
 

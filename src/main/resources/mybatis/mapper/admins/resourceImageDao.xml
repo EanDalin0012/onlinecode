@@ -16,18 +16,22 @@
             INSERT INTO resource_img
             (
                 id,
-                product_id,
+                create_date,
+                create_by,
                 file_source,
                 file_name,
                 file_size,
-                file_extension
+                file_extension,
+                file_type
             ) VALUES (
                 #{uuid},
-                #{product_id},
+                 to_char(NOW(), 'YYYYMMDD'),
+                 #{create_by},
                 #{file_source},
                 #{file_name},
                 #{file_size},
-                #{file_extension}
+                #{file_extension},
+                #{file_type}
             )
     	]]>
     </insert>

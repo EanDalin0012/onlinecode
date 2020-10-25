@@ -373,13 +373,11 @@ public class FileRestController {
     public  String readImage() throws IOException {
         String base64 = "";
         try {
-            String imagePath = SystemUtil.projectPath() + "/Products_Abc/93eadff6-1c40-433f-a461-15db3d4000db.png";
+            String imagePath = SystemUtil.projectPath() + "/uploads/Products_Abc/93eadff6-1c40-433f-a461-15db3d4000db.png";
 
-
-            System.out.println("=================Encoder Image to Base 64!================="+Paths.get(imagePath).isAbsolute());
-            System.out.println("=================Encoder Image to Base 64!================="+Paths.get(imagePath).toAbsolutePath());
-            Path p = Paths.get(imagePath).iterator().next();
-
+            System.out.println("=================Encoder Image to Base 64!=================");
+            base64 = encoder(imagePath);
+            System.out.println(encoder(imagePath));
 
             System.out.println("DONE!");
 

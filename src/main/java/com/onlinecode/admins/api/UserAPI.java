@@ -150,7 +150,7 @@ public class UserAPI {
     public ResponseEntity<ResponseData<MMap>> getUserByUserName(@RequestParam("userName") String userName) throws  Exception {
         ResponseData<MMap> out = new ResponseData<>();
         try {
-            testing();
+
             log.info("\n\n<<<<====***user api loader user param: [" + userName + "]***====>>>> \n");
             if (userName == null || userName == "") {
                 throw new Exception("user name is null");
@@ -173,23 +173,4 @@ public class UserAPI {
         }
         return new ResponseEntity<>(out, HttpStatus.OK);
     }
-
-
-    private void testing() {
-        try{
-            String key = "admin";
-            MMap data = new MMap();
-            data.setString("id", "jdaklf");
-            ObjectMapper objectMapper = new ObjectMapper();
-            String jsonString = objectMapper.writeValueAsString(data);
-            String encryptedData = AESUtils.encrypt(key, jsonString);
-            String decrtyptedData = AESUtils.decrypt(encryptedData, key);
-
-            System.out.println("encrypt data:\n"+encryptedData);
-            System.out.println("decrypted data:\n"+decrtyptedData);
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
 }

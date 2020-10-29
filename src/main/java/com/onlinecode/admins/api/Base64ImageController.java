@@ -28,7 +28,10 @@ public class Base64ImageController {
     public ResponseData<MMap> index(@RequestBody MMap param, @RequestParam("userId") int user_id, @RequestParam("lang") String lang) {
         ResponseData<MMap> responseData = new ResponseData<>();
         try {
+            log.info("================Start write image=============");
+
             MMap body  = param.getMMap("body");
+            log.info("param:",body);
             MMap input = new MMap();
             String uuid = UUID.randomUUID().toString();
             input.setString("id", uuid);

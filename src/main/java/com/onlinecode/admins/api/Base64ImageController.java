@@ -15,8 +15,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.UUID;
-
 @RestController
 @RequestMapping(value = "/api/base64/image")
 public class Base64ImageController {
@@ -33,26 +31,39 @@ public class Base64ImageController {
             MMap body  = param.getMMap("body");
             log.info("param:",body);
             MMap input = new MMap();
-            String uuid = UUID.randomUUID().toString();
-            input.setString("id", uuid);
-            String path = "/uploads/Products";
-            String base64 = body.getString("file_source");
-            String fileName = uuid;
+
+            String path          = "/uploads/products";
+            String base64        = body.getString("base64");
+            String id            = body.getString("id");
             String fileExtension = body.getString("file_extension");
-            String basePath = Base64ImageUtil.decodeToImage(path, base64, fileName, fileExtension);
 
-            input.setString("file_name",    body.getString("file_name"));
-            input.setString("file_type",    body.getString("file_type"));
-            input.setInt("file_extension",  body.getInt("file_extension"));
-            input.setString("file_source",  body.getString("file_source"));
-            input.setString("file_size",    body.getString("file_size"));
-            input.setString("file_type",    body.getString("file_type"));
-            input.setString("status",       Status.Active.getValueStr());
+            log.info("path:"+path+",id"+id+",name:"+id+",extension:"+fileExtension);
+            log.info("base64:"+base64);
 
-            resourceImageService.save(input);
+            String basePath      = Base64ImageUtil.decodeToImage(path, base64, id, fileExtension);
+
+            if (!basePath.equals("")) {
+                log.info("data:"+input);
+                input.setString("id",               id);
+                input.setString("file_name",        id);
+                input.setInt("file_size",           body.getInt("file_size"));
+                input.setString("file_type",        body.getString("file_type"));
+                input.setString("file_extension",   body.getString("file_extension"));
+                input.setString("original_name",    body.getString("file_name"));
+                input.setString("file_source",      basePath);
+                input.setString("status",           Status.Active.getValueStr());
+                input.setInt("user_id",             user_id);
+                resourceImageService.save(input);
+            } else  {
+                log.info("can not write image");
+                Message message = message(ErrorCode.EXCEPTION_ERR, lang);
+                responseData.setError(message);
+            }
 
         }catch (ValidatorException ex) {
-
+            log.info("Wrong validation", ex);
+            Message message = message(ex.getKey(), lang);
+            responseData.setError(message);
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -96,7 +107,7 @@ public class Base64ImageController {
 
     private Message message(String key, String lang) {
         Message data = new Message();
-        String message = Translator.toLocale(lang, "category_"+key);
+        String message = Translator.toLocale(lang, "image_"+key);
         if (ErrorCode.EXCEPTION_ERR == key) {
             message = Translator.toLocale(lang, key);
         } else if ("status".equals(key)) {

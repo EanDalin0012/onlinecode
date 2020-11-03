@@ -15,7 +15,7 @@ public class ResourceImageServiceImplement implements ResourceImageService {
 
     @Override
     public Long save(MMap param) throws ValidatorException {
-        ValidatorUtil.validate(param, "id");
+        ValidatorUtil.validate(param, "id", "original_name", "file_size", "file_type", "file_extension","file_source");
         return resourceImageDao.save(param);
     }
 

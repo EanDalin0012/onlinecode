@@ -14,5 +14,8 @@
     <entry key="vendor_contact">The vendor contact is null | empty.</entry>
     <!--product message-->
     <entry key="product_name">The product name is null | empty.</entry>
+    <!--file images=-->
+    <entry key="image_id">Image id is null | empty.</entry>
+    <entry key="image_original_name">File name is null | empty.</entry>
 
 </properties>

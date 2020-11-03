@@ -10,7 +10,7 @@ import javax.imageio.ImageIO;
 
 @SpringBootApplication
 public class OnlineCodeApplication {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         SpringApplication.run(OnlineCodeApplication.class, args);
     }
 

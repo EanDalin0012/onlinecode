@@ -1,5 +1,6 @@
 package com.onlinecode.admins.utils;
 import com.onlinecode.utils.SystemUtil;
+import org.apache.commons.codec.binary.Base64;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import javax.imageio.ImageIO;
@@ -22,14 +23,15 @@ public class Base64ImageUtil {
                 log.info("path exits");
                 f.mkdirs();
             }
-            fullPath = path+"/"+fileName+"."+fileExtension;
+            fullPath = path+"/"+fileName+""+fileExtension;
             log.info("full path:"+fullPath);
             byte[] base64Val=convertToImg(base64);
-            writeByteToImageFile(base64Val, mkdir+"/"+fileName+"."+fileExtension);
+            writeByteToImageFile(base64Val, mkdir+"/"+fileName+fileExtension);
 
         }catch (Exception e) {
             e.printStackTrace();
             log.error("write base64 error", e);
+            return  "";
         }
 
         log.info("===========End write base64 ========");
@@ -53,14 +55,20 @@ public class Base64ImageUtil {
     }
 
     private static byte[] convertToImg(String base64) throws IOException{
-        return org.apache.commons.codec.binary.Base64.decodeBase64(base64);
+        return Base64.decodeBase64(base64);
     }
     private static void writeByteToImageFile(byte[] imgBytes, String imgFileName) throws IOException {
         File imgFile = new File(imgFileName);
         BufferedImage img = ImageIO.read(new ByteArrayInputStream(imgBytes));
         ImageIO.write(img, "png", imgFile);
     }
-/*byte[] imageBytes = IOUtils.toByteArray(new URL("...")));
-String base64 = Base64.getEncoder().encodeToString(imageBytes);*/
+
+    public static void main(String[] args) {
+        String path = "";
+        String data = "";
+        String fileName = "";
+        String fileExtension = ".png";
+        decodeToImage("", "","","");
+    }
 
 }

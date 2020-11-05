@@ -25,12 +25,15 @@ public class Base64ImageController {
     @PostMapping(value = "/write")
     public ResponseData<MMap> index(@RequestBody MMap param, @RequestParam("userId") int user_id, @RequestParam("lang") String lang) {
         ResponseData<MMap> responseData = new ResponseData<>();
+        MMap output = new MMap();
         try {
             log.info("================Start write image=============");
 
             MMap body  = param.getMMap("body");
             log.info("param:",body);
             MMap input = new MMap();
+
+            output.setString("status", "N");
 
             String path          = "/uploads/products";
             String base64        = body.getString("base64");
@@ -53,7 +56,10 @@ public class Base64ImageController {
                 input.setString("file_source",      basePath);
                 input.setString("status",           Status.Active.getValueStr());
                 input.setInt("user_id",             user_id);
-                resourceImageService.save(input);
+               Long save = resourceImageService.save(input);
+               if (save > 0) {
+                   output.setString("status", "Y");
+               }
             } else  {
                 log.info("can not write image");
                 Message message = message(ErrorCode.EXCEPTION_ERR, lang);
@@ -71,6 +77,7 @@ public class Base64ImageController {
             Message message = message(ErrorCode.EXCEPTION_ERR, lang);
             responseData.setError(message);
         }
+        responseData.setBody(output);
         return responseData;
     }
 
@@ -102,6 +109,7 @@ public class Base64ImageController {
         }catch (Exception e) {
             throw e;
         }
+
         return  base64;
     }
 

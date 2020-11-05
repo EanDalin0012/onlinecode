@@ -4,7 +4,7 @@
 
     <select id="retrieveList" resultType="MMap">
         <![CDATA[
-		   SELECT
+		    SELECT
 			  p.id
 			, p.name
 		 	, p.description
@@ -13,9 +13,11 @@
 			, p.status
 			, p.resource_img_id
 			, p.category_id
+			, c."name"		as "catgory_name"
 			, (SELECT u.user_name FROM user_ u WHERE u.id = p.create_by) as "create_by"
 		    , (SELECT u.user_name FROM user_ u WHERE u.id = p.modify_by) as "modify_by"
 		FROM product p
+		INNER JOIN category c on c.id = p.category_id
 		where p.status != #{status}
 	     ]]>
     </select>
@@ -35,7 +37,7 @@
 				, status
 			)
 			VALUES (
-			#{id}
+			  #{id}
 			, #{name}
 			, #{category_id}
 			, #{resource_img_id}

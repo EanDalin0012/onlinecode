@@ -5,17 +5,22 @@
     <entry key="status">Invalid Status.</entry>
     <entry key="user_id">Invalid user id.</entry>
     <entry key="exception_error">General Exception.</entry>
+
     <!--category message-->
     <entry key="category_name">The category name is null | empty.</entry>
     <entry key="category_id">The category id is null | empty.</entry>
+
     <!--vendor message-->
     <entry key="vendor_id">The vendor id is null | empty.</entry>
     <entry key="vendor_name">The vendor name is null | empty.</entry>
     <entry key="vendor_contact">The vendor contact is null | empty.</entry>
+
     <!--product message-->
     <entry key="product_name">The product name is null | empty.</entry>
+    <entry key="product_category_id">The Category is null | empty.</entry>
+
     <!--file images=-->
     <entry key="image_id">Image id is null | empty.</entry>
     <entry key="image_original_name">File name is null | empty.</entry>
-
+    <!---->
 </properties>

@@ -9,6 +9,7 @@ import com.onlinecode.core.exception.ValidatorException;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.core.map.MultiMap;
 import com.onlinecode.core.template.ResponseData;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,20 +51,23 @@ public class ProductAPI {
     private ResponseData<MMap> execute(String function, int user_id, String lang, MMap param) {
         ResponseData<MMap> responseData = new ResponseData<>();
         try {
+            ObjectMapper objectMapper = new ObjectMapper();
             MMap input = new MMap();
             MMap out = new MMap();
             out.setString("status", "N");
 
-            input.setInt("user_id",     user_id);
-            input.setString("name",     param.getString("name"));
-            input.setString("description", param.getString("description"));
-            input.setString("status", Status.Active.getValueStr());
-            input.setInt("resource_img_id", param.getInt("resource_img_id"));
+            input.setInt("user_id",         user_id);
+            input.setString("name",         param.getString("name"));
+            input.setString("description",  param.getString("description"));
+            input.setString("status",       Status.Active.getValueStr());
+            input.setInt("category_id",     param.getInt("category_id"));
+            input.setString("resource_img_id", param.getString("resource_img_id"));
 
 
             if (function == "save") {
                 int id = productService.sequence();
                 input.setInt("id",          id);
+                log.info("product info:", input);
                 Long save = productService.save(input);
                 if (save > 0 ) {
                     out.setString("status", "Y");
@@ -71,6 +75,7 @@ public class ProductAPI {
 
             } else if (function == "update") {
                 input.setInt("id",          param.getInt("id"));
+                log.info("product info:", objectMapper.writeValueAsString(input));
                 Long update = productService.update(input);
                 if (update > 0) {
                     out.setString("status", "Y");

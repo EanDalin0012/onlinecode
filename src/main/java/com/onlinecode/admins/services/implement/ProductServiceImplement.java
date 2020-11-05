@@ -23,7 +23,7 @@ public class ProductServiceImplement implements ProductService {
 
     @Override
     public Long save(MMap param) throws ValidatorException {
-        ValidatorUtil.validate(param, "id", "name", "status", "user_id");
+        ValidatorUtil.validate(param, "id", "name", "status", "user_id", "category_id");
         return productDao.save(param);
     }
 

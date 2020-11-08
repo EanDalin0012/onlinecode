@@ -12,7 +12,7 @@ public class ReaderImgServiceImp implements ReaderImgService {
     @Autowired
     private ReaderImgDao readerImgDao;
     @Override
-    public String getResourcesImageById(MMap param) {
+    public MMap getResourcesImageById(MMap param) {
         return readerImgDao.getResourcesImageById(param);
     }
 }

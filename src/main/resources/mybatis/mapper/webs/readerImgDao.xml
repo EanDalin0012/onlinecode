@@ -2,12 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.onlinecode.webs.dao.ReaderImgDao">
 
-    <select id="getResourcesImageById" resultType="java.lang.String">
+    <select id="getResourcesImageById" resultType="MMap">
         <![CDATA[
             SELECT
-                file_source
-            FROM resource_img
-            WHERE id = #{id}
+                a.id,
+                a.file_name,
+                a.file_type,
+                a.file_size,
+                a.file_extension,
+                a.file_source
+            FROM
+            resource_img a
+            WHERE a.id = #{id}
 	     ]]>
     </select>
 

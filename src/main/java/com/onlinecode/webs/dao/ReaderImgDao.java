@@ -5,5 +5,5 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface ReaderImgDao {
-    String getResourcesImageById(MMap param);
+    MMap getResourcesImageById(MMap param);
 }

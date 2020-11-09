@@ -1,7 +1,11 @@
 package com.onlinecode.admins.api;
 
 import com.onlinecode.admins.services.implement.UserServiceImplement;
+import com.onlinecode.component.Translator;
+import com.onlinecode.constants.ErrorCode;
+import com.onlinecode.constants.ReturnStatus;
 import com.onlinecode.constants.Status;
+import com.onlinecode.core.dto.Message;
 import com.onlinecode.core.encryption.AESUtils;
 import com.onlinecode.core.exception.ApplicationException;
 import com.onlinecode.core.map.MMap;
@@ -14,10 +18,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.oauth2.common.OAuth2AccessToken;
+import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping(value = "/api/user")
@@ -27,6 +35,9 @@ public class UserAPI {
     private UserServiceImplement userService;
     @Autowired
     private PlatformTransactionManager transactionManager;
+    @Autowired
+    private TokenStore tokenStore;
+
     /**
      * <pre>
      *     get list of user
@@ -84,6 +95,27 @@ public class UserAPI {
         return execute(param, "save");
     }
 
+    @GetMapping(value = "/oauth/revoke-token")
+    public ResponseData<MMap> oauthRevokeToken(HttpServletRequest request) {
+        ResponseData responseData = new ResponseData();
+        MMap output = new MMap();
+        try {
+            output.setString(ReturnStatus.StatusProperty, ReturnStatus.N);
+            String authHeader = request.getHeader("Authorization");
+            if (authHeader != null) {
+                String tokenValue = authHeader.replace("Bearer", "").trim();
+                OAuth2AccessToken accessToken = tokenStore.readAccessToken(tokenValue);
+                tokenStore.removeAccessToken(accessToken);
+                output.setString(ReturnStatus.StatusProperty, ReturnStatus.Y);
+            }
+            responseData.setBody(output);
+        }catch (Exception e) {
+            Message message = message(ErrorCode.EXCEPTION_ERR, "en");
+            responseData.setError(message);
+            return responseData;
+        }
+        return  responseData;
+    }
     /**
      * <pre>
      *     register or update information of main category
@@ -172,5 +204,20 @@ public class UserAPI {
             throw e;
         }
         return new ResponseEntity<>(out, HttpStatus.OK);
+    }
+
+    private Message message(String key, String lang) {
+        Message data = new Message();
+        String message = Translator.toLocale(lang, "user_"+key);
+        if (ErrorCode.EXCEPTION_ERR == key) {
+            message = Translator.toLocale(lang, key);
+        } else if (ErrorCode.STATUS.equals(key.trim())) {
+            message = Translator.toLocale(lang, ErrorCode.STATUS);
+        } else if (ErrorCode.USER_ID.equals(key.trim())) {
+            message = Translator.toLocale(lang, ErrorCode.USER_ID);
+        }
+        data.setCode(key);
+        data.setMessage(message);
+        return data;
     }
 }

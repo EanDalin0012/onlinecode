@@ -40,7 +40,7 @@
 			  #{id}
 			, #{name}
 			, #{category_id}
-			, #{resource_img_id}
+			, COALESCE(#{resource_img_id}, '' )
 			, COALESCE(#{description}, '' )
 			, to_char(NOW(), 'YYYYMMDD')
 			, #{user_id}
@@ -59,16 +59,16 @@
 
     <update id="update">
         <![CDATA[
-		UPDATE product
-		SET
-			  name 			    = #{name}
-			, category_id  		= #{category_id}
-			, resource_img_id  	= #{resource_img_id}
-			, description 	    = COALESCE(#{description},'')
-			, status		    = #{status}
-			, modify_by		    = #{user_id}
-			, modify_date	    = to_char(NOW(), 'YYYYMMDD')
-		WHERE id 			    = #{id}
+            UPDATE product
+            SET
+                  name 			    = #{name}
+                , category_id  		= #{category_id}
+                , resource_img_id  	= #{resource_img_id}
+                , description 	    = COALESCE(#{description},'')
+                , status		    = #{status}
+                , modify_by		    = #{user_id}
+                , modify_date	    = to_char(NOW(), 'YYYYMMDD')
+            WHERE id 			    = #{id}
 		]]>
     </update>
 

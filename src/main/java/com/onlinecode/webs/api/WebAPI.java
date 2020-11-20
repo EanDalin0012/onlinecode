@@ -11,6 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 class WebAPI {
     @GetMapping(value = "/")
     public ResponseEntity<String> index() {
+        try {
+            String amount ="20";
+            String[] arr = amount.split("\\.");
+            String a = arr[0];
+            String b = arr[1];
+            System.out.println(arr[0]+","+b);
+        }catch (Exception e) {
+            throw e;
+        }
         return new ResponseEntity<>("api webs", HttpStatus.OK);
     }
 }

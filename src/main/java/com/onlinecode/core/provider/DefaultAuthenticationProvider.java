@@ -65,7 +65,7 @@ public class DefaultAuthenticationProvider implements AuthenticationProvider {
             String _password = userInfo.getString("password");
             String password = (String) authentication.getCredentials();
             boolean isPasswordMatch = passwordEncoder.matches(password, _password);
-
+            System.out.println(isPasswordMatch);
             if (!isPasswordMatch) {
                 int count = trackLockUser(authentication.getName(), "User input wrong password");
                 if (count >= 5) {

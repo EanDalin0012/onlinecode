@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.onlinecode.admins.dao.UserInfoDao">
+
+    <select id="retrieveList" resultType="MMap">
+        <![CDATA[
+		   SELECT
+			 id
+			    , us.first_name
+			    , us.last_name
+			    , us.gender
+			    , us.date_birth
+			    , us.contact
+			    , us.profile_resource_img_id
+			    , us.email
+				, us.description
+				, us.create_date
+				, us.modify_date
+				, us.status
+                , (SELECT u.user_name FROM user_ u WHERE u.id = us.create_by) as "create_by"
+                , (SELECT u.user_name FROM user_ u WHERE u.id = us.modify_by) as "modify_by"
+		FROM user_info us
+		where us.status != #{status}
+	     ]]>
+    </select>
+
+
+    <insert id="save">
+        <![CDATA[
+	    	INSERT INTO user_info
+			(
+			    id
+			    , first_name
+			    , last_name
+			    , gender
+			    , date_birth
+			    , contact
+			    , profile_resource_img_id
+			    , email
+				, description
+				, create_date
+				, create_by
+				, status
+			)
+			VALUES (
+                #{id}
+                , #{first_name}
+                , #{last_name}
+                , #{gender}
+                , #{date_birth}
+                , #{contact}
+                , #{profile_resource_img_id}
+                , #{email}
+                , COALESCE(#{description}, '' )
+                , to_char(NOW(), 'YYYYMMDD')
+                , #{user_id}
+                , #{status}
+			)
+    	]]>
+    </insert>
+
+    <select id="count">
+        <![CDATA[
+		  SELECT
+	     	COUNT (*)
+	     FROM user_info
+	     ]]>
+    </select>
+
+    <update id="update">
+        <![CDATA[
+		UPDATE user_info
+		SET
+			     first_name                 = #{first_name}
+			    , last_name                 = #{last_name}
+			    , gender                    = #{gender}
+			    , date_birth                = #{date_birth}
+			    , contact                   = #{contact}
+			    , profile_resource_img_id   = #{profile_resource_img_id}
+			    , email                     = #{email}
+				, description               = COALESCE(#{description}, '' )
+				, modify_by                 = #{modify_by}
+				, modify_date               = #{modify_date}
+				, status                    = #{status}
+		WHERE id 			                = #{id}
+		]]>
+    </update>
+
+    <update id="delete">
+        <![CDATA[
+		update user_info
+        set
+             status  		= #{status}
+            , modify_by   	= #{userID}
+            , modify_date	= to_char(NOW(), 'YYYYMMDD')
+        where id   			= #{id}
+		]]>
+    </update>
+
+
+
+</mapper>

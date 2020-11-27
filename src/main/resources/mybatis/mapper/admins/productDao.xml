@@ -13,6 +13,8 @@
 			, p.status
 			, p.resource_img_id
 			, p.category_id
+			, p.web_show
+			, p.mobile_show
 			, c."name"		as "catgory_name"
 			, (SELECT u.user_name FROM user_ u WHERE u.id = p.create_by) as "create_by"
 		    , (SELECT u.user_name FROM user_ u WHERE u.id = p.modify_by) as "modify_by"
@@ -77,6 +79,30 @@
 		update product
         set
              status  		= #{status}
+            , modify_by   	= #{user_id}
+            , modify_date	= to_char(NOW(), 'YYYYMMDD')
+        where id   			= #{id}
+		]]>
+    </update>
+
+    <update id="updateShowOnWeb">
+        <![CDATA[
+		update product
+        set
+            web_show        = #{web_show}
+            , status  		= #{status}
+            , modify_by   	= #{user_id}
+            , modify_date	= to_char(NOW(), 'YYYYMMDD')
+        where id   			= #{id}
+		]]>
+    </update>
+
+    <update id="updateShowOnMobile">
+        <![CDATA[
+		update product
+        set
+            mobile_show     = #{mobile_show}
+            , status  		= #{status}
             , modify_by   	= #{user_id}
             , modify_date	= to_char(NOW(), 'YYYYMMDD')
         where id   			= #{id}

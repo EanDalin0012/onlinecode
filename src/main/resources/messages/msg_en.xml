@@ -18,6 +18,8 @@
     <!--product message-->
     <entry key="product_name">The product name is null | empty.</entry>
     <entry key="product_category_id">The Category is null | empty.</entry>
+    <entry key="product_web_show">Show on Web is null | empty.</entry>
+    <entry key="product_mobile_show">Show on Mobile is null | empty.</entry>
 
     <!--file images=-->
     <entry key="image_id">Image id is null | empty.</entry>

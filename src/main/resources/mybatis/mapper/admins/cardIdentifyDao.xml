@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.onlinecode.admins.dao.CardIdentifyDao">
+
+    <select id="retrieveList" resultType="MMap">
+        <![CDATA[
+		   SELECT
+			  v.id
+			, v.name
+			, v.address
+			, v.contact
+			, v.email
+		 	, v.description
+			, v.create_date
+			, v.modify_date
+			, v.status
+			, (SELECT u.user_name FROM user_ u WHERE u.id = v.create_by) as "create_by"
+		    , (SELECT u.user_name FROM user_ u WHERE u.id = v.modify_by) as "modify_by"
+		FROM card_identify v
+		where v.status != #{status}
+	     ]]>
+    </select>
+
+
+    <insert id="save">
+        <![CDATA[
+	    	INSERT INTO vendor
+			(
+			    id
+			    , name
+			    , address
+			    , contact
+			    , other_contact
+			    , email
+				, description
+				, create_date
+				, create_by
+				, status
+			)
+			VALUES (
+			#{id}
+			, #{name}
+			, #{address}
+			, #{contact}
+			, #{other_contact}
+			, #{email}
+			, COALESCE(#{description}, '' )
+			, to_char(NOW(), 'YYYYMMDD')
+			, #{user_id}
+			, #{status}
+			)
+    	]]>
+    </insert>
+
+    <select id="count">
+        <![CDATA[
+		  SELECT
+	     	COUNT (*)
+	     FROM vendor
+	     ]]>
+    </select>
+
+    <update id="update">
+        <![CDATA[
+		UPDATE vendor
+		SET
+			  name 			= #{name}
+			, address  		= #{address}
+			, contact  		= #{contact}
+			, email  		= #{email}
+			, other_contact = #{other_contact}
+			, description 	= COALESCE(#{description},'')
+			, status		= #{status}
+			, modify_by		= #{user_id}
+			, modify_date	= to_char(NOW(), 'YYYYMMDD')
+		WHERE id 			= #{id}
+		]]>
+    </update>
+
+    <update id="delete">
+        <![CDATA[
+		update vendor
+        set
+             status  		= #{status}
+            , modify_by   	= #{userID}
+            , modify_date	= to_char(NOW(), 'YYYYMMDD')
+        where id   			= #{id}
+		]]>
+    </update>
+
+    <select id="sequence" resultType="java.lang.Integer">
+        <![CDATA[
+            SELECT nextval('sequence_vendor');
+        ]]>
+    </select>
+
+</mapper>

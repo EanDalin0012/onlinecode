@@ -40,6 +40,18 @@ public class ProductServiceImplement implements ProductService {
     }
 
     @Override
+    public Long updateShowOnWeb(MMap param) throws ValidatorException {
+        ValidatorUtil.validate(param, "id", "web_show", "status", "user_id");
+        return productDao.updateShowOnWeb(param);
+    }
+
+    @Override
+    public Long updateShowOnMobile(MMap param) throws ValidatorException {
+        ValidatorUtil.validate(param, "id", "mobile_show", "status", "user_id");
+        return productDao.updateShowOnMobile(param);
+    }
+
+    @Override
     public int count() {
         return productDao.count();
     }

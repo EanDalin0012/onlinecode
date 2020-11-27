@@ -9,6 +9,8 @@ public interface ProductService {
     Long save(MMap param) throws ValidatorException, Exception;
     Long delete(MMap param) throws ValidatorException, Exception;
     Long update(MMap param) throws ValidatorException, Exception;
+    Long updateShowOnWeb(MMap param) throws ValidatorException;
+    Long updateShowOnMobile(MMap param) throws ValidatorException;
     int count();
     int sequence();
 }

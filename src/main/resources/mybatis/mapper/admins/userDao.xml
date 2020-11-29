@@ -28,36 +28,33 @@
 
     <insert id="save">
         <![CDATA[
-			INSERT INTO "user" (
-					  first_name
-					, last_name
-					, date_of_birth
-					, email
-					, password
-					, contact
-					, gender
-					, create_by
-					, create_date
-					, status
-					, description
-					, address_id
-					, resource_id
-					)
+	    	INSERT INTO user_
+			(
+			    id
+			    , account_expired
+			    , account_locked
+			    , credentials_expired
+			    , enabled
+			    , password
+			    , user_name
+			    , is_first_login
+			    , create_by
+			    , create_date
+			    , status
+			)
 			VALUES (
-					#{firstName}
-					, #{lastName}
-					, #{dateBirth}
-					, #{email}
-					, #{password}
-					, #{contact}
-					, #{gender}
-					, #{userID}
-					, to_char(NOW(), 'YYYYMMDD')
-					, #{status}
-					, COALESCE(#{description}, '' )
-					, COALESCE(#{addressID}, 0)
-					, COALESCE(#{resourceID}, 0)
-					);
+			#{id}
+			, #{account_expired}
+			, #{account_lock}
+			, #{credential_expired}
+			, #{enable}
+			, #{passwd}
+			, #{user_name}
+			, #{is_first_login}
+			, #{user_id}
+			, to_char(NOW(), 'YYYYMMDD')
+			, #{status}
+			)
     	]]>
     </insert>
 
@@ -94,9 +91,8 @@
 				, u.credentials_expired
 				, u.enabled
 				, u.user_name
-				, u.resource_img_id
 			from user_ u
-			where u.user_name = #{userName}
+			where u.user_name = #{user_name}
 	     ]]>
     </select>
 
@@ -129,5 +125,11 @@
 				WHERE id			= #{id}
 		]]>
     </update>
+
+    <select id="sequence" resultType="java.lang.Integer">
+        <![CDATA[
+            SELECT nextval('sequence_user_');
+        ]]>
+    </select>
 
 </mapper>

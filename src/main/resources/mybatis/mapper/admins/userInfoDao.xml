@@ -79,8 +79,8 @@
 			    , profile_resource_img_id   = #{profile_resource_img_id}
 			    , email                     = #{email}
 				, description               = COALESCE(#{description}, '' )
-				, modify_by                 = #{modify_by}
-				, modify_date               = #{modify_date}
+				, modify_by                 = #{user_id}
+				, modify_date               = to_char(NOW(), 'YYYYMMDD')
 				, status                    = #{status}
 		WHERE id 			                = #{id}
 		]]>
@@ -91,7 +91,7 @@
 		update user_info
         set
              status  		= #{status}
-            , modify_by   	= #{userID}
+            , modify_by   	= #{user_id}
             , modify_date	= to_char(NOW(), 'YYYYMMDD')
         where id   			= #{id}
 		]]>

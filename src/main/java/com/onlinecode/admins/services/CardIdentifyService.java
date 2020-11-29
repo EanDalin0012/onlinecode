@@ -10,5 +10,4 @@ public interface CardIdentifyService {
     int delete(MMap param) throws ValidatorException;
     int update(MMap param) throws ValidatorException;
     int count();
-    int sequence();
 }

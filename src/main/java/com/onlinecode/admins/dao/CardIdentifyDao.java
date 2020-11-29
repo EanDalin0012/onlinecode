@@ -11,5 +11,4 @@ public interface CardIdentifyDao {
     int delete(MMap param);
     int update(MMap param);
     int count();
-    int sequence();
 }

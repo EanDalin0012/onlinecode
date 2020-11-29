@@ -1,6 +1,7 @@
 package com.onlinecode.admins.api;
 
 import com.onlinecode.admins.services.implement.UserServiceImplement;
+import com.onlinecode.admins.utils.MessageUtils;
 import com.onlinecode.component.Translator;
 import com.onlinecode.constants.ErrorCode;
 import com.onlinecode.constants.ReturnStatus;
@@ -8,6 +9,7 @@ import com.onlinecode.constants.Status;
 import com.onlinecode.core.dto.Message;
 import com.onlinecode.core.encryption.AESUtils;
 import com.onlinecode.core.exception.ApplicationException;
+import com.onlinecode.core.exception.ValidatorException;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.core.map.MultiMap;
 import com.onlinecode.core.template.ResponseData;
@@ -26,6 +28,7 @@ import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.xml.bind.ValidationException;
 
 @RestController
 @RequestMapping(value = "/api/user")
@@ -47,7 +50,7 @@ public class UserAPI {
      * @return
      */
     @GetMapping(value = "/get/list")
-    public ResponseEntity<ResponseData<MMap>> getUserList() throws Exception {
+    public ResponseData<MMap> getUserList(@RequestParam("userId") int user_id, @RequestParam("lang") String lang)  {
         ResponseData<MMap> responseData = new ResponseData<>();
         try {
             MMap input = new MMap();
@@ -61,10 +64,16 @@ public class UserAPI {
             body.setInt("totalRecords", count);
 
             responseData.setBody(body);
-            return new ResponseEntity<>(responseData, HttpStatus.OK);
-        } catch (Exception e) {
-            throw e;
+
+        }catch (ValidatorException ex) {
+            Message message = MessageUtils.message("user_"+ex.getKey(), lang);
+            responseData.setError(message);
+        }catch (Exception e) {
+            Message message = MessageUtils.message(ErrorCode.EXCEPTION_ERR, lang);
+            responseData.setError(message);
+            return  responseData;
         }
+        return responseData;
     }
 
     /**
@@ -91,8 +100,8 @@ public class UserAPI {
      * @throws
      **/
     @PostMapping(value = "/save")
-    public ResponseEntity<ResponseData<MMap>> save(@RequestBody MMap param) throws Exception {
-        return execute(param, "save");
+    public ResponseData<MMap> save(@RequestBody MMap param,@RequestParam("userId") int user_id, @RequestParam("lang") String lang) throws Exception {
+        return execute(param, "save", lang, user_id);
     }
 
     @GetMapping(value = "/oauth/revoke-token")
@@ -126,7 +135,7 @@ public class UserAPI {
      * @return ResponseEntity<MMap>
      * @throws Exception
      */
-    private ResponseEntity<ResponseData<MMap>> execute(MMap param, String function) throws Exception {
+    private ResponseData<MMap> execute(MMap param, String function, String lang, int user_id) {
         ResponseData<MMap> response = new ResponseData<>();
         MMap getHeader = param.getMMap("header");
         MMap body = param.getMMap("body");
@@ -136,8 +145,6 @@ public class UserAPI {
             MMap input = new MMap();
             MMap responseBody = new MMap();
             String Yn = "N";
-
-            ValidatorUtil.validate(body, "firstName", "lastName", "dateBirth", "email", "password", "contact", "gender");
 
             input.setString("firstName", body.getString("firstName"));
             input.setString("lastName", body.getString("lastName"));
@@ -167,43 +174,41 @@ public class UserAPI {
                 }
             }
 
-            transactionManager.commit(transactionStatus);
             responseBody.setString("returnYN", Yn);
             response.setBody(responseBody);
-            return new ResponseEntity<>(response, HttpStatus.OK);
+            transactionManager.commit(transactionStatus);
+        } catch (ValidatorException ex) {
+            Message message = MessageUtils.message("user_"+ex.getKey(), lang);
+            response.setError(message);
         } catch (Exception e) {
             transactionManager.rollback(transactionStatus);
-            log.error("get Exception ", e);
-            throw e;
+            Message message = message(ErrorCode.EXCEPTION_ERR, "en");
+            response.setError(message);
+            return response;
         }
+        return response;
     }
 
     @GetMapping(value = "/load_user")
-    public ResponseEntity<ResponseData<MMap>> getUserByUserName(@RequestParam("userName") String userName) throws  Exception {
+    public ResponseData<MMap> getUserByUserName(@RequestParam("userName") String userName, @RequestParam("lang") String lang) {
         ResponseData<MMap> out = new ResponseData<>();
         try {
-
-            log.info("\n\n<<<<====***user api loader user param: [" + userName + "]***====>>>> \n");
-            if (userName == null || userName == "") {
-                throw new Exception("user name is null");
-            }
-
+            log.info("======== Start load user info========");
             MMap input = new MMap();
-            MMap outPut = new MMap();
-            MMap header = new MMap();
-            header.setBoolean("result", true);
-            header.setString("mgs", "test");
-
-            input.setString("userName", userName);
-
-            outPut = userService.loadUserByUserName(input);
-            log.info("\n\n<<<<====***user api loader user out put : " + outPut + "***====>>>> \n");
+            input.setString("user_name", userName);
+            MMap outPut = userService.loadUserByUserName(input);
+            log.info("======== user api loader user data : " + outPut);
+            log.info("======== End load user info========");
             out.setBody(outPut);
+        }catch (ValidatorException ex) {
+            Message message = MessageUtils.message("user_"+ex.getKey(), lang);
+            out.setError(message);
         }catch (Exception e) {
-            log.error("load user by user name get exception error:", e);
-            throw e;
+            Message message = MessageUtils.message(ErrorCode.EXCEPTION_ERR, "en");
+            out.setError(message);
+            return  out;
         }
-        return new ResponseEntity<>(out, HttpStatus.OK);
+        return out;
     }
 
     private Message message(String key, String lang) {

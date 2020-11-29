@@ -24,5 +24,24 @@
     <!--file images=-->
     <entry key="image_id">Image id is null | empty.</entry>
     <entry key="image_original_name">File name is null | empty.</entry>
-    <!---->
+    <!--User Info-->
+    <entry key="user_info_id">User Information ID is null | empty.</entry>
+    <entry key="user_info_first_name">First Name is null | empty.</entry>
+    <entry key="user_info_last_name">Last Name is null | empty.</entry>
+    <entry key="user_info_gender">Gender is null | empty.</entry>
+    <entry key="user_info_date_birth">Date of birth is null | empty.</entry>
+    <entry key="user_info_email">Email is null | empty.</entry>
+    <entry key="user_info_contact">Email is null | empty.</entry>
+    <entry key="user_user_name">User Name Invalid.</entry>
+    <!--Card Identify-->
+    <entry key="card_identify_card_id">Card Identify is null | empty.</entry>
+    <!--Account-->
+    <entry key="account_user_name">User Name is null | empty.</entry>
+    <entry key="account_passwd">Password is null | empty.</entry>
+    <entry key="account_is_first_login">First Login Invalid.</entry>
+    <entry key="account_enable">Enable Invalid.</entry>
+    <entry key="account_account_lock">Account Lock Invalid.</entry>
+    <entry key="account_credential_expired">Credential Expired Invalid.</entry>
+    <entry key="account_account_expired">Account Expired Invalid.</entry>
+
 </properties>

@@ -1,0 +1,6 @@
+CREATE SEQUENCE sequence_category START 1;
+CREATE SEQUENCE sequence_product START 1;
+CREATE SEQUENCE sequence_vendor START 1;
+CREATE SEQUENCE sequence_user_ START 1;
+
+

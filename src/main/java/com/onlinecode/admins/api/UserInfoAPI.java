@@ -1,14 +1,12 @@
 package com.onlinecode.admins.api;
 
 import com.onlinecode.admins.dao.UserDetailsDao;
-import com.onlinecode.admins.services.CardIdentifyService;
-import com.onlinecode.admins.services.UserInfoService;
-import com.onlinecode.admins.services.implement.AccountServiceImplement;
 import com.onlinecode.admins.services.implement.CardIdentifyServiceImplement;
 import com.onlinecode.admins.services.implement.UserInfoServiceImplement;
+import com.onlinecode.admins.services.implement.UserServiceImplement;
 import com.onlinecode.admins.utils.MessageUtils;
-import com.onlinecode.component.Translator;
 import com.onlinecode.constants.ErrorCode;
+import com.onlinecode.constants.ReturnStatus;
 import com.onlinecode.constants.Status;
 import com.onlinecode.core.dto.Message;
 import com.onlinecode.core.exception.ValidatorException;
@@ -25,8 +23,6 @@ import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.UUID;
-
 @RestController
 @RequestMapping(value = "/api/user_info/v1")
 public class UserInfoAPI {
@@ -37,7 +33,7 @@ public class UserInfoAPI {
     @Autowired
     private UserInfoServiceImplement userInfoService;
     @Autowired
-    private AccountServiceImplement accountService;
+    private UserServiceImplement userService;
     @Autowired
     private UserDetailsDao userDetailsDao;
     @Autowired
@@ -54,17 +50,23 @@ public class UserInfoAPI {
     public ResponseData<MMap> save (@RequestParam("userId") int user_id, @RequestParam("lang") String lang, @RequestBody MMap param) throws Exception {
         ResponseData<MMap> responseData = new ResponseData<>();
         TransactionStatus transactionStatus = transactionManager.getTransaction(new DefaultTransactionDefinition());
+
+        MMap out = new MMap();
+
         try {
-            MMap userInfo = param.getMMap("personalInfo");
-            MMap cardIdentify = param.getMMap("cardIdentify");
-            MMap accountInfo = param.getMMap("accountInfo");
+            MMap body = param.getMMap("body");
+            MMap userInfo = body.getMMap("personalInfo");
+            MMap cardIdentify = body.getMMap("cardIdentify");
+            MMap accountInfo = body.getMMap("accountInfo");
+
+            out.setString("status", ReturnStatus.N);
 
             int userSave            = 0;
             int cardIdentifySave    = 0;
             int accountServiceSave  = 0;
             String user_info_id     = "";
             String cardIdentifyId   = "";
-            String accountInfoId    = "";
+            int accountInfoId    = userService.sequence();
 
             try {
                 MMap userInfoInput = new MMap();
@@ -80,10 +82,15 @@ public class UserInfoAPI {
                 userInfoInput.setString("profile_id_image",  userInfo.getString("profile_id_image"));
                 userInfoInput.setInt("user_id",              user_id);
                 userInfoInput.setString("status",           Status.Active.getValueStr());
+                log.info("=========== Personal Info Data:"+userInfoInput);
                 userSave = userInfoService.save(userInfoInput);
             }catch (ValidatorException e1) {
+                transactionManager.rollback(transactionStatus);
                 Message message = MessageUtils.message("user_info_"+e1.getKey(), lang);
                 responseData.setError(message);
+                responseData.setBody(out);
+                responseData.setError(message);
+                return  responseData;
             }
             try {
                 MMap cardIdentifyInput = new MMap();
@@ -94,11 +101,16 @@ public class UserInfoAPI {
                 cardIdentifyInput.setString("rear_image_id", cardIdentify.getString("rear_image_id"));
                 cardIdentifyInput.setString("status",        Status.Active.getValueStr());
                 cardIdentifyInput.setInt("user_id",              user_id);
-                cardIdentifySave = cardIdentifyService.save(cardIdentify);
+                log.info("=========== Card Identify Data:"+cardIdentifyInput);
+                cardIdentifySave = cardIdentifyService.save(cardIdentifyInput);
 
             }catch (ValidatorException e2 ) {
+                transactionManager.rollback(transactionStatus);
                 Message message = MessageUtils.message("card_identify_"+e2.getKey(), lang);
                 responseData.setError(message);
+                responseData.setBody(out);
+                responseData.setError(message);
+                return responseData;
             }
             try{
                 MMap accountInfoInput = new MMap();
@@ -106,8 +118,7 @@ public class UserInfoAPI {
                 String password = accountInfo.getString("pw");
                 String enCodePasswd = passwordEncoder.encode(password);
 
-                accountInfoId = Uuid.randomUUID();
-                accountInfoInput.setString("id",                    accountInfoId);
+                accountInfoInput.setInt("id",                       accountInfoId);
                 accountInfoInput.setString("user_name",             accountInfo.getString("user_name"));
                 accountInfoInput.setString("passwd",                enCodePasswd);
                 accountInfoInput.setBoolean("is_first_login",       accountInfo.getBoolean("is_first_login"));
@@ -116,13 +127,20 @@ public class UserInfoAPI {
                 accountInfoInput.setBoolean("credential_expired",   accountInfo.getBoolean("credential_expired"));
                 accountInfoInput.setBoolean("account_expired",      accountInfo.getBoolean("account_expired"));
                 accountInfoInput.setString("status",                Status.Active.getValueStr());
+                accountInfoInput.setInt("user_id", user_id);
                 accountInfoInput.setInt("user_id",                  user_id);
 
-                accountServiceSave = accountService.save(accountInfoInput);
+                log.info("=========== Account Info Data:"+accountInfoInput);
+
+                accountServiceSave = userService.save(accountInfoInput);
 
             }catch (ValidatorException e3) {
-                Message message = MessageUtils.message("card_identify_"+e3.getKey(), lang);
+                transactionManager.rollback(transactionStatus);
+                Message message = MessageUtils.message("account_"+e3.getKey(), lang);
                 responseData.setError(message);
+                responseData.setBody(out);
+                responseData.setError(message);
+                return responseData;
             }
             if (userSave > 0 && cardIdentifySave> 0 && accountServiceSave> 0) {
                 Long save = saveUserDetails(cardIdentifyId,user_info_id,accountInfoId);
@@ -138,7 +156,12 @@ public class UserInfoAPI {
             e.printStackTrace();
             Message message = MessageUtils.message(ErrorCode.EXCEPTION_ERR, lang);
             responseData.setError(message);
+            responseData.setBody(out);
+            responseData.setError(message);
+            return responseData;
         }
+        out.setString("status", ReturnStatus.Y);
+        responseData.setBody(out);
         return responseData;
     }
 
@@ -154,11 +177,11 @@ public class UserInfoAPI {
         return responseData;
     }
 
-    private Long saveUserDetails(String card_identify_id,String user_info_id,String user_id) {
+    private Long saveUserDetails(String card_identify_id,String user_info_id,int user_id) {
         MMap input = new MMap();
         input.setString("card_identify_id", card_identify_id);
         input.setString("user_info_id", user_info_id);
-        input.setString("user_id", user_id);
+        input.setInt("user_id", user_id);
         Long save = userDetailsDao.save(input);
         return save;
     }

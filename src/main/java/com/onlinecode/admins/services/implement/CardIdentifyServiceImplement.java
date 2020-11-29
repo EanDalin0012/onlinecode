@@ -44,8 +44,6 @@ public class CardIdentifyServiceImplement implements CardIdentifyService {
         return cardIdentifyDao.count();
     }
 
-    @Override
-    public int sequence() {
-        return cardIdentifyDao.sequence();
-    }
+
+
 }

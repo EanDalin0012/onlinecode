@@ -38,11 +38,23 @@ public class UserInfoAPI {
     private UserDetailsDao userDetailsDao;
     @Autowired
     private PlatformTransactionManager transactionManager;
+    @Autowired
+    private  UserDetailsDao userDetails;
 
-    @GetMapping(value = "/")
-    public ResponseData<MultiMap> index() {
+    @GetMapping(value = "/inquiry")
+    public ResponseData<MultiMap> index(@RequestParam("userId") int user_id, @RequestParam("lang") String lang) {
         ResponseData<MultiMap> multiMapResponseData = new ResponseData<>();
-
+        try {
+            MMap input = new MMap();
+            input.setString("status", Status.Delete.getValueStr());
+            MultiMap data = userDetails.dataDetails(input);
+            multiMapResponseData.setBody(data);
+        }catch (Exception e) {
+            log.error("/api/user_info/v1/inquiry",e);
+            Message message = MessageUtils.message(ErrorCode.EXCEPTION_ERR, lang);
+            multiMapResponseData.setError(message);
+            return multiMapResponseData;
+        }
         return  multiMapResponseData;
     }
 

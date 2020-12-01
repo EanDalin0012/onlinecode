@@ -17,4 +17,35 @@
 			)
     	]]>
     </insert>
+
+    <select id="dataDetails" resultType="MMap">
+        <![CDATA[
+			SELECT
+                usd.card_identify_id		    AS "card_identify_id"
+                , ci.card_id			        AS "card_id"
+	            , us.user_name		            AS "user_name"
+                , usd.user_id				    AS "account_id"
+                , uif.id                        AS "user_info_id"
+                , uif.first_name                AS "first_name"
+                , uif.last_name	                AS "last_name"
+                , uif.gender		            AS "gender"
+                , uif.date_birth                AS "date_of_birth"
+                , uif.email			            AS "email"
+                , uif.contact		            AS "contact"
+                , uif.description	            AS "description"
+                , uif.profile_resource_img_id	AS "profile_resource_img_id"
+                , uif.status		            AS "status"
+                , uif.address		            AS "address"
+                , uif.modify_date 	            AS "modify_date"
+                , uif.create_date		        AS "create_date"
+                , (SELECT u.user_name FROM user_ u WHERE u.id = uif.create_by) AS "create_by"
+                , (SELECT u.user_name FROM user_ u WHERE u.id = uif.modify_by) AS "modify_by"
+            from user_info_details usd
+            INNER JOIN user_info uif on uif.id = usd.user_info_id
+            INNER JOIN user_ us on us.id = usd.user_id
+            INNER JOIN card_identify ci on ci.id = usd.card_identify_id
+			WHERE uif.status != #{status};
+	     ]]>
+    </select>
+
 </mapper>

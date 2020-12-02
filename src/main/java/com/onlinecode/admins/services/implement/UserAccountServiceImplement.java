@@ -2,6 +2,7 @@ package com.onlinecode.admins.services.implement;
 
 import com.onlinecode.admins.dao.UserAccountDao;
 import com.onlinecode.admins.services.UserAccountService;
+import com.onlinecode.core.exception.ValidatorException;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.core.map.MultiMap;
 import com.onlinecode.utils.ValidatorUtil;
@@ -17,6 +18,12 @@ public class UserAccountServiceImplement implements UserAccountService {
     public int updateUserAccount(MMap param) throws Exception {
         ValidatorUtil.validate(param, "id", "userName", "enabled", "accountLocked", "credentialsExpired", "accountExpired");
         return userAccountDao.updateUserAccount(param);
+    }
+
+    @Override
+    public MMap retrieveUserAccountByID(MMap param) throws ValidatorException {
+        com.onlinecode.admins.utils.ValidatorUtil.validate(param, "id");
+        return userAccountDao.retrieveUserAccountByID(param);
     }
 
     @Override

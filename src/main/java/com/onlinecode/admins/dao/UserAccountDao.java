@@ -9,6 +9,7 @@ public interface UserAccountDao {
     int updateUserAccount(MMap param);
     MultiMap getList(MMap param);
     MultiMap retrieveList(MMap param);
+    MMap retrieveUserAccountByID(MMap param);
     int save(MMap param);
     int delete(MMap param);
     int update(MMap param);

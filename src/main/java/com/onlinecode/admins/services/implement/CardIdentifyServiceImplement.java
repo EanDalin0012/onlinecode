@@ -3,11 +3,11 @@ package com.onlinecode.admins.services.implement;
 import com.onlinecode.admins.dao.CardIdentifyDao;
 import com.onlinecode.admins.services.CardIdentifyService;
 import com.onlinecode.admins.utils.ValidatorUtil;
-import com.onlinecode.core.exception.ValidatorException;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.core.map.MultiMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.onlinecode.core.exception.ValidatorException;
 
 @Service
 public class CardIdentifyServiceImplement implements CardIdentifyService {
@@ -19,6 +19,12 @@ public class CardIdentifyServiceImplement implements CardIdentifyService {
     public MultiMap retrieveList(MMap param) throws ValidatorException {
         ValidatorUtil.validate(param, "status");
         return cardIdentifyDao.retrieveList(param);
+    }
+
+    @Override
+    public MMap retrieveCardIdentifyById(MMap param) throws ValidatorException {
+        ValidatorUtil.validate(param, "card_id");
+        return cardIdentifyDao.retrieveCardIdentifyById(param);
     }
 
     @Override

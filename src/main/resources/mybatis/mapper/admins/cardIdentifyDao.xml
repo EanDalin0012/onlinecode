@@ -19,6 +19,22 @@
 	     ]]>
     </select>
 
+    <select id="retrieveCardIdentifyById" resultType="MMap">
+        <![CDATA[
+		   SELECT
+			  ci.id
+			, ci.card_id
+			, ci.card_img_front     as "font_image_id"
+			, ci.card_img_rear      as "rear_image_id"
+			, ci.create_date
+			, ci.modify_date
+			, ci.status
+			, (SELECT u.user_name FROM user_ u WHERE u.id = ci.create_by) as "create_by"
+		    , (SELECT u.user_name FROM user_ u WHERE u.id = ci.modify_by) as "modify_by"
+		FROM card_identify ci
+		where ci.id = #{card_id}
+	     ]]>
+    </select>
 
     <insert id="save">
         <![CDATA[

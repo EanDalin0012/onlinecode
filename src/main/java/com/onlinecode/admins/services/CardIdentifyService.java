@@ -6,6 +6,7 @@ import com.onlinecode.core.map.MultiMap;
 
 public interface CardIdentifyService {
     MultiMap retrieveList(MMap param) throws ValidatorException;
+    MMap retrieveCardIdentifyById(MMap param) throws ValidatorException;
     int save(MMap param) throws ValidatorException;
     int delete(MMap param) throws ValidatorException;
     int update(MMap param) throws ValidatorException;

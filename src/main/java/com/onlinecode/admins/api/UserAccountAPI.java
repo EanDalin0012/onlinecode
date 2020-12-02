@@ -2,7 +2,12 @@ package com.onlinecode.admins.api;
 
 import com.onlinecode.admins.services.implement.UserAccountServiceImplement;
 import com.onlinecode.admins.utils.DefaultResponse;
+import com.onlinecode.admins.utils.MessageUtils;
+import com.onlinecode.constants.ErrorCode;
+import com.onlinecode.constants.ReturnStatus;
 import com.onlinecode.constants.Status;
+import com.onlinecode.core.dto.Message;
+import com.onlinecode.core.exception.ValidatorException;
 import com.onlinecode.core.map.MMap;
 import com.onlinecode.core.map.MultiMap;
 import com.onlinecode.core.template.ResponseData;
@@ -90,6 +95,35 @@ public class UserAccountAPI {
         } catch (Exception e) {
             throw e;
         }
+    }
+
+    @PostMapping(value = "/account_id")
+    public ResponseData<MMap> retrieveUserById(@RequestBody MMap param, @RequestParam("userId") int user_id, @RequestParam("lang") String lang) {
+        ResponseData<MMap> responseData = new ResponseData<>();
+        MMap out = new MMap();
+
+        try {
+            MMap body = param.getMMap("body");
+            MMap input = new MMap();
+            input.setInt("id", body.getInt("account_id"));
+            MMap data = userAccountService.retrieveUserAccountByID(input);
+            log.info("Retrieve User Account By Id Data:", data);
+            responseData.setBody(data);
+            out.setString("status", ReturnStatus.Y);
+            return responseData;
+        } catch (ValidatorException ex) {
+            log.error("get error api retrieveUserById", ex);
+            Message message = MessageUtils.message("account_"+ex.getKey(), lang);
+            responseData.setError(message);
+            return responseData;
+        }
+        catch (Exception e) {
+            log.error("get error api retrieveUserById", e);
+            Message message = MessageUtils.message(ErrorCode.EXCEPTION_ERR, lang);
+            responseData.setError(message);
+            return responseData;
+        }
+
     }
 
 }

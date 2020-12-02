@@ -37,6 +37,7 @@
     <entry key="card_identify_card_id">Card Identify is null | empty.</entry>
     <!--Account-->
     <entry key="account_user_name">User Name is null | empty.</entry>
+    <entry key="account_id">User Account ID is null | empty.</entry>
     <entry key="account_passwd">Password is null | empty.</entry>
     <entry key="account_is_first_login">First Login Invalid.</entry>
     <entry key="account_enable">Enable Invalid.</entry>

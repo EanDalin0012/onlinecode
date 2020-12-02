@@ -101,7 +101,6 @@ public class UserInfoAPI {
                 Message message = MessageUtils.message("user_info_"+e1.getKey(), lang);
                 responseData.setError(message);
                 responseData.setBody(out);
-                responseData.setError(message);
                 return  responseData;
             }
             try {
@@ -121,7 +120,6 @@ public class UserInfoAPI {
                 Message message = MessageUtils.message("card_identify_"+e2.getKey(), lang);
                 responseData.setError(message);
                 responseData.setBody(out);
-                responseData.setError(message);
                 return responseData;
             }
             try{
@@ -169,7 +167,6 @@ public class UserInfoAPI {
             Message message = MessageUtils.message(ErrorCode.EXCEPTION_ERR, lang);
             responseData.setError(message);
             responseData.setBody(out);
-            responseData.setError(message);
             return responseData;
         }
         out.setString("status", ReturnStatus.Y);
@@ -188,6 +185,8 @@ public class UserInfoAPI {
 
         return responseData;
     }
+
+
 
     private Long saveUserDetails(String card_identify_id,String user_info_id,int user_id) {
         MMap input = new MMap();

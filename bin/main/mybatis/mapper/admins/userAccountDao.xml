@@ -26,7 +26,42 @@
 				, u.credentials_expired
 				, u.enabled
 				, u.user_name
-				, u.resource_img_id
+				, u.create_date			as "createDate"
+				, u.create_by			as "createBy"
+				, u.modify_date			as "modifyDate"
+				, u.modify_by			as "modifyBy"
+			from user_ u
+	     ]]>
+    </select>
+
+    <select id="retrieveUserAccountByID" resultType="MMap">
+        <![CDATA[
+			 	select
+				u.id
+				, u.account_expired
+				, u.account_locked
+				, u.credentials_expired
+				, u.enabled
+				, u.user_name
+				, u.create_date			as "createDate"
+				, u.create_by			as "createBy"
+				, u.modify_date			as "modifyDate"
+				, u.modify_by			as "modifyBy"
+			from user_ u
+			WHERE id 			        = #{id}
+	     ]]>
+    </select>
+
+
+    <select id="retrieveList" resultType="MMap">
+        <![CDATA[
+			 	select
+				u.id
+				, u.account_expired
+				, u.account_locked
+				, u.credentials_expired
+				, u.enabled
+				, u.user_name
 				, u.create_date			as "createDate"
 				, u.create_by			as "createBy"
 				, u.modify_date			as "modifyDate"
@@ -42,5 +77,67 @@
 	     FROM user_
 	     ]]>
     </select>
+
+    <insert id="save">
+        <![CDATA[
+	    	INSERT INTO user_
+			(
+			    id
+			    , account_expired
+			    , account_locked
+			    , credentials_expired
+			    , enabled
+			    , password
+			    , user_name
+			    , is_first_login
+			    , create_by
+			    , create_date
+			    , status
+			)
+			VALUES (
+			#{id}
+			, #{account_expired}
+			, #{account_lock}
+			, #{credential_expired}
+			, #{enable}
+			, #{passwd}
+			, #{user_name}
+			, #{is_first_login}
+			, #{user_id}
+			, to_char(NOW(), 'YYYYMMDD')
+			, #{status}
+			)
+    	]]>
+    </insert>
+
+    <update id="update">
+        <![CDATA[
+		UPDATE user_
+		SET
+            account_expired         = #{account_expired}
+            , account_locked        = #{account_lock}
+            , credentials_expired   = #{credential_expired}
+            , enabled               = #{enable}
+            , password              = #{passwd}
+            , user_name             = #{user_name}
+            , is_first_login        = #{is_first_login}
+            , modify_by             = #{user_id}
+            , modify_date           = to_char(NOW(), 'YYYYMMDD')
+            , status                = #{status}
+		WHERE id 			        = #{id}
+		]]>
+    </update>
+
+    <update id="delete">
+        <![CDATA[
+		update user_
+        set
+             status  		= #{status}
+            , modify_by   	= #{user_id}
+            , modify_date	= to_char(NOW(), 'YYYYMMDD')
+        where id   			= #{id}
+		]]>
+    </update>
+
 
 </mapper>

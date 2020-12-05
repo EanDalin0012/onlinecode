@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-    <entry key="welcome">EN resource bundle test invoked by {0}</entry>
-    <entry key="Company_Name_Required">Can not process company name is required (1000)</entry>
-    <entry key="Contact_Required">Can not process contact is required (1000)</entry>
-    <entry key="Email_Required">Can not process cause email is required (1000)</entry>
+    <!--General Exception-->
+    <entry key="exception_error">General Exception</entry>
+    <entry key="status">Invalid Status</entry>
+    <entry key="user_id">Invalid use ID</entry>
+    <entry key="id">Invalid ID</entry>
+    <!--category message-->
+    <entry key="category_name">ឈ្មោះប្រភេទគឺទទេឬទទេ</entry>
+
 </properties>

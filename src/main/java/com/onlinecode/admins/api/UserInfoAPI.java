@@ -17,7 +17,6 @@ import com.onlinecode.utils.Uuid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
@@ -124,9 +123,9 @@ public class UserInfoAPI {
             }
             try{
                 MMap accountInfoInput = new MMap();
-                BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+//                BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
                 String password = accountInfo.getString("pw");
-                String enCodePasswd = passwordEncoder.encode(password);
+                String enCodePasswd = "";
 
                 accountInfoInput.setInt("id",                       accountInfoId);
                 accountInfoInput.setString("user_name",             accountInfo.getString("user_name"));

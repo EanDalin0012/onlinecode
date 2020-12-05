@@ -1,0 +1,156 @@
+2020-12-04 09:10:08 [restartedMain] [INFO] com.onlinecode.OnlineCodeApplication - Starting OnlineCodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 12016 (D:\gradle-project\onlinecode\build\classes\java\main started by Eanda in D:\gradle-project\onlinecode)
+2020-12-04 09:10:08 [restartedMain] [DEBUG] com.onlinecode.OnlineCodeApplication - Running with Spring Boot v2.4.0, Spring v5.3.1
+2020-12-04 09:10:08 [restartedMain] [INFO] com.onlinecode.OnlineCodeApplication - No active profile set, falling back to default profiles: default
+2020-12-04 09:10:08 [restartedMain] [INFO] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Eanda\.gradle\caches\modules-2\files-2.1\javax.xml\jaxb-impl\2.1\8c86d5d4eac7f89cec63432274d712ba82cd201b\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb-api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/activation.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jsr173_1.0_api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb1-impl.jar
+2020-12-04 09:10:08 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-04 09:10:08 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-04 09:10:09 [restartedMain] [WARN] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.onlinecode.core.config.security_oauth2.AuthorizationServerConfigAdapter]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.class] cannot be opened because it does not exist
+2020-12-04 09:10:09 [restartedMain] [ERROR] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.onlinecode.core.config.security_oauth2.AuthorizationServerConfigAdapter]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:610)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:311)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:199)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:304)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:336)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:252)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:285)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:99)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:751)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:569)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.onlinecode.OnlineCodeApplication.main(OnlineCodeApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:180)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:49)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:696)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getSuperClass(ConfigurationClassParser.java:1010)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:341)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:600)
+	... 26 common frames omitted
+2020-12-04 21:32:59 [restartedMain] [INFO] com.onlinecode.OnlineCodeApplication - Starting OnlineCodeApplication using Java 11.0.4 on DESKTOP-3B8PA24 with PID 13236 (D:\gradle-project\onlinecode\build\classes\java\main started by Eanda in D:\gradle-project\onlinecode)
+2020-12-04 21:32:59 [restartedMain] [DEBUG] com.onlinecode.OnlineCodeApplication - Running with Spring Boot v2.4.0, Spring v5.3.1
+2020-12-04 21:32:59 [restartedMain] [INFO] com.onlinecode.OnlineCodeApplication - No active profile set, falling back to default profiles: default
+2020-12-04 21:32:59 [restartedMain] [INFO] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Eanda\.gradle\caches\modules-2\files-2.1\javax.xml\jaxb-impl\2.1\8c86d5d4eac7f89cec63432274d712ba82cd201b\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb-api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/activation.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jsr173_1.0_api.jar,file:/C:/Users/Eanda/.gradle/caches/modules-2/files-2.1/javax.xml/jaxb-impl/2.1/8c86d5d4eac7f89cec63432274d712ba82cd201b/jaxb1-impl.jar
+2020-12-04 21:32:59 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-04 21:32:59 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.onlinecode'
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\onlinecode\build\classes\java\main\com\onlinecode\admins\dao\CardIdentifyDao.class]
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\onlinecode\build\classes\java\main\com\onlinecode\admins\dao\CategoryDao.class]
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\onlinecode\build\classes\java\main\com\onlinecode\admins\dao\CompanyDao.class]
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\onlinecode\build\classes\java\main\com\onlinecode\admins\dao\ProductDao.class]
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\onlinecode\build\classes\java\main\com\onlinecode\admins\dao\ResourceFileInfoDao.class]
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\onlinecode\build\classes\java\main\com\onlinecode\admins\dao\ResourceImageDao.class]
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\onlinecode\build\classes\java\main\com\onlinecode\admins\dao\UserAccountDao.class]
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\onlinecode\build\classes\java\main\com\onlinecode\admins\dao\UserDao.class]
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\onlinecode\build\classes\java\main\com\onlinecode\admins\dao\UserDetailsDao.class]
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\onlinecode\build\classes\java\main\com\onlinecode\admins\dao\UserInfoDao.class]
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\onlinecode\build\classes\java\main\com\onlinecode\admins\dao\VendorDao.class]
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\onlinecode\build\classes\java\main\com\onlinecode\core\dao\DefaultAuthenticationProviderDao.class]
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\gradle-project\onlinecode\build\classes\java\main\com\onlinecode\webs\dao\ReaderImgDao.class]
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'cardIdentifyDao' and 'com.onlinecode.admins.dao.CardIdentifyDao' mapperInterface
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'cardIdentifyDao'.
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'categoryDao' and 'com.onlinecode.admins.dao.CategoryDao' mapperInterface
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'categoryDao'.
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'companyDao' and 'com.onlinecode.admins.dao.CompanyDao' mapperInterface
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'companyDao'.
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'productDao' and 'com.onlinecode.admins.dao.ProductDao' mapperInterface
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'productDao'.
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'resourceFileInfoDao' and 'com.onlinecode.admins.dao.ResourceFileInfoDao' mapperInterface
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'resourceFileInfoDao'.
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'resourceImageDao' and 'com.onlinecode.admins.dao.ResourceImageDao' mapperInterface
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'resourceImageDao'.
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userAccountDao' and 'com.onlinecode.admins.dao.UserAccountDao' mapperInterface
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userAccountDao'.
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDao' and 'com.onlinecode.admins.dao.UserDao' mapperInterface
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userDao'.
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDetailsDao' and 'com.onlinecode.admins.dao.UserDetailsDao' mapperInterface
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userDetailsDao'.
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userInfoDao' and 'com.onlinecode.admins.dao.UserInfoDao' mapperInterface
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userInfoDao'.
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'vendorDao' and 'com.onlinecode.admins.dao.VendorDao' mapperInterface
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'vendorDao'.
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'defaultAuthenticationProviderDao' and 'com.onlinecode.core.dao.DefaultAuthenticationProviderDao' mapperInterface
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'defaultAuthenticationProviderDao'.
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'readerImgDao' and 'com.onlinecode.webs.dao.ReaderImgDao' mapperInterface
+2020-12-04 21:33:01 [restartedMain] [DEBUG] o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'readerImgDao'.
+2020-12-04 21:33:01 [restartedMain] [INFO] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$28864b74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-04 21:33:01 [restartedMain] [INFO] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-12-04 21:33:01 [restartedMain] [INFO] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-12-04 21:33:01 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-12-04 21:33:01 [restartedMain] [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-04 21:33:01 [restartedMain] [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-04 21:33:02 [restartedMain] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-04 21:33:02 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3059 ms
+2020-12-04 21:33:02 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis/mybatis_config.xml]'
+2020-12-04 21:33:02 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\onlinecode\build\resources\main\mybatis\mapper\admins\cardIdentifyDao.xml]'
+2020-12-04 21:33:02 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\onlinecode\build\resources\main\mybatis\mapper\admins\categoryDai.xml]'
+2020-12-04 21:33:02 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\onlinecode\build\resources\main\mybatis\mapper\admins\companyDAO.xml]'
+2020-12-04 21:33:02 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\onlinecode\build\resources\main\mybatis\mapper\admins\productDao.xml]'
+2020-12-04 21:33:02 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\onlinecode\build\resources\main\mybatis\mapper\admins\rescourceFileInfoDao.xml]'
+2020-12-04 21:33:02 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\onlinecode\build\resources\main\mybatis\mapper\admins\resourceImageDao.xml]'
+2020-12-04 21:33:02 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\onlinecode\build\resources\main\mybatis\mapper\admins\userAccountDao.xml]'
+2020-12-04 21:33:03 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\onlinecode\build\resources\main\mybatis\mapper\admins\userDao.xml]'
+2020-12-04 21:33:03 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\onlinecode\build\resources\main\mybatis\mapper\admins\userDetailsDao.xml]'
+2020-12-04 21:33:03 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\onlinecode\build\resources\main\mybatis\mapper\admins\userInfoDao.xml]'
+2020-12-04 21:33:03 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\onlinecode\build\resources\main\mybatis\mapper\admins\vendorDao.xml]'
+2020-12-04 21:33:03 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\onlinecode\build\resources\main\mybatis\mapper\core\defaultAuthenticationProviderDao.xml]'
+2020-12-04 21:33:03 [restartedMain] [DEBUG] o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\gradle-project\onlinecode\build\resources\main\mybatis\mapper\webs\readerImgDao.xml]'
+2020-12-04 21:33:03 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/api/web/**'] with []
+2020-12-04 21:33:03 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/api/mobile/**'] with []
+2020-12-04 21:33:03 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/file/**'] with []
+2020-12-04 21:33:03 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/401.html'] with []
+2020-12-04 21:33:03 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/404.html'] with []
+2020-12-04 21:33:03 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/500.html'] with []
+2020-12-04 21:33:03 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Will secure Or [Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']] with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2cfb9a44, org.springframework.security.web.context.SecurityContextPersistenceFilter@7cc09d43, org.springframework.security.web.header.HeaderWriterFilter@4412c34d, org.springframework.security.web.authentication.logout.LogoutFilter@e3e5dcf, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@72353c55, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@116b2816, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b3f4abf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c47d90e, org.springframework.security.web.session.SessionManagementFilter@48d22c43, org.springframework.security.web.access.ExceptionTranslationFilter@14d0057a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@577916cd]
+2020-12-04 21:33:03 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Will secure Or [Ant [pattern='/api/**']] with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d57c6e6, org.springframework.security.web.context.SecurityContextPersistenceFilter@4e14ee61, org.springframework.security.web.header.HeaderWriterFilter@38297b76, org.springframework.security.web.authentication.logout.LogoutFilter@16b43561, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@11167fe0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c3da943, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f3c9979, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@753f48eb, org.springframework.security.web.session.SessionManagementFilter@c5983fc, org.springframework.security.web.access.ExceptionTranslationFilter@38474d85, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2ca47bcf]
+2020-12-04 21:33:03 [restartedMain] [INFO] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@9c22c1, org.springframework.security.web.context.SecurityContextPersistenceFilter@7de47550, org.springframework.security.web.header.HeaderWriterFilter@5dc798d2, org.springframework.security.web.csrf.CsrfFilter@373d4fdc, org.springframework.security.web.authentication.logout.LogoutFilter@1b3d3b2f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3f6d09a9, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@157df4e9, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3d6d31ef, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7a760b13, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a1f5e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@619a068b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a1a57aa, org.springframework.security.web.session.SessionManagementFilter@20fa8d3c, org.springframework.security.web.access.ExceptionTranslationFilter@6852b624, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3b7df72]
+2020-12-04 21:33:03 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-04 21:33:03 [restartedMain] [WARN] o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-12-04 21:33:03 [restartedMain] [DEBUG] o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2020-12-04 21:33:04 [restartedMain] [WARN] o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-12-04 21:33:04 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-12-04 21:33:04 [restartedMain] [WARN] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2020-12-04 21:33:04 [restartedMain] [INFO] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-04 21:33:04 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2020-12-04 21:33:04 [restartedMain] [INFO] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-12-04 21:33:04 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2020-12-04 21:33:04 [restartedMain] [INFO] o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2020-12-04 21:33:04 [restartedMain] [INFO] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-12-04 21:33:04 [restartedMain] [ERROR] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+

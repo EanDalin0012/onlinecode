@@ -1,36 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-    <entry key="welcome">EN resource bundle test invoked by {0}</entry>
-    <entry key="Company_Name_Required">Can not process company name is required (1000)</entry>
-    <entry key="Contact_Required">Can not process contact is required (1000)</entry>
-    <entry key="Email_Required">Can not process cause email is required (1000)</entry>
-    <entry key="Role_Name_Require">Can not process cause role name is required Code(1000)</entry>
+    <!--comment-->
+    <entry key="status">Invalid Status.</entry>
+    <entry key="user_id">Invalid user id.</entry>
+    <entry key="exception_error">General Exception.</entry>
 
-    <!--Main Category-->
-    <entry key="Main_Category_Name_Required">Main Category Name is required. Error: Code(1000)</entry>
-    <!--GET_ERROR_EXCEPTION -->
-    <entry key="GET_ERROR_EXCEPTION">Throw Exception. Error: Code(1100)</entry>
-    <!--SUB_CATEGORY_REQUIRED-->
-    <entry key="SUB_CATEGORY_REQUIRED">Sub category is null. Error: Code(1000)</entry>
-    <entry key="MAIN_CATEGORY_ID">Main name category is null. Error: Code(1000)</entry>
+    <!--category message-->
+    <entry key="category_name">The category name is null | empty.</entry>
+    <entry key="category_id">The category id is null | empty.</entry>
 
-    <!--Product-->
-    <entry key="Product_Name_Null">Product name is null. Error: Code(1000)</entry>
-    <entry key="Product_Price_Zero">Product price must than Zero. Error: Code(1000)</entry>
-    <entry key="Product_UnitPrice_Zero">Product unit price must than Zero. Error: Code(1000)</entry>
-    <entry key="Product_SubCate">Select sub category of product. Error: Code(1000)</entry>
-    <entry key="Product_After_Discount">After discount product must than zero. Error: Code(1000)</entry>
-    <entry key="Product_IMAGE_NULL">Select product image. Error: Code(1000)</entry>
+    <!--vendor message-->
+    <entry key="vendor_id">The vendor id is null | empty.</entry>
+    <entry key="vendor_name">The vendor name is null | empty.</entry>
+    <entry key="vendor_contact">The vendor contact is null | empty.</entry>
 
-    <!--Company translation-->
-    <entry key="SELECT_ROW_FOR_DELETE">Please select row for delete company. Error: Code(1000)</entry>
-    <entry key="Company_Name_Required">Company name is require. Error: Code(1000)</entry>
-    <entry key="Contact_Required">Contact is require. Error: Code(1000)</entry>
-    <entry key="Email_Required">Email is require. Error: Code(1000)</entry>
+    <!--product message-->
+    <entry key="product_name">The product name is null | empty.</entry>
+    <entry key="product_category_id">The Category is null | empty.</entry>
+    <entry key="product_web_show">Show on Web is null | empty.</entry>
+    <entry key="product_mobile_show">Show on Mobile is null | empty.</entry>
 
-    <!--Role-->
-    <entry key="Role_Name_Require">Role Name is require. Error: Code(1000)</entry>
-    <entry key="Role_ID_Undefined">Role ID of undefined. Error: Code(1000)</entry>
+    <!--file images=-->
+    <entry key="image_id">Image id is null | empty.</entry>
+    <entry key="image_original_name">File name is null | empty.</entry>
+    <!--User Info-->
+    <entry key="user_info_id">User Information ID is null | empty.</entry>
+    <entry key="user_info_first_name">First Name is null | empty.</entry>
+    <entry key="user_info_last_name">Last Name is null | empty.</entry>
+    <entry key="user_info_gender">Gender is null | empty.</entry>
+    <entry key="user_info_date_birth">Date of birth is null | empty.</entry>
+    <entry key="user_info_email">Email is null | empty.</entry>
+    <entry key="user_info_contact">Email is null | empty.</entry>
+    <entry key="user_user_name">User Name Invalid.</entry>
+    <!--Card Identify-->
+    <entry key="card_identify_card_id">Card Identify is null | empty.</entry>
+    <!--Account-->
+    <entry key="account_user_name">User Name is null | empty.</entry>
+    <entry key="account_id">User Account ID is null | empty.</entry>
+    <entry key="account_passwd">Password is null | empty.</entry>
+    <entry key="account_is_first_login">First Login Invalid.</entry>
+    <entry key="account_enable">Enable Invalid.</entry>
+    <entry key="account_account_lock">Account Lock Invalid.</entry>
+    <entry key="account_credential_expired">Credential Expired Invalid.</entry>
+    <entry key="account_account_expired">Account Expired Invalid.</entry>
 
 </properties>
